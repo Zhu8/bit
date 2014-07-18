@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<title>WordPress插件:Add Bookmarks | ChenJun(Zhu8)-浮生志</title>
+
+    
+    <meta name="author" content="Chen Jun(Zhu8)">
+
+  <meta name="google-site-verification" content="Mfl8lf6NN0DWPluv8lQpBL-mrKi22ZOcnlKXYURni1Y" />
+  <meta name="baidu-site-verification" content="EfohsDsVrB" />
+  <meta property="wb:webmaster" content="e0287cd04d1775d9" />
+  <html xmlns:wb=“http://open.weibo.com/wb”>
+	<link href="http://feeds.feedburner.com/Zhu8/github/" rel="alternate" title=" Feed" type="application/atom+xml">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="author" href="https://plus.google.com/+ChenJun">
+
+    <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="//cdn.jsdelivr.net/bootflat/2.0.0/css/bootflat.css" /-->
+    <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/bootstrap.min.2.css" />
+    <!--link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/ihover.min.css"-->
+    <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/pygment_trac.css">
+    <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/fancyBox/jquery.fancybox.css">
+<link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/style.css" type="text/css" media="screen" charset="utf-8">
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!--[if lt IE9]>
+<script src="http://zhu8.qiniudn.com/assets/js/html5.js"></script>
+<![endif]-->
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="main">
+        <hgroup>
+          <h1 id="logo"><a href="/">ChenJun(Zhu8)-浮生志</a></h1>
+          
+            <p id="tagline">On The Way to Philistinism...</p>
+          
+        </hgroup>
+        <ul class="buttons">
+          <!-- <li><a href="http://github.com/Zhu8/" rel="me">Code <strong>GitHub</strong></a></li> -->
+          <li class="twitter"><a href="http://twitter.com/5CJ/" rel="me">Follow <strong>Twitter</strong></a></li>
+          <li class="facebook"><a href="http://www.facebook.com/ichenjun/" rel="me">Connect <strong>Facebook</strong></a></li>
+          <li class="google"><a href="https://plus.google.com/+ChenJun/" rel="publisher">Plus Me<strong>Google+</strong></a></li>
+        </ul>
+
+        <p class="about text-justify">
+          <a href="http://chenjun.com/"><strong>陈俊</strong></a>ChenJun(Zhu8)的个人网站，江苏人士，83年生人，电子产品自虐狂，<a href="http://chenjun.com/wang2/"><strong>王小波</strong></a>门下走狗，欢迎<strong>Fork</strong>本站@<a href="https://github.com/Zhu8/zhu8.github.io/fork">Github</a>。
+        </p>
+
+      </header>
+
+      <section class="main" id="container">
+		<!--^frag--><article class="post">
+	<header>
+    <!-- Nav tabs -->
+<ul class="nav nav-pills">
+    <li class=""><a href="/">Home | 首页</a></li>
+    <li class=""><a href="/archive.html">Archive | 归档</a></li>
+</ul>
+	<div class="page-header">
+		  <h1>WordPress插件:Add Bookmarks</h1>
+    </div>
+		<p><b>发布于：</b> <time datetime="2006-09-04T04:23:28+00:00" pubdate>
+			2006年9月4日 04时23分28秒</time>
+      <a href="https://plus.google.com/+ChenJun?rel=author">Chen Jun(Zhu8)</a>
+    </p>
+	</header>
+
+	<p>First plugin for WordPress:<a href="#Eng">English vision</a> (2008/03/18)</p>
+
+<p>这是我第一次做的插件，虽然是东参考西参考，也整整折腾了我半天的工夫，呼&#8230;&#8230;闲话少说，入正题。(现在想再做一个，但是发现却是是水平有限。在瞎折腾两三个小时之后，发现自己只是稍长于修改，真正要做确实不是我等门外汉能力所及。)</p>
+
+<ul>
+<li><p><strong>插件名称</strong>：Add Bookmarks</p></li>
+<li><p><strong>插件版本</strong>：0.1（0.4 <strong><em>Updated on 2008.03.18</em></strong>）</p></li>
+<li><p><strong>插件描述</strong>：</p></li>
+</ul>
+
+<p>在你的文章下加入添加到书签或网摘的代码，参考<em>Thomas McMahon</em>插件<a href="http://www.twistermc.com/shake/wordpress-social.php" target="blank"><em>Social Bookmark Links</em></a>修改，可选择文字链接或图标链接，若喜欢还可以自己添加。<br>
+<strong><em>Update On 2006/9/27</em></strong>：更新了图片的链接问题，使用<textarea name="code" class="php" cols="60" rows="10">&#8220;.get_settings(&#8216;siteurl&#8217;).&#8221;</textarea>使链接在更新Blog地址的时候不会出错。</p>
+
+<!--more-->
+
+<ul>
+<li><p><strong>插件安装</strong>：1) 下载插件：<a title="下载插件" href="http://chenjun.com/blog/upload/add-bookmarks.rar" target="_blank">add-bookmarks.rar</a></p></li>
+<li><p>2) 打开 <em>add-bookmarks.php</em> 并在文本编辑器中配置好。</p></li>
+<li><p>3) 你不想使用的书签请将 0 改成 1，反之亦然。</p></li>
+</ul>
+
+<p>例子：<span style="color: #0000ff;">$a4 = &#8220;1″;</span> <span style="color: #008000;">//365key | 天天网摘 &#8211; 这就是说你已经设置成使用365key了</span>。</p>
+
+<ul>
+<li>  4) 设置书签的显示方式</li>
+</ul>
+
+<p><span style="color: #0000ff;">$createKind = &#8220;icon&#8221;;</span> <span style="color: #008000;">// links : 文字链接 &#8211; icon : 图标链接</span><br>
+文字链接示例：<br>
+»»<br>
+图标链接示例：<br>
+»»<br>
+<span style="color: #0000ff;">$beforeall = &#8220;<strong>收藏</strong> &#8220;;</span> <span style="color: #008000;">// 你想显示在所有书签前面的</span><br>
+<span style="color: #0000ff;">$beforeeach = &#8221; [ &quot;;</span> <span style="color: #008000;">// 你想显示在每个书签前面的</span><br>
+<span style="color: #0000ff;">$aftereach = &quot; ] &#8220;;</span> <span style="color: #008000;">// 你想显示在每个书签后面的</span><br>
+<span style="color: #0000ff;">$afterall = &#8220;&#8221;;</span> <span style="color: #008000;">// 你想显示在所有书签后面的</span><br>
+<span style="color: #008000;">// 可以使用HTML标签，但不能使用(&#8220;)哦！</span></p>
+
+<ul>
+<li><p>5) 上传<strong>文件夹</strong><em>add-bookmarks</em>到你的插件目录（注意：包括icon文件夹和add-bookmarks.php）。</p></li>
+<li><p>6) 在管理页面<strong>激活</strong>插件。</p></li>
+<li><p>7) 将下面的代码放到你想显示加入书签或网摘的位置：</p></li>
+</ul>
+
+<p><textarea name="code" class="php" cols="60" rows="10">&lt;?php if(function<em>exists(&#39;add</em>bookmarks&#39;)) { add_bookmarks(); } ?&gt;</textarea></p>
+
+<ul>
+<li>我是放置在<em>single.php</em>中例如 <em>postmetadata</em> 前面的，仅供参考。<br></li>
+<li><p>如果你<strong>停用</strong>了该插件，可以将该代码移除。（因为使用了if语句，所以不移出也不会影响其他正常功能的:em06: ）<strong><em>-Update On 2006.12.22</em></strong></p></li>
+<li><p><strong>Tips(小提示)</strong>：</p></li>
+</ul>
+
+<p>Yahoo!我已经修改成<a title="雅虎中国" href="http://cn.yahoo.com/" target="_blank">Yahoo!中国</a>的<a title="雅虎收藏+" href="http://myweb.cn.yahoo.com/" target="_blank">Yahoo!收藏</a><sup>+</sup>，更符合国人习惯；你如果想修改图标内容，图标均在icon目录下，增加或修改的图标请注意在<em>add-bookmarks.php</em>中也要记得修改图标的源文件地址。<br>
+<strong><em>Update@2006/09/05</em></strong><br>
+将所使用的五个书签的代码做了一次更新，确保每个对中文正确识别。其中Furl对中文的支持最不好，我使用其他人所最常使用的代码均会使中文标题变成乱码，所以我最后还是选择了一个弹出窗口的，可能使用<strong>窗口block</strong>的会有一定影响。<br>
+更多书签网站请参考：<a title="网摘大全1016最新整理版　(rss8.net 木木牛牛整理) " href="http://blog.donews.com/rss/archive/2005/10/16/590504.aspx" target="_blank">网摘大全1016最新整理版　(rss8.net 木木牛牛整理) </a><br>
+另一种方式请参考：<a title="无需插件 给你的BLOG手动添加 网摘 代码　图标下载" href="http://www.dustlonely.com/2006/08/24/blog-rss/" target="_blank">无需插件 给你的BLOG手动添加 网摘 代码　图标下载</a>。<br>
+欢迎你使用Trackback告知我你使用了该插件 <img src="http://chenjun.com/wp/wp-includes/images/smilies/icon_smile.gif" alt=":-)" class="wp-smiley" /> <strong><em>Updated on 2006.11.28</em></strong><br>
+加入 <a title="百度搜藏" href="http://cang.baidu.com/" target="_blank">百度搜藏</a><br>
+<strong><em>Updated on 2008.03.18</em></strong><br>
+加入 <a title="奇客发现 有趣新鲜" href="http://www.diglog.com/" target="_blank">Diglog!奇客发现</a><br>
+加入 <a title="饭否 | 迷你博客 随时随地发消息" href="http://fanfou.com/" target="_blank">饭否</a><br>
+加入 <a title="QQ书签" href="http://shuqian.qq.com/" target="_blank">QQ书签</a><br>
+加入 <a title="Technorati Favorites" href="http://technorati.com/faves/" target="_blank">Technorati Favorites</a><br>
+<strong id="Eng"><em>English Vision:</em></strong><br>
+<strong>Add Bookmarks for WordPress</strong><br>
+<strong>Plugin Name</strong>: Add Bookmarks<br>
+<strong>Version</strong>: 0.4 <em>(Last update:2008/03/18)</em><br>
+<strong>Description</strong>: Help your visitors to add your entry to<br>
+Social Bookmark like<br>
+Blogmarks,delicious,Furl,Yahoo,Google,Baidu,QQ,Techmorati and so on..<br>
+(You can add by your self <strong>very simply</strong>,You can choice either <strong>TEXT</strong> or <strong>ICON</strong>)<br>
+<strong>Requires at least</strong>: WordPress 1.5<br>
+<strong>Tested up to</strong>: WordPress 2.5<br>
+<strong>Author</strong>: Zhu8<br>
+<strong>Plugin URI</strong>: http://chenjun.com/blog/2006/09/wordpress-plugin-add-bookmarks.html<br>
+<strong>Download</strong>:<a href="http://chenjun.com/blog/upload/add-bookmarks.zip" title="Download This Plugin">add-bookmarks.zip</a><br>
+<strong>Usage</strong>:1) Upload the <strong>folder</strong> to the <em>/wp-content/plugins/</em>.<br>
+2) Active it .Add <textarea name="code" class="php" cols="60" rows="10">&lt;?php if(function<em>exists(&#39;add</em>bookmarks&#39;)) { add_bookmarks(); } ?&gt;</textarea> to where you want to put (I put it in</p>
+
+<p><em>single.php</em> <strong>before</strong> <em>postmetadata</em>) .DONE!<br>
+3)If you want to Add Your Bookmarks,open <em>\</em>add-bookmarks.php** and config it in your Editor(as Editplus,Notepad++) in <strong>UTF-8</strong>.<br>
+Fell free to <a href="http://chenjun.com/contact/">Contact</a> me and Trackback here!</p>
+
+
+	<p>
+		<div class="addthis_sharing_toolbox">
+<ul class="share_links">
+  <li>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=zhu8"></script>
+</li>
+</ul>
+</div>
+
+	</p>
+
+	<footer>
+    <section>
+      
+        <h1><b>标签：</b></h1>
+        <ul>
+        
+        
+
+
+	 
+		<li><a href="/tags.html#Bookmarks-ref">
+			Bookmarks <span class="badge">2</span>
+		</a></li>
+	 
+		<li><a href="/tags.html#Download-ref">
+			Download <span class="badge">7</span>
+		</a></li>
+	 
+		<li><a href="/tags.html#Plugin-ref">
+			Plugin <span class="badge">3</span>
+		</a></li>
+	 
+		<li><a href="/tags.html#下载-ref">
+			下载 <span class="badge">8</span>
+		</a></li>
+	
+	
+
+        </ul>
+      
+
+      
+        <h1><b>归档于：</b></h1>
+        <ul>
+        
+        
+
+
+	 
+		<li><a href="/categories.html#石马 | code-ref">
+			石马 | code <span>15</span>
+		</a></li>
+	
+	
+
+        </ul>
+      
+    </section>
+	</footer>
+
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'chenjun'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</article>
+<!--$frag-->
+      </section>
+
+      <aside>
+        <nav>
+		<h3>Navigation</h3>
+          <ul>
+      			<li><a href="/">Home</a></li>
+				<li><a href="/about.html">About</a></li>
+      			<li><a href="/archive.html">Archive</a></li>
+      			<li><a href="/tags.html">Tag List</a></li>
+      			<li><a href="/categories.html">Categories</a></li>
+          </ul>
+        </nav>
+        <ul>
+          <li class="search"><script>
+  (function() {
+    var cx = '011396242115913189926:7a1cte8z8t8';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only></li>
+        </ul>
+
+        <h3>Contact</h3>
+        <p class="contact">
+        <a href="http://weibo.com/zhu8" title="微博联系我"><img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_32x32.png" width="24" height="24" style="display:inline-block;vertical-align:middle"></a> & <a href='mailto:zhu8.net@googlemail'>zhu8.net@<img title="Zhu8.Net[at]Gmail" alt="Zhu8.Net[at]Gmail" src="https://mail.google.com/mail/images/2/5/logo.png" height="20" /></a>
+        </p>
+      </aside>
+      <footer class="main">
+	  <h3>Misc...</h3>
+        <p><small>
+			Powered by <a href="http://pages.github.com/">GitHub</a> & <a href="http://jekyllrb.com/">Jekyll</a>.
+			Themed with <a href="http://github.com/orderedlist/minimal/">minimal</a>.
+		</small></p>
+      </footer>
+    </div>
+    <script src="http://zhu8.qiniudn.com/assets/js/scale.fix.js"></script>
+	<script src="http://zhu8.qiniudn.com/assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="http://zhu8.qiniudn.com/assets/js/bootstrap.min.js"></script>
+	<script src="http://zhu8.qiniudn.com/assets/fancyBox/jquery.fancybox.pack.js"></script>
+	<script src="http://zhu8.qiniudn.com/assets/js/application.js"></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://zhu8.qiniudn.com/assets/js/go-top.js"></script>
+
+    <div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_17872'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D17872' type='text/javascript'%3E%3C/script%3E"));</script></div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7529365-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>
+
