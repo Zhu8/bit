@@ -686,10 +686,8 @@ button.itunes::-moz-focus-inner {
     transform: translateY();
 }
 /**Add By Zhu8**/
-.gsc-clear-button {
-    visibility: none;
-    display: none;
-}
+#st-search-input{height:30px;}
+
 section.main .homepage-archive { float: right }
 /* tag_box & category_box */
 .tag_box, .category_box {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-	<title>从wordpress到textpattern | 陈俊的网-浮生志</title>
+	<title>从wordpress到textpattern | 陈俊的网：浮生志</title>
 
     
     <meta name="author" content="Chen Jun(Zhu8)">
@@ -35,7 +35,7 @@
     <div class="wrapper">
       <header class="main">
         <hgroup>
-          <h1 id="logo"><a href="/">陈俊的网-浮生志</a></h1>
+          <h1 id="logo"><a href="/">陈俊的网：浮生志</a></h1>
           
             <p id="tagline">On The Way to Philistinism...</p>
           
@@ -72,31 +72,52 @@
     </p>
 	</header>
 
-	<p>其实<img class="right" title="Textpattern" style="FLOAT: right" alt="Textpattern" src="http://junnie.3322.org/images/zhu8.net/txp.gif" />很久以前就试用了 <a href="http://textpattern.com/"><span class="caps">TXP</span></a> ，但是一直是一头雾水，今天终于 <sup>其实昨天</sup> 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 <strong>记录：</strong></p>
+	<p>其实<img class="right" title="Textpattern" style="FLOAT: right" alt="Textpattern" src="http://static.chenjun.com/images/txp.gif" />很久以前就试用了 <a href="http://textpattern.com/"><span class="caps">TXP</span></a> ，但是一直是一头雾水，今天终于 <sup>其实昨天</sup> 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 <strong>记录：</strong></p>
 
 <ul>
 <li>  <strong>解决乱码问题</strong> 打开 <em>import_wp.php</em> ，找到下面这行：</li>
 </ul>
+<div class="highlight"><pre><code class="language-php" data-lang="php">mysql_select_db($b2db, $b2link);
 
-<p><textarea name="code" class="php" cols="60" rows="10">mysql<em>select</em>db($b2db, $b2link);<br /> </textarea>在后面加上： <textarea name="code" class="php" cols="60" rows="10">mysql_query(&#8220;SET NAMES &#8216;utf8&#8242;&#8221;, $b2link);<br /> </textarea></p>
+</code></pre></div>
+<p>在后面加上： ```php
+mysql_query(&#8220;SET NAMES &#8216;utf8&#8242;&#8221;, $b2link);</p>
+<div class="highlight"><pre><code class="language-" data-lang="">
 
-<ul>
-<li>  <strong>增加 Excerpt 部分</strong> 找到下面这行：</li>
-</ul>
+*   **增加 Excerpt 部分** 找到下面这行：
 
-<p><textarea name="code" class="php" cols="60" rows="10">p.post<em>content as Body,<br /> </textarea>在后面加上： <textarea name="code" class="php" cols="60" rows="10">p.post</em>excerpt as Excerpt,<br /> </textarea>同样的，找到这行： <textarea name="code" class="php" cols="60" rows="10">Body<em>html = &#8216;&#8221;.doSlash($Body</em>html).&#8221;&#8216;,<br /> </textarea>在后面加上： <textarea name="code" class="php" cols="60" rows="10">Excerpt = &#8216;&#8221;.doSlash($Excerpt).&#8221;&#8216;,<br /> Excerpt_html = &#8216;&#8221;.doSlash($Excerpt).&#8221;&#8216;,<br /> </textarea></p>
+```php
+p.post_content as Body,
 
-<ul>
-<li>  <strong>不导入附件生成的页面</strong> 找到下面这行：</li>
-</ul>
+</code></pre></div>
+<p>在后面加上： ```php
+p.post_excerpt as Excerpt,</p>
+<div class="highlight"><pre><code class="language-" data-lang="">同样的，找到这行： ```php
+Body_html = &amp;#8216;&amp;#8221;.doSlash($Body_html).&amp;#8221;&amp;#8216;,
 
-<p><textarea name="code" class="php" cols="60" rows="10">&#8220;.$wpdbprefix.&#8221;users as u on u.ID = p.post<em>author<br /> </textarea>在后面加上： <textarea name="code" class="php" cols="60" rows="10">WHERE p.post</em>status != &#8216;attachment&#8217;<br /> </textarea>差不多就这些了，在懒懒喵的 <a href="http://blog.nahoya.com/archives/2006_09/129">旧文</a> 中提到的留言关闭问题已经在Textpattern · 4.0.6中得到了解决。 <strong>但是我本人的一个问题，Tag问题还没有搞定，导入会变成Category，我是用的笨办法：直接在WP数据库中先删除它，哈哈！</strong> 还有一个小问题，导入user错误，不过如果是单用户的Blog，大可不必去管这个问题。</p>
+</code></pre></div>
+<p>在后面加上： ```php
+Excerpt = &#8216;&#8221;.doSlash($Excerpt).&#8221;&#8216;,
+ Excerpt_html = &#8216;&#8221;.doSlash($Excerpt).&#8221;&#8216;,</p>
+<div class="highlight"><pre><code class="language-" data-lang="">
 
-<ul>
-<li><p>放出修改后的 <del>import_wp.php</del></p></li>
-<li><p><em>P.S</em> 初次使用 <a href="http://textile.thresholdstate.com/">Textile</a> ，感觉还要适应好段时间，不过用起来确实是种不同的体验。</p></li>
-</ul>
+*   **不导入附件生成的页面** 找到下面这行：
 
+```php
+&amp;#8220;.$wpdbprefix.&amp;#8221;users as u on u.ID = p.post_author
+
+</code></pre></div>
+<p>在后面加上： ```php
+WHERE p.post_status != &#8216;attachment&#8217;</p>
+<div class="highlight"><pre><code class="language-" data-lang="">差不多就这些了，在懒懒喵的 [旧文][2] 中提到的留言关闭问题已经在Textpattern · 4.0.6中得到了解决。 **但是我本人的一个问题，Tag问题还没有搞定，导入会变成Category，我是用的笨办法：直接在WP数据库中先删除它，哈哈！** 还有一个小问题，导入user错误，不过如果是单用户的Blog，大可不必去管这个问题。
+
+*   放出修改后的 &lt;del&gt;import_wp.php&lt;/del&gt;
+
+*   *P.S* 初次使用 [Textile][3] ，感觉还要适应好段时间，不过用起来确实是种不同的体验。
+
+
+
+</code></pre></div>
 
 	<p>
 		<div class="addthis_sharing_toolbox">
@@ -195,7 +216,7 @@
         </nav>
         <ul>
           <li class="search"><form>
-  <input type="text" id="st-search-input" class="st-search-input" />
+  <input type="text" id="st-search-input" class="st-search-input" placeholder="Input then ENTER"/>
 </form>
 <script type="text/javascript">
 var Swiftype = window.Swiftype || {};
