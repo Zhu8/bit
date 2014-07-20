@@ -74,40 +74,45 @@
 
 	<p>其实<img class="right" title="Textpattern" style="FLOAT: right" alt="Textpattern" src="http://static.chenjun.com/images/txp.gif" width="250px" />很久以前就试用了 <a href="http://textpattern.com/"><span class="caps">TXP</span></a> ，但是一直是一头雾水，今天终于 <sup>其实昨天</sup> 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 <strong>记录：</strong></p>
 
-<p><strong>解决乱码问题</strong> 打开 <em>import_wp.php</em> ，找到下面这行：
-<code>php
-mysql_select_db($b2db, $b2link);
-</code>
-在后面加上：
-<code>php
-mysql_query(&amp;#8220;SET NAMES &amp;#8216;utf8&amp;#8242;&amp;#8221;, $b2link);
-</code>
-*   <strong>增加 Excerpt 部分</strong> 找到下面这行：
-<code>php
-p.post_content as Body,
-</code>
-在后面加上：
-<code>php
-p.post_excerpt as Excerpt,
-</code>
-同样的，找到这行：
-<code>php
-Body_html = &amp;#8216;&amp;#8221;.doSlash($Body_html).&amp;#8221;&amp;#8216;,
-</code>
-在后面加上：
-<code>php
-Excerpt = &amp;#8216;&amp;#8221;.doSlash($Excerpt).&amp;#8221;&amp;#8216;,
- Excerpt_html = &amp;#8216;&amp;#8221;.doSlash($Excerpt).&amp;#8221;&amp;#8216;,
-</code>
-*   <strong>不导入附件生成的页面</strong> 找到下面这行：
-<code>php
-&amp;#8220;.$wpdbprefix.&amp;#8221;users as u on u.ID = p.post_author
-</code>
-在后面加上：
-<code>php
-WHERE p.post_status != &amp;#8216;attachment&amp;#8217;
-</code>
-差不多就这些了，在懒懒喵的 <a href="http://blog.nahoya.com/archives/2006_09/129">旧文</a> 中提到的留言关闭问题已经在Textpattern · 4.0.6中得到了解决。 <strong>但是我本人的一个问题，Tag问题还没有搞定，导入会变成Category，我是用的笨办法：直接在WP数据库中先删除它，哈哈！</strong> 还有一个小问题，导入user错误，不过如果是单用户的Blog，大可不必去管这个问题。</p>
+<p><strong>解决乱码问题</strong></p>
+
+<p>打开 <em>import_wp.php</em> ，找到下面这行：</p>
+
+<p><code>mysql_select_db($b2db, $b2link);</code></p>
+
+<p>在后面加上：</p>
+
+<p><code>mysql_query(&quot;SET NAMES &#39;utf8&#39;&quot;, $b2link);</code></p>
+
+<ul>
+<li>  <strong>增加 Excerpt 部分</strong> 找到下面这行：</li>
+</ul>
+
+<p><code>p.post_content as Body,</code></p>
+
+<p>在后面加上：</p>
+
+<p><code>p.post_excerpt as Excerpt,</code></p>
+
+<p>同样的，找到这行：</p>
+
+<p><code>Body_html = &#39;&quot;.doSlash($Body_html).&quot;&#39;,</code></p>
+
+<p>在后面加上：</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php">Excerpt = '".doSlash($Excerpt)."',
+Excerpt_html = '".doSlash($Excerpt)."',
+</code></pre></div>
+<ul>
+<li>  <strong>不导入附件生成的页面</strong> 找到下面这行：</li>
+</ul>
+
+<p><code>&quot;.$wpdbprefix.&quot;users as u on u.ID = p.post_author</code></p>
+
+<p>在后面加上：</p>
+
+<p><code>WHERE p.post_status != &#39;attachment&#39;</code></p>
+
+<p>差不多就这些了，在懒懒喵的 <a href="http://blog.nahoya.com/archives/2006_09/129">旧文</a> 中提到的留言关闭问题已经在Textpattern · 4.0.6中得到了解决。 <strong>但是我本人的一个问题，Tag问题还没有搞定，导入会变成Category，我是用的笨办法：直接在WP数据库中先删除它，哈哈！</strong> 还有一个小问题，导入user错误，不过如果是单用户的Blog，大可不必去管这个问题。</p>
 
 <p>*放出修改后的 <del>import_wp.php</del></p>
 
