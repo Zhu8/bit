@@ -4,7 +4,7 @@
  <title>陈俊的网：浮生志</title>
  <link href="/" rel="self"/>
  <link href=""/>
- <updated>2014-07-20T13:41:16+00:00</updated>
+ <updated>2014-07-20T14:06:38+00:00</updated>
  <id></id>
  <author>
    <name>Chen Jun(Zhu8)</name>
@@ -1259,50 +1259,45 @@ C罗是红魔在平日联赛里首席点球手，但他没被安排到压轴位�
    <id>/blog/2008/04/from-wordpress-to-textpattern</id>
    <content type="html">&lt;p&gt;其实&lt;img class=&quot;right&quot; title=&quot;Textpattern&quot; style=&quot;FLOAT: right&quot; alt=&quot;Textpattern&quot; src=&quot;http://static.chenjun.com/images/txp.gif&quot; /&gt;很久以前就试用了 &lt;a href=&quot;http://textpattern.com/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;TXP&lt;/span&gt;&lt;/a&gt; ，但是一直是一头雾水，今天终于 &lt;sup&gt;其实昨天&lt;/sup&gt; 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 &lt;strong&gt;记录：&lt;/strong&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;  &lt;strong&gt;解决乱码问题&lt;/strong&gt; 打开 &lt;em&gt;import_wp.php&lt;/em&gt; ，找到下面这行：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;mysql_select_db($b2db, $b2link);
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;在后面加上： ```php
-mysql_query(&amp;#8220;SET NAMES &amp;#8216;utf8&amp;#8242;&amp;#8221;, $b2link);&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;
-
-*   **增加 Excerpt 部分** 找到下面这行：
-
-```php
+&lt;p&gt;&lt;strong&gt;解决乱码问题&lt;/strong&gt; 打开 &lt;em&gt;import_wp.php&lt;/em&gt; ，找到下面这行：
+&lt;code&gt;php
+mysql_select_db($b2db, $b2link);
+&lt;/code&gt;
+在后面加上：
+&lt;code&gt;php
+mysql_query(&amp;amp;#8220;SET NAMES &amp;amp;#8216;utf8&amp;amp;#8242;&amp;amp;#8221;, $b2link);
+&lt;/code&gt;
+*   &lt;strong&gt;增加 Excerpt 部分&lt;/strong&gt; 找到下面这行：
+&lt;code&gt;php
 p.post_content as Body,
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;在后面加上： ```php
-p.post_excerpt as Excerpt,&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;同样的，找到这行： ```php
+&lt;/code&gt;
+在后面加上：
+&lt;code&gt;php
+p.post_excerpt as Excerpt,
+&lt;/code&gt;
+同样的，找到这行：
+&lt;code&gt;php
 Body_html = &amp;amp;#8216;&amp;amp;#8221;.doSlash($Body_html).&amp;amp;#8221;&amp;amp;#8216;,
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;在后面加上： ```php
-Excerpt = &amp;#8216;&amp;#8221;.doSlash($Excerpt).&amp;#8221;&amp;#8216;,
- Excerpt_html = &amp;#8216;&amp;#8221;.doSlash($Excerpt).&amp;#8221;&amp;#8216;,&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;
-
-*   **不导入附件生成的页面** 找到下面这行：
-
-```php
+&lt;/code&gt;
+在后面加上：
+&lt;code&gt;php
+Excerpt = &amp;amp;#8216;&amp;amp;#8221;.doSlash($Excerpt).&amp;amp;#8221;&amp;amp;#8216;,
+ Excerpt_html = &amp;amp;#8216;&amp;amp;#8221;.doSlash($Excerpt).&amp;amp;#8221;&amp;amp;#8216;,
+&lt;/code&gt;
+*   &lt;strong&gt;不导入附件生成的页面&lt;/strong&gt; 找到下面这行：
+&lt;code&gt;php
 &amp;amp;#8220;.$wpdbprefix.&amp;amp;#8221;users as u on u.ID = p.post_author
+&lt;/code&gt;
+在后面加上：
+&lt;code&gt;php
+WHERE p.post_status != &amp;amp;#8216;attachment&amp;amp;#8217;
+&lt;/code&gt;
+差不多就这些了，在懒懒喵的 &lt;a href=&quot;http://blog.nahoya.com/archives/2006_09/129&quot;&gt;旧文&lt;/a&gt; 中提到的留言关闭问题已经在Textpattern · 4.0.6中得到了解决。 &lt;strong&gt;但是我本人的一个问题，Tag问题还没有搞定，导入会变成Category，我是用的笨办法：直接在WP数据库中先删除它，哈哈！&lt;/strong&gt; 还有一个小问题，导入user错误，不过如果是单用户的Blog，大可不必去管这个问题。&lt;/p&gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;在后面加上： ```php
-WHERE p.post_status != &amp;#8216;attachment&amp;#8217;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;差不多就这些了，在懒懒喵的 [旧文][2] 中提到的留言关闭问题已经在Textpattern · 4.0.6中得到了解决。 **但是我本人的一个问题，Tag问题还没有搞定，导入会变成Category，我是用的笨办法：直接在WP数据库中先删除它，哈哈！** 还有一个小问题，导入user错误，不过如果是单用户的Blog，大可不必去管这个问题。
+&lt;p&gt;*放出修改后的 &lt;del&gt;import_wp.php&lt;/del&gt;&lt;/p&gt;
 
-*   放出修改后的 &amp;lt;del&amp;gt;import_wp.php&amp;lt;/del&amp;gt;
-
-*   *P.S* 初次使用 [Textile][3] ，感觉还要适应好段时间，不过用起来确实是种不同的体验。
-
-
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;p&gt;&lt;em&gt;P.S&lt;/em&gt; 初次使用 &lt;a href=&quot;http://textile.thresholdstate.com/&quot;&gt;Textile&lt;/a&gt; ，感觉还要适应好段时间，不过用起来确实是种不同的体验。&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
