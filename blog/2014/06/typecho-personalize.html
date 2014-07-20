@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-	<title>Typecho个性化常用代码 | ChenJun(Zhu8)-浮生志</title>
+	<title>Typecho个性化常用代码 | 陈俊的网-浮生志</title>
 
     
     <meta name="author" content="Chen Jun(Zhu8)">
@@ -23,7 +23,8 @@
     <!--link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/ihover.min.css"-->
     <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/pygment_trac.css">
     <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/fancyBox/jquery.fancybox.css">
-<link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/style.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/style.css">
+<link href="tipuesearch/tipuesearch.css" rel="stylesheet">
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!--[if lt IE9]>
@@ -35,7 +36,7 @@
     <div class="wrapper">
       <header class="main">
         <hgroup>
-          <h1 id="logo"><a href="/">ChenJun(Zhu8)-浮生志</a></h1>
+          <h1 id="logo"><a href="/">陈俊的网-浮生志</a></h1>
           
             <p id="tagline">On The Way to Philistinism...</p>
           
@@ -96,76 +97,78 @@
 <h2><a name="1"></a>1、归档页面模板</h2>
 
 <p>（这里涉及到官方文档首段代码没有结尾，注意参考下面的第一段）</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;?php
-/**
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="sd">/**
  * 归档页面模板
  *
  * @package custom
- */; ?&gt;
+ */</span><span class="p">;</span> <span class="cp">?&gt;</span>
 
-&lt;?php $this-&gt;need('header.php'); ?&gt;
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">'header.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
 
-    &lt;div class="col-mb-12 col-8" id="main" role="main"&gt;
-        &lt;h3 class="archive-title"&gt;日志归档&lt;/h3&gt;
-&lt;?php $this-&gt;widget('Widget_Contents_Post_Recent', 'pageSize=10000')-&gt;to($archives);   
-    $year=0; $mon=0; $i=0; $j=0;   
-    $output = '&lt;div id="archives"&gt;';   
-    while($archives-&gt;next()):   
-        $year_tmp = date('Y',$archives-&gt;created);   
-        $mon_tmp = date('m',$archives-&gt;created);   
-        $y=$year; $m=$mon;   
-        if ($mon != $mon_tmp &amp;&amp; $mon &gt; 0) $output .= '&lt;/ul&gt;&lt;/li&gt;';   
-        if ($year != $year_tmp &amp;&amp; $year &gt; 0) $output .= '&lt;/ul&gt;';   
-        if ($year != $year_tmp) {   
-            $year = $year_tmp;   
-            $output .= '&lt;h3 class="al_year"&gt;'. $year .' 年&lt;/h3&gt;&lt;ul class="al_mon_list"&gt;'; //输出年份   
-        }   
-        if ($mon != $mon_tmp) {   
-            $mon = $mon_tmp;   
-            $output .= '&lt;li&gt;&lt;span class="al_mon"&gt;'. $mon .' 月&lt;/span&gt;&lt;ul class="al_post_list"&gt;'; //输出月份   
-        }   
-        $output .= '&lt;li&gt;'.date('d日: ',$archives-&gt;created).'&lt;a href="'.$archives-&gt;permalink .'"&gt;'. $archives-&gt;title .'&lt;/a&gt; &lt;em&gt;('. $archives-&gt;commentsNum.')&lt;/em&gt;&lt;/li&gt;'; //输出文章日期和标题   
-    endwhile;   
-    $output .= '&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;';   
-    echo $output;   
-?&gt; 
-    &lt;/div&gt;&lt;!-- end #main --&gt;
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-mb-12 col-8"</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"archive-title"</span><span class="nt">&gt;</span>日志归档<span class="nt">&lt;/h3&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">'Widget_Contents_Post_Recent'</span><span class="p">,</span> <span class="s1">'pageSize=10000'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="nv">$archives</span><span class="p">);</span>   
+    <span class="nv">$year</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$mon</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>   
+    <span class="nv">$output</span> <span class="o">=</span> <span class="s1">'&lt;div id="archives"&gt;'</span><span class="p">;</span>   
+    <span class="k">while</span><span class="p">(</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">())</span><span class="o">:</span>   
+        <span class="nv">$year_tmp</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'Y'</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">);</span>   
+        <span class="nv">$mon_tmp</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'m'</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">);</span>   
+        <span class="nv">$y</span><span class="o">=</span><span class="nv">$year</span><span class="p">;</span> <span class="nv">$m</span><span class="o">=</span><span class="nv">$mon</span><span class="p">;</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$mon</span> <span class="o">!=</span> <span class="nv">$mon_tmp</span> <span class="o">&amp;&amp;</span> <span class="nv">$mon</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;/ul&gt;&lt;/li&gt;'</span><span class="p">;</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$year</span> <span class="o">!=</span> <span class="nv">$year_tmp</span> <span class="o">&amp;&amp;</span> <span class="nv">$year</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$year</span> <span class="o">!=</span> <span class="nv">$year_tmp</span><span class="p">)</span> <span class="p">{</span>   
+            <span class="nv">$year</span> <span class="o">=</span> <span class="nv">$year_tmp</span><span class="p">;</span>   
+            <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;h3 class="al_year"&gt;'</span><span class="o">.</span> <span class="nv">$year</span> <span class="o">.</span><span class="s1">' 年&lt;/h3&gt;&lt;ul class="al_mon_list"&gt;'</span><span class="p">;</span> <span class="c1">//输出年份   
+</span>        <span class="p">}</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$mon</span> <span class="o">!=</span> <span class="nv">$mon_tmp</span><span class="p">)</span> <span class="p">{</span>   
+            <span class="nv">$mon</span> <span class="o">=</span> <span class="nv">$mon_tmp</span><span class="p">;</span>   
+            <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;li&gt;&lt;span class="al_mon"&gt;'</span><span class="o">.</span> <span class="nv">$mon</span> <span class="o">.</span><span class="s1">' 月&lt;/span&gt;&lt;ul class="al_post_list"&gt;'</span><span class="p">;</span> <span class="c1">//输出月份   
+</span>        <span class="p">}</span>   
+        <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;li&gt;'</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s1">'d日: '</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">)</span><span class="o">.</span><span class="s1">'&lt;a href="'</span><span class="o">.</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">permalink</span> <span class="o">.</span><span class="s1">'"&gt;'</span><span class="o">.</span> <span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">title</span> <span class="o">.</span><span class="s1">'&lt;/a&gt; &lt;em&gt;('</span><span class="o">.</span> <span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">commentsNum</span><span class="o">.</span><span class="s1">')&lt;/em&gt;&lt;/li&gt;'</span><span class="p">;</span> <span class="c1">//输出文章日期和标题   
+</span>    <span class="k">endwhile</span><span class="p">;</span>   
+    <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span><span class="p">;</span>   
+    <span class="k">echo</span> <span class="nv">$output</span><span class="p">;</span>   
+<span class="cp">?&gt;</span> 
+    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- end #main --&gt;</span>
 
-    &lt;?php $this-&gt;need('sidebar.php'); ?&gt;
-    &lt;?php $this-&gt;need('footer.php'); ?&gt;
+    <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">'sidebar.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
+    <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">'footer.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <h2><a name="2"></a>2、获取分类描述</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;?php echo $this-&gt;getDescription(); ?&gt;
-</code></pre></div>
+
+<p><code>&lt;?php echo $this-&gt;getDescription(); ?&gt;</code></p>
+
 <p><em>案例演示：</em></p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;?php $this-&gt;widget('Widget_Metas_Category_List')
--&gt;parse('&lt;li&gt;&lt;a href="{permalink}" title="{description}"&gt;{name}&lt;/a&gt; ({count})&lt;/li&gt;'); ?&gt;
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">'Widget_Metas_Category_List'</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="na">parse</span><span class="p">(</span><span class="s1">'&lt;li&gt;&lt;a href="{permalink}" title="{description}"&gt;{name}&lt;/a&gt; ({count})&lt;/li&gt;'</span><span class="p">);</span> <span class="cp">?&gt;</span>
 </code></pre></div>
 <h2><a name="3"></a>3、前后文章调用代码</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;?php $this-&gt;thePrev(); ?&gt; &lt;?php $this-&gt;theNext(); ?&gt;
-</code></pre></div>
+
+<p><code>&lt;?php $this-&gt;thePrev(); ?&gt; &lt;?php $this-&gt;theNext(); ?&gt;</code></p>
+
 <h2><a name="4"></a>4、随机颜色标签云</h2>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;?php $this-&gt;widget('Widget_Metas_Tag_Cloud', 'ignoreZeroCount=1&amp;limit=30')-&gt;to($tags); ?&gt;
-&lt;ul class="tags-list"&gt;
-&lt;?php while($tags-&gt;next()): ?&gt;
-    &lt;li&gt;&lt;a style="color: rgb(&lt;?php echo(rand(0, 255)); ?&gt;, &lt;?php echo(rand(0,255)); ?&gt;, &lt;?php echo(rand(0, 255)); ?&gt;)" href="&lt;?php $tags-&gt;permalink(); ?&gt;" title='&lt;?php $tags-&gt;name(); ?&gt;'&gt;&lt;?php $tags-&gt;name(); ?&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;?php endwhile; ?&gt;
-&lt;/ul&gt;
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">'Widget_Metas_Tag_Cloud'</span><span class="p">,</span> <span class="s1">'ignoreZeroCount=1&amp;limit=30'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="nv">$tags</span><span class="p">);</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tags-list"</span><span class="nt">&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">while</span><span class="p">(</span><span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">())</span><span class="o">:</span> <span class="cp">?&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">style=</span><span class="s">"color: rgb(</span><span class="cp">&lt;?php</span> <span class="k">echo</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="s">, </span><span class="cp">&lt;?php</span> <span class="k">echo</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="s">, </span><span class="cp">&lt;?php</span> <span class="k">echo</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="s">)"</span> <span class="na">href=</span><span class="s">"</span><span class="cp">&lt;?php</span> <span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">permalink</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="s">"</span> <span class="na">title=</span><span class="s">'</span><span class="cp">&lt;?php</span> <span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="s">'</span><span class="nt">&gt;</span><span class="cp">&lt;?php</span> <span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endwhile</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 <h2><a name="5"></a>5、返回网页顶部</h2>
 
 <p>在footer.php页面增加如下代码（可直接下载我的第二段JS代码，将其中的图片地址改成你自己定义的）：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;!-- Start of Go-Top Code --&gt;
-&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://chenjun.com/usr/uploads/top.js"&gt;&lt;/script&gt;
-&lt;!-- End of Go-Top Code --&gt;
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Start of Go-Top Code --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://chenjun.com/usr/uploads/top.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!-- End of Go-Top Code --&gt;</span>
 </code></pre></div>
 <h2><a name="6"></a>6、段落首行缩进两字符</h2>
 
 <p>编辑Style.css文件，增加如下代码：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">.post-content p{ 
-text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/ 
-} 
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.post-content</span> <span class="nt">p</span><span class="p">{</span> 
+<span class="nl">text-indent</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="c">/*em是相对单位，2em即现在一个字大小的两倍*/</span> 
+<span class="p">}</span> 
 </code></pre></div>
 <p>后续待补充，部分参考：<a rel="nofollow" href="http://docs.typecho.org">Typecho官方文档</a>以及<a rel="nofollow" href="http://typecho.me">Typecho.me</a>，一并致谢！</p>
 
@@ -258,19 +261,17 @@ text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
           </ul>
         </nav>
         <ul>
-          <li class="search"><script>
-  (function() {
-    var cx = '011396242115913189926:7a1cte8z8t8';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only resultsUrl="/search.html"></gcse:searchbox-only></li>
+          <li class="search">    <div id="searchbox" class="searchbox-style searchbox-display header-element-margin"></div> <!-- #searchbox -->
+
+    <!-- #no-js-searchbox appears if either CSS or JavaScript is disabled -->
+    <div id="no-js-searchbox">
+      <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+          <input type="hidden" name="q" value="site:chenjun.com"/>
+          <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+        </fieldset>
+      </form> 
+    </div> <!-- #no-js-searchbox --></li>
         </ul>
 
         <h3>Contact</h3>
