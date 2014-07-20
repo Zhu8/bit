@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/pygment_trac.css">
     <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/fancyBox/jquery.fancybox.css">
 <link rel="stylesheet" href="http://zhu8.qiniudn.com/assets/css/style.css">
-<link href="tipuesearch/tipuesearch.css" rel="stylesheet">
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!--[if lt IE9]>
@@ -176,11 +175,26 @@
           </ul>
         </nav>
         <ul>
-          <li class="search"><div id="search">
-  <form action="search.html" method="get">
-    <input type="text" id="search-query" name="q" placeholder="Search" autocomplete="off">
-  </form>
-</div></li>
+          <li class="search"><form>
+  <input type="text" id="st-search-input" class="st-search-input" />
+</form>
+<script type="text/javascript">
+var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = '55VDr6bxf6Ng69P1-1gM';
+    Swiftype.renderStyle = 'new_page';
+    /** CONFIGURATION VARIABLE: YOU MUST EDIT BEFORE ADDING TO YOUR TEMPLATE. **/
+    Swiftype.resultPageURL = '/search.html';
+    // EXAMPLE:
+    // Swiftype.resultPageURL = '/results.html';
+
+    /** DO NOT EDIT BELOW THIS LINE **/
+    var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+    script.src = "//s.swiftypecdn.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  }());
+</script></li>
         </ul>
 
         <h3>Contact</h3>
