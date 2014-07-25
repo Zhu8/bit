@@ -267,14 +267,14 @@ footer.main {
     width: 270px;
     float: left;
     position: fixed;
-    bottom: 50px;
+    top: 88%;
     text-align: right;
 }
 aside {
     width: 270px;
     float: left;
     position: fixed;
-    bottom: 115px;
+    top: 180px;
     text-align: right;
 }
 aside ul {
