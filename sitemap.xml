@@ -6,6 +6,15 @@
       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <url>
+    <loc>http://chenjun.com/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll.html</loc>
+    
+    <lastmod>2014-07-27T05:23:33+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
     <loc>http://chenjun.com/blog/2014/07/jekyll-github.html</loc>
     
     <lastmod>2014-07-04T15:23:44+00:00</lastmod>

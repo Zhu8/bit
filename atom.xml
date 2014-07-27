@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>陈俊的网：浮生志</title>
- <link href="/" rel="self"/>
- <link href=""/>
- <updated>2014-07-26T08:46:17+00:00</updated>
- <id></id>
+ <link href="http://chenjun.com/" rel="self"/>
+ <link href="http://chenjun.com"/>
+ <updated>2014-07-27T09:15:45+00:00</updated>
+ <id>http://chenjun.com</id>
  <author>
    <name>Chen Jun(Zhu8)</name>
    <email>zhu8.net@gmail.com</email>
@@ -13,10 +13,43 @@
 
  
  <entry>
+   <title>使用BitBucket和FTPloy私有Jekyll源码</title>
+   <link href="http://chenjun.com/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll.html"/>
+   <updated>2014-07-27T05:23:33+00:00</updated>
+   <id>http://chenjun.com/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll</id>
+   <content type="html">&lt;h2&gt;为何用BitBucket&amp;amp;FTPloy？&lt;/h2&gt;
+
+&lt;p&gt;网站使用&lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;Jekyll &amp;amp;bull; Simple, blog-aware, static sites&quot;&gt;Jekyll&lt;/a&gt;建成之后，放置在&lt;a href=&quot;https://pages.github.com&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt;的源码属于公开的访问，处于一些个人安全考虑，最重要的是放置在自己的FTP空间会相对安全一些，所以，我采用了支持私有源码的&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;作为Git仓库，并使用&lt;a href=&quot;https://ftploy.com&quot; title=&quot;FTP Deploy&quot;&gt;FTPloy&lt;/a&gt;作为Deploy方案，实现了自动发布到个人FTP的目的。
+&lt;img src=&quot;http://static.chenjun.com/images/FTPloy.png&quot; alt=&quot;FTPloy&quot; title=&quot;FTPloy&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;注册并使用BitBucket&lt;/h2&gt;
+
+&lt;p&gt;Github私有源码的话，是需要美刀的，作为小站长，一个虚拟空间的钱还是要省的，所以，去注册&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;吧：）注册完成之后，创建一个仓库，如 &lt;strong&gt;&lt;em&gt;下图&lt;/em&gt;&lt;/strong&gt; 所示，注意可选 &lt;strong&gt;私人仓库&lt;/strong&gt; 选项。当然，也可以按右上角的&lt;strong&gt;import&lt;/strong&gt;导入你的Github仓库。
+&lt;a href=&quot;http://static.chenjun.com/images/Bitbucket.png&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/Bitbucket.png&quot; alt=&quot;BitBucket新建仓库&quot; title=&quot;BitBucket&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;注册并使用FTPloy&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ftploy.com&quot; title=&quot;FTP Deploy&quot;&gt;FTPloy&lt;/a&gt;是一个自动监控Git库分支变更并发布到FTP的网站，支持Bitbucket和Github，当然为了简便起见，你也可以直接监控你的Github仓库，能使用的，应该都不用教啦！FTPloy&lt;em&gt;免费版&lt;/em&gt;仅支持&lt;strong&gt;一&lt;/strong&gt;个Project，但是对于小站长来说，监控一个就足够啦！所以，如&lt;strong&gt;&lt;em&gt;下面&lt;/em&gt;&lt;/strong&gt;两幅图，先新建Server，后新建Project。
+&lt;a href=&quot;http://static.chenjun.com/images/Server-FTPloy.png&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/Server-FTPloy.png&quot; alt=&quot;FTPloy新建Server&quot; title=&quot;FTPloy新建Server&quot;&gt;&lt;/a&gt;
+&lt;a href=&quot;http://static.chenjun.com/images/Project-FTPloy.png&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/Project-FTPloy.png&quot; alt=&quot;FTPloy新建Project&quot; title=&quot;FTPloy新建Project&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;本地生成Jekyll页面并Push&lt;/h2&gt;
+
+&lt;p&gt;本地安装网上教程太多，不多说啦，直接&lt;strong&gt;CMD&lt;/strong&gt;：&lt;strong&gt;&lt;em&gt;jekyll build&lt;/em&gt;&lt;/strong&gt;
+&lt;a href=&quot;http://static.chenjun.com/images/Jekyll-CMD.png&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/Jekyll-CMD.png&quot; alt=&quot;Jekyll Build in one CMD line&quot; title=&quot;Jekyll Build in one CMD line&quot;&gt;&lt;/a&gt;
+然后就是如何Push，我使用的是&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;，所以，Windows用户请直接下载&lt;a href=&quot;http://www.sourcetreeapp.com/?utm_source=bitbucket&amp;amp;utm_medium=link&amp;amp;utm_campaign=chenjun.com&quot; title=&quot;Mac/Windows上的免费Git/Mercurial客户端.&quot;&gt;SourceTree&lt;/a&gt;，自行探索吧，这就不教程了。&lt;/p&gt;
+
+&lt;h2&gt;结语&lt;/h2&gt;
+
+&lt;p&gt;经过以上部署之后，你的Jekyll网站在本地编辑并Build之后，使用SourceTree提交并推送之后，FTPloy就会自动将你的新网站PUSH到你的FTP，完美，安心！祝你使用愉快！&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>重生@Jekyll+GitHub Pages</title>
-   <link href="/blog/2014/07/jekyll-github.html"/>
+   <link href="http://chenjun.com/blog/2014/07/jekyll-github.html"/>
    <updated>2014-07-04T15:23:44+00:00</updated>
-   <id>/blog/2014/07/jekyll-github</id>
+   <id>http://chenjun.com/blog/2014/07/jekyll-github</id>
    <content type="html">&lt;p&gt;本博开篇，Zhu8.Net Reborn!&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Enjoy it!&lt;/strong&gt;&lt;/p&gt;
@@ -62,9 +95,9 @@
  
  <entry>
    <title>Typecho个性化常用代码</title>
-   <link href="/blog/2014/06/typecho-personalize.html"/>
+   <link href="http://chenjun.com/blog/2014/06/typecho-personalize.html"/>
    <updated>2014-06-30T12:51:49+00:00</updated>
-   <id>/blog/2014/06/typecho-personalize</id>
+   <id>http://chenjun.com/blog/2014/06/typecho-personalize</id>
    <content type="html">&lt;p&gt;发觉自己真的老了，好多东西折腾不动了……一个网站模版和个性化，竟然每天就只能折腾一点点。遥想公瑾当年，一晚上不睡觉，整个网站页面就优化完毕了。&lt;/p&gt;
 
 &lt;p&gt;网站以前&lt;/a&gt;用&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.movabletype.com&quot;&gt;MT&lt;/a&gt;，最喜欢的当然是静态化，虽然用的是3.X，但是能达到我的要求，就一直没有换。但是后来不知道为什么，反垃圾评论功能失效了……作为一个强迫症兼偏执狂，当然受不了这个，但是自己又没劲再去折腾了。于是，换到了&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.typecho.org&quot;&gt;Typecho&lt;/a&gt;，因为实在是不想用大众脸的&lt;a rel=&quot;nofollow&quot; href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt;！&lt;/p&gt;
@@ -168,9 +201,9 @@
  
  <entry>
    <title>今天开始</title>
-   <link href="/blog/2014/06/start.html"/>
+   <link href="http://chenjun.com/blog/2014/06/start.html"/>
    <updated>2014-06-04T14:27:20+00:00</updated>
-   <id>/blog/2014/06/start</id>
+   <id>http://chenjun.com/blog/2014/06/start</id>
    <content type="html">&lt;p&gt;上一篇 &lt;a rel=&quot;nofollow&quot; href=&quot;http://chenjun.com/&quot;&gt;日志&lt;/a&gt; 还是&lt;strong&gt;三年&lt;/strong&gt;前了。&lt;br&gt;
 选择在&lt;strong&gt;今天&lt;/strong&gt;，开始新的网站更新吧。微博、微信，都是危险的东西。&lt;/p&gt;
 </content>
@@ -178,9 +211,9 @@
  
  <entry>
    <title>转移到Ubuntu同时开启ipv6</title>
-   <link href="/blog/2011/05/change-to-ubuntu-and-ipv6.html"/>
+   <link href="http://chenjun.com/blog/2011/05/change-to-ubuntu-and-ipv6.html"/>
    <updated>2011-05-20T16:46:07+00:00</updated>
-   <id>/blog/2011/05/change-to-ubuntu-and-ipv6</id>
+   <id>http://chenjun.com/blog/2011/05/change-to-ubuntu-and-ipv6</id>
    <content type="html">&lt;p&gt;转眼又大半年过去了，曾经的火炉南京也烧到了35度的高温，风就像蒸汽一样的薰人。不过晚上的凉风仍然让人感觉到夏天还没有正在到来。生活依然平淡的在继续，“要加薪”没有成功，但是也没有胜利者，就如同在法院外放鞭炮的人一样，他们也仅仅是在那一刹那得到了一些病态的慰籍。如同在微博上“狂欢”的人们一样，生活并没有因此也改变，生存环境也不会因此而宽大，铁屋子似乎越来越密封。一如南京中午13：00的空气。&lt;/p&gt;
 
 &lt;p&gt;闲得无事，终于想去折腾Linux，选择自然是我在06还是07年索取过的漂洋过海来到中国的&lt;a href=&quot;http://www.ubuntu.com&quot; rel=&quot;external&quot; title=&quot;Ubuntu&quot;&gt;Ubuntu&lt;/a&gt;。不料冲动坏事，在格式化的时候把我的1TB硬盘全部格掉，更始料未及的是两天前冲动的那个我用Recovery软件恢复的时候，把原来要恢复的扇区给覆盖了，导致近一年的相片无存，如同我的生命少了一年。&lt;/p&gt;
@@ -230,9 +263,9 @@ $ sudo ufw enable&lt;/code&gt;&lt;/p&gt;
  
  <entry>
    <title>最新1991台视版《雪山飞狐》480P下载及絮叨</title>
-   <link href="/blog/2010/11/new-flying-fox-of-snowy-mountain-1991.html"/>
+   <link href="http://chenjun.com/blog/2010/11/new-flying-fox-of-snowy-mountain-1991.html"/>
    <updated>2010-11-30T14:45:08+00:00</updated>
-   <id>/blog/2010/11/new-flying-fox-of-snowy-mountain-1991</id>
+   <id>http://chenjun.com/blog/2010/11/new-flying-fox-of-snowy-mountain-1991</id>
    <content type="html">&lt;p&gt;曾经一段时间，我近乎痴迷的看《&lt;a href=&quot;http://chenjun.com/blog/2004/10/xue-shan-fei-hu-gong-ci-en.html&quot; title=&quot;《雪山飞狐》孟飞`龚慈恩`伍宇娟&quot;&gt;雪山飞狐&lt;/a&gt;》。但是可惜的一直没有清晰的版本可以给我们重温，迄今为止，最&lt;strong&gt;清晰&lt;/strong&gt;的，&lt;strong&gt;分辨率&lt;/strong&gt;最高的，可以&lt;strong&gt;免费&lt;/strong&gt;获得的，&lt;strong&gt;1991台视版《雪山飞狐》&lt;/strong&gt;，出来啦！感谢网络上一位朋友的提醒，他曾经帮我找了以前绿标台视国际台的雪山飞狐，分辨率448*336的，大小在160M左右一集的MKV，清晰度是当时最清晰的，我一直琢磨着分享给大家，但是第一由于要&lt;a href=&quot;http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng.html&quot;&gt;从北京回南京&lt;/a&gt;，一直在折腾。第二一直觉得这种清晰度对大家来说也许没有什么质的提高。&lt;/p&gt;
 
 &lt;p&gt;今天，终于有新的出来了！600M一集，480P（720*480）的TVRip，应该不会辜负大家的期望！我还正在下载中，但是还是迫不及待的来更新下我的濒死的小小Weblog，希望能够帮到要找的兄弟姐妹！&lt;/p&gt;
@@ -288,9 +321,9 @@ sha1：A739DAA8A11498BA166CBD1C278D187E888A0D21&lt;br&gt;
  
  <entry>
    <title>[流水]N97在太原火车站被狗日的维族佬偷了</title>
-   <link href="/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html"/>
+   <link href="http://chenjun.com/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html"/>
    <updated>2010-08-12T08:53:24+00:00</updated>
-   <id>/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station</id>
+   <id>http://chenjun.com/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station</id>
    <content type="html">&lt;p&gt;很久没有写&lt;strong&gt;日志&lt;/strong&gt;了，因为一直没有啥动力，本来世界杯完了准备再写一篇&lt;a href=&quot;http://chenjun.com/blog/2006/06/worldcup-2006.html&quot; title=&quot;世界杯–难得疯狂&quot;&gt;&lt;strong&gt;世界杯感受&lt;/strong&gt;&lt;/a&gt;的，可是我可爱的&lt;strong&gt;&lt;a href=&quot;http://twitter.com/5CJ/status/17593626413&quot;&gt;斯内德&lt;/a&gt;（要翻土啬，你懂的。）&lt;/strong&gt;没有带领荷兰笑到最后，与数个被&lt;strong&gt;无比功利&lt;/strong&gt;的1个净胜球杀回家的球队一样，被西班牙1：0送回了阿姆斯特丹。 &lt;/p&gt;
 
 &lt;p&gt;今天&lt;a href=&quot;http://static.chenjun.com/images/o_N97.jpg&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/s_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97-点击看大图&quot; class=&quot;alignright&quot; /&gt;&lt;/a&gt;写的目的，是说下我在太原火车站，丢了我半年前引以为豪，机缘巧合用1900元人民币买回来的全新的&lt;strong&gt;Nokia&amp;nbsp;N97&lt;/strong&gt;行货（当时N97的行货价是3900大洋），&lt;strong&gt;不是丢！是偷！2010年8月11日&lt;/strong&gt;，我第二次来太原出差，下午&lt;strong&gt;15：40&lt;/strong&gt;分左右，出了出站口，因为一只手拿着行李和笔记本包，另一只手打着伞，所以身上斜跨的小KAPPA包赤果果的暴露在了不法之徒的眼底。 &lt;/p&gt;
@@ -318,9 +351,9 @@ sha1：A739DAA8A11498BA166CBD1C278D187E888A0D21&lt;br&gt;
  
  <entry>
    <title>ChenJun.COM重生及继续折腾</title>
-   <link href="/blog/2010/06/chenjun-com-reborn-and-zheteng.html"/>
+   <link href="http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng.html"/>
    <updated>2010-06-04T13:52:37+00:00</updated>
-   <id>/blog/2010/06/chenjun-com-reborn-and-zheteng</id>
+   <id>http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng</id>
    <content type="html">&lt;p&gt;自从去年&lt;a href=&quot;http://chenjun.com/blog/2009/03/chenjun-dot-com-online.html&quot;&gt;被不幸&lt;del datetime=&quot;2010-06-04T13:52:45+00:00&quot;&gt;与世隔绝&lt;/del&gt;&lt;/a&gt;1年余，&lt;strong&gt;今日&lt;/strong&gt;幸得真主眷顾，冲出牢笼。&lt;/p&gt;
 
 &lt;p&gt;兴奋不已，重燃激情，欣闻&lt;a href=&quot;http://wordpress.org/development/2010/05/wordpress-3-0-release-candidate/&quot;&gt;WordPress快到3.0&lt;/a&gt;，且使用Movable Type已有倦意，而WordPress的用户群广大，插件众多，用户感受颇好。且多年前我就是从&lt;a href=&quot;http://www.rainbowsoft.org&quot;&gt;Z-Blog&lt;/a&gt;之后就是&lt;a href=&quot;http://chenjun.com/blog/2006/07/my-wordpress-plugins.html&quot;&gt;从WordPress开始&lt;/a&gt;的，遂重新启用域名的同时，也改头换面，用回WP，继续折腾！&lt;/p&gt;
@@ -337,9 +370,9 @@ sha1：A739DAA8A11498BA166CBD1C278D187E888A0D21&lt;br&gt;
  
  <entry>
    <title>招行信用卡绑定Google Checkout</title>
-   <link href="/blog/2010/01/use-cmb-card-as-google-checkout.html"/>
+   <link href="http://chenjun.com/blog/2010/01/use-cmb-card-as-google-checkout.html"/>
    <updated>2010-01-21T06:02:35+00:00</updated>
-   <id>/blog/2010/01/use-cmb-card-as-google-checkout</id>
+   <id>http://chenjun.com/blog/2010/01/use-cmb-card-as-google-checkout</id>
    <content type="html">&lt;p&gt;使用招行信用卡购买了Google的&lt;strong&gt;$5&lt;/strong&gt;/年的&lt;strong&gt;20GB&lt;/strong&gt;存储空间！没有办法，&lt;a href=&quot;https://checkout.google.com/&quot; style=&quot;text-decoration: none; color: rgb(128, 255, 0); &quot;&gt;Google Checkout&lt;/a&gt;不支持&lt;strong&gt;中国（P.R.C）&lt;/strong&gt;，所以只能&lt;strong&gt;&amp;#8220;被&amp;#8221;&lt;/strong&gt;成为香港（&lt;strong&gt;Hong.Kong&lt;/strong&gt;）公民了，因为只能购买一年的，Google提示是：&lt;strong&gt;您目前的方案將在 2011/1/20自動續約&lt;/strong&gt;。目前已经增容成功，关键一点就是害怕，会不会因为卡片的注册地不在香港被停止这张信用卡在Google Checkout的使用，明年会自动续费么？这些都得等明年才知道了。&lt;/p&gt;
 
 &lt;p&gt;信用卡使用的是&lt;strong&gt;双币&lt;/strong&gt;信用卡，&lt;strong&gt;Visa&lt;/strong&gt;的，开通了&lt;strong&gt;Visa验证&lt;/strong&gt;，购买后，招行短信提示有两条：&lt;/p&gt;
@@ -377,9 +410,9 @@ Authorizations can remain in your account anywhere from 24 hours up to 14 busine
  
  <entry>
    <title>Google Go Le?</title>
-   <link href="/blog/2010/01/google-go-le.html"/>
+   <link href="http://chenjun.com/blog/2010/01/google-go-le.html"/>
    <updated>2010-01-15T15:25:14+00:00</updated>
-   <id>/blog/2010/01/google-go-le</id>
+   <id>http://chenjun.com/blog/2010/01/google-go-le</id>
    <content type="html">&lt;p&gt;Google&amp;nbsp;&lt;a title=&quot;Official Google Blog: A new approach to China&quot; href=&quot;http://googleblog.blogspot.com/2010/01/new-approach-to-china.html&quot; style=&quot;text-decoration: none; color: rgb(102, 181, 255); &quot;&gt;要走了&lt;/a&gt;？大家都在这么说，各处新闻长篇累牍，也不需要我等草民复述。我与&lt;a title=&quot;三言二拍：Google退出中国 - 对牛乱弹琴 | Playin&#39; with IT - DonewsBlog&quot; href=&quot;http://blog.donews.com/keso/archive/2010/01/13/1580275.aspx&quot; style=&quot;text-decoration: none; color: rgb(102, 181, 255); &quot;&gt;Keso&lt;/a&gt;（妄自尊大了）的想法如出一辙，我的这么多服务怎么办？我的&lt;strike&gt;Gmail、Google Reader、Analytics、AdSense、Blogger、Talk、Chrome、PinYin、PicasaWeb&lt;/strike&gt;以及还没有盼到的&lt;strike&gt;Nexus One&lt;/strike&gt;，它们怎么办？&lt;/p&gt;
 
 &lt;p&gt;也许有一天，我的所有这些都无法访问，我得把我的身体练得愈发强壮，好爬过那耸入云霄的文明用语；也许有一天，我会发现我惟一的祈祷就是能亲手砸烂那伟岸无比的文明用语；也许有一天，我得不停的说着：“文明用语你文明用语的文明用语。”才能倾泄我对文明用语的文明用语。&lt;/p&gt;
@@ -406,9 +439,9 @@ Authorizations can remain in your account anywhere from 24 hours up to 14 busine
  
  <entry>
    <title>2010新开始</title>
-   <link href="/blog/2010/01/new-start-form-2010.html"/>
+   <link href="http://chenjun.com/blog/2010/01/new-start-form-2010.html"/>
    <updated>2010-01-11T04:01:41+00:00</updated>
-   <id>/blog/2010/01/new-start-form-2010</id>
+   <id>http://chenjun.com/blog/2010/01/new-start-form-2010</id>
    <content type="html">&lt;p&gt;2010年终于到来了，北京的两场大雪也下的扎扎实实，我的未来却还没有扎实，中国的未来吾等草民还是继续为我们的那座小屋努力吧！&lt;/p&gt;
 
 &lt;p&gt;也许是厌倦了不停的升级，虽然SixApart终于在两次跳票后发布了&lt;strong&gt;Movable Type 5&lt;/strong&gt;，Wordpress的更新速度更甚，反而是默默的Blogger，被关注的次数也越来越少，所以，我还是继续小众好了。害怕&lt;strike&gt;看不到&lt;/strike&gt;这里的更新？&lt;strong&gt;Who Cares!&lt;/strong&gt;&lt;/p&gt;
@@ -421,9 +454,9 @@ Authorizations can remain in your account anywhere from 24 hours up to 14 busine
  
  <entry>
    <title>战争的艺术（War Craft）</title>
-   <link href="/blog/2009/11/warcraft.html"/>
+   <link href="http://chenjun.com/blog/2009/11/warcraft.html"/>
    <updated>2009-11-03T04:04:44+00:00</updated>
-   <id>/blog/2009/11/warcraft</id>
+   <id>http://chenjun.com/blog/2009/11/warcraft</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;战争&lt;/strong&gt;还是爆发了。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.cnbeta.com/articles/96873.htm&quot;&gt;&lt;strong&gt;版署终止《魔兽世界》审批 要求网易停止违规&lt;/strong&gt;&lt;/a&gt;（2009-11-02 19:16）&lt;/p&gt;
@@ -474,9 +507,9 @@ Authorizations can remain in your account anywhere from 24 hours up to 14 busine
  
  <entry>
    <title>Rokr E2从Outlook Express中导入联系人</title>
-   <link href="/blog/2009/07/rokr-e2-import-contacts-from-outlook-express.html"/>
+   <link href="http://chenjun.com/blog/2009/07/rokr-e2-import-contacts-from-outlook-express.html"/>
    <updated>2009-07-27T07:04:22+00:00</updated>
-   <id>/blog/2009/07/rokr-e2-import-contacts-from-outlook-express</id>
+   <id>http://chenjun.com/blog/2009/07/rokr-e2-import-contacts-from-outlook-express</id>
    <content type="html">&lt;p&gt;最近购入了Moto的Rokr E2，一部已经停产快两年，但我一直想拥有但苦于一直行货缺货的机器。前段时间卓越竟然有货了，毫不犹豫的购入了一台，刷机，很好很强大，用着也挺顺心的。&lt;/p&gt;
 
 &lt;p&gt;就是一直为如何将原来Palm 680的通讯录导过来以及更新烦恼。寻找了如下方法：&lt;/p&gt;
@@ -525,9 +558,9 @@ Authorizations can remain in your account anywhere from 24 hours up to 14 busine
  
  <entry>
    <title>Movable Type中文化书签插件-Bookmarks Chinese</title>
-   <link href="/blog/2009/06/bookmarks-chinese.html"/>
+   <link href="http://chenjun.com/blog/2009/06/bookmarks-chinese.html"/>
    <updated>2009-06-16T12:58:44+00:00</updated>
-   <id>/blog/2009/06/bookmarks-chinese</id>
+   <id>http://chenjun.com/blog/2009/06/bookmarks-chinese</id>
    <content type="html">&lt;p&gt;&lt;font style=&quot;font-size: 1.25em;&quot;&gt;&lt;b&gt;描述：&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;BookmarksChinese&lt;/em&gt;&lt;/strong&gt;是我在使用了一些如&lt;a class=&quot;&quot; title=&quot;AddThis&quot; href=&quot;http://www.addthis.com/&quot;&gt;addthis.com&lt;/a&gt;的按钮之后，发现对中文支持很差，所以弄的一个中文化的书签插件如果你还需要其他的按钮，请自行参考开发即可。&lt;br&gt;
@@ -623,9 +656,9 @@ Authorizations can remain in your account anywhere from 24 hours up to 14 busine
  
  <entry>
    <title>【Braid/时空幻境】图文介绍+视频攻略</title>
-   <link href="/blog/2009/05/braid.html"/>
+   <link href="http://chenjun.com/blog/2009/05/braid.html"/>
    <updated>2009-05-08T16:44:10+00:00</updated>
-   <id>/blog/2009/05/braid</id>
+   <id>http://chenjun.com/blog/2009/05/braid</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;img style=&quot;FLOAT: left&quot; src=&quot;http://static.chenjun.com/images/killsign.png&quot; /&gt;当我看到&lt;a title=&quot;Woooh:Braid&quot; href=&quot;http://woooh.com/2009/05/braid.html&quot;&gt;Aether&lt;/a&gt;在FriendFeed上推荐了这个游戏的时候，回家我用最快的速度下载了下来。很小（100多Mb，仅相当于动辄N个G的一些&amp;#8221;&lt;strike&gt;大作&lt;/strike&gt;&amp;#8220;的数十分之一），但是画面细腻有加，音乐有些像我们当年玩&lt;strong&gt;《英雄无敌3之死亡阴影》&lt;/strong&gt;时候的背景音乐，唯美动听。&lt;strong&gt;&lt;em&gt;Updated on 2009/05/09 21：15&amp;#8212;-&lt;/em&gt;&lt;/strong&gt;变态的玩了一晚上，真的对自己的游戏体验有了一种全新的感受，从95年开始，玩游戏到现在，没有想到还可以有这样的叙事和创造性的玩法。所有的时光倒流，所有的World开篇的那片云山，那些翻开的书页上所有的哀伤并优美的文字，绘画板式的画面，都是一种强烈而变态的刺激。有些画面不得不借助攻略才能过关，才逐渐适应这个BT的时光倒流的世界，这个小游戏至少告诉了我：&lt;strong&gt;有些东西是可以挽回的，而有些东西，一旦溜走或失去了，你就再也回不去了。&lt;/strong&gt;&lt;/p&gt;
 
@@ -680,9 +713,9 @@ Journey into worlds where time behaves strangely; observe, learn from, and then 
  
  <entry>
    <title>Sub字幕转换Srt字幕&#8211;赠：大话西游字幕及Srt编辑器</title>
-   <link href="/blog/2009/04/sub-to-srt-and-srt-editor.html"/>
+   <link href="http://chenjun.com/blog/2009/04/sub-to-srt-and-srt-editor.html"/>
    <updated>2009-04-22T17:34:27+00:00</updated>
-   <id>/blog/2009/04/sub-to-srt-and-srt-editor</id>
+   <id>http://chenjun.com/blog/2009/04/sub-to-srt-and-srt-editor</id>
    <content type="html">&lt;p&gt;还是没事做，又欣赏了一遍鬼斧神道的大话西游，心中默念着台词，然后在周星星的某个表情还没有开始的时候偷偷笑，肆意模仿着星爷的夸张语气和表演，忍不住回想起当年，才发觉初次在家中用那台2800大洋的Panasonic录像机看它的时候，已经是10年甚至更早了（大约是在96-98之间）。那时的我刚刚初三或者高一，仍然懵懂，记得当时的录像带上有周星星的孙悟空扮相，当时的录像带上名字分明是：《齐天大圣东游记》。&lt;/p&gt;
 
 &lt;p&gt;饶有兴致的翻出我的刻录碟：Verycd上下的：&lt;a href=&quot;http://www.verycd.com/topics/8613/&quot;&gt;《大话西游之月光宝盒》(A Chinese Odyssey Part One: Pandora&amp;#8217;s Box)&lt;/a&gt;&amp;amp;&lt;a href=&quot;http://www.verycd.com/topics/17571/&quot;&gt;《大话西游之仙履奇缘》(A Chinese Odyssey Part Two: Cinderella)&lt;/a&gt;，发现我这里的字幕文件有一个是Srt，还有一个是Idx+Sub的，而我比较不喜欢Sub，于是到处倒腾了一下，找到了一些转换的软件和编辑软件，所以随便鼓捣了一番，并且放出了下面的下载。&lt;/p&gt;
@@ -707,9 +740,9 @@ Journey into worlds where time behaves strangely; observe, learn from, and then 
  
  <entry>
    <title>ChenJun dot COM上线!</title>
-   <link href="/blog/2009/03/chenjun-dot-com-online.html"/>
+   <link href="http://chenjun.com/blog/2009/03/chenjun-dot-com-online.html"/>
    <updated>2009-03-12T15:10:33+00:00</updated>
-   <id>/blog/2009/03/chenjun-dot-com-online</id>
+   <id>http://chenjun.com/blog/2009/03/chenjun-dot-com-online</id>
    <content type="html">&lt;p&gt;在Godaddy BackOrder了我的名字：&lt;em&gt;陈俊：&lt;/em&gt;&lt;strong&gt;ChenJun dot COM&lt;/strong&gt; 作为&lt;strong&gt;&lt;em&gt;个人&lt;/em&gt;&lt;/strong&gt;域名。&lt;strong&gt;&lt;em&gt;2009-2-17&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;It&amp;#8217;s Blocked and Not Forgive By The Big Brother Yet. &lt;em&gt;2009.3～2009.6&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -721,9 +754,9 @@ Journey into worlds where time behaves strangely; observe, learn from, and then 
  
  <entry>
    <title>关闭WordPress的Revision功能</title>
-   <link href="/blog/2009/03/disable-wordpress-revision.html"/>
+   <link href="http://chenjun.com/blog/2009/03/disable-wordpress-revision.html"/>
    <updated>2009-03-03T15:25:55+00:00</updated>
-   <id>/blog/2009/03/disable-wordpress-revision</id>
+   <id>http://chenjun.com/blog/2009/03/disable-wordpress-revision</id>
    <content type="html">&lt;p&gt;还是使用 &lt;a href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt; 吧！。因为它的2.7实在是太诱人了。我从WP1.3开始用到现在，实在是太习惯和依赖了。虽然他有讨厌的Revision……&lt;/p&gt;
 
 &lt;p&gt;如何关闭Revision？我试用了几种方法：&lt;/p&gt;
@@ -751,9 +784,9 @@ define(&amp;amp;#8216;AUTOSAVE_INTERVAL&amp;amp;#8217;, 72000 );
  
  <entry>
    <title>等待编辑中</title>
-   <link href="/blog/2009/03/waitting-for-edit.html"/>
+   <link href="http://chenjun.com/blog/2009/03/waitting-for-edit.html"/>
    <updated>2009-03-01T23:32:20+00:00</updated>
-   <id>/blog/2009/03/waitting-for-edit</id>
+   <id>http://chenjun.com/blog/2009/03/waitting-for-edit</id>
    <content type="html">&lt;p&gt;还是使用 &lt;a href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt; 吧！。因为它的2.7实在是太诱人了。我从WP1.3开始用到现在，实在是太习惯和依赖了。虽然他有讨厌的Revision……——&lt;strong&gt;如何关闭？&lt;/strong&gt;看这里：&lt;a href=&quot;http://chenjun.com/blog/2009/03/disable-wordpress-revision.html&quot; rel=&quot;bookmark&quot;&gt;关闭Wordpress的Revision功能&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;其他事项将补充在这篇&lt;strong&gt;/?p=1&lt;/strong&gt;的置顶文章中……&lt;/p&gt;
@@ -762,9 +795,9 @@ define(&amp;amp;#8216;AUTOSAVE_INTERVAL&amp;amp;#8217;, 72000 );
  
  <entry>
    <title>技嘉主板安装IDE光驱和硬盘跳线问题(赠：Beyond-情人)</title>
-   <link href="/blog/2009/02/ide-cdrom-on-gigabyte-error.html"/>
+   <link href="http://chenjun.com/blog/2009/02/ide-cdrom-on-gigabyte-error.html"/>
    <updated>2009-02-13T17:31:38+00:00</updated>
-   <id>/blog/2009/02/ide-cdrom-on-gigabyte-error</id>
+   <id>http://chenjun.com/blog/2009/02/ide-cdrom-on-gigabyte-error</id>
    <content type="html">&lt;p&gt;原来的板子坏了，新买了一块技嘉的板子（GA-M61PME-S2），因为我原来的硬盘和DVD-ROM都是IDE接口的，但是接上去之后系统要么启动很慢，要么在见到欢迎页面前就死掉。【启动&amp;#8221;Detecting IDE Drives&amp;#8230;&amp;#8221;处非常慢，然后就是到&amp;#8221;Verifying DMI Pool Data&amp;#8230;&amp;#8221;，一样巨慢，然后无法从硬盘启动&amp;#8230;&amp;#8230;】而我原来的大板子悍马HA01-GT没有这个问题，只是被我刷BIOS刷爆了。不高兴去修了。反正技嘉那块板子才300多点，就买回来。前两天装系统，今天启动就老是不行。开始还怀疑是电源不够，我的是航嘉冷静王2.0钻石版300W的。后来检查跳线，因为我的跳线没有动过，Benq光驱还是在Slave上，而我的日立硬盘还是在Master上面；BIOS中的M/S设置也是对的。&lt;/p&gt;
 
 &lt;p&gt;去网上查了一下，有位哥们跟我情况比较相似：&lt;/p&gt;
@@ -829,9 +862,9 @@ Woo&amp;amp;#8230; 你可知谁甘心归去
  
  <entry>
    <title>Blogger绑定自定义域名404错误</title>
-   <link href="/blog/2009/01/blogger-custom-domain-404-error.html"/>
+   <link href="http://chenjun.com/blog/2009/01/blogger-custom-domain-404-error.html"/>
    <updated>2009-01-19T04:46:24+00:00</updated>
-   <id>/blog/2009/01/blogger-custom-domain-404-error</id>
+   <id>http://chenjun.com/blog/2009/01/blogger-custom-domain-404-error</id>
    <content type="html">&lt;p style=&#39;text-indent: 2em;&#39;&gt;
   &lt;strong&gt;问题&lt;/strong&gt;：今天下午的时候blogger绑定的域名http://www.zhu8.net提示： &lt;strong&gt;&lt;span style=&#39;color: rgb(255, 102, 102);&#39;&gt;&amp;#8220;The page cannot befound&amp;#8221;. (Error 404)&lt;/span&gt;&lt;/strong&gt; 。不知道出现404错误是什么原因，大概搜了一下，发现原来是因为DNS缓存的问题，可能在Godaddy上的设置过2-3天才会生效。
 &lt;/p&gt;
@@ -846,9 +879,9 @@ Woo&amp;amp;#8230; 你可知谁甘心归去
  
  <entry>
    <title>看图说话：绑定Godaddy域名到Blogger</title>
-   <link href="/blog/2009/01/google-blogger-custom-domain-godaddy.html"/>
+   <link href="http://chenjun.com/blog/2009/01/google-blogger-custom-domain-godaddy.html"/>
    <updated>2009-01-16T09:05:32+00:00</updated>
-   <id>/blog/2009/01/google-blogger-custom-domain-godaddy</id>
+   <id>http://chenjun.com/blog/2009/01/google-blogger-custom-domain-godaddy</id>
    <content type="html">&lt;p style=&#39;text-indent: 2em;&#39;&gt;
   为了用上已强大的Blogger，同时不闲置自己的域名，觉得绑定到Blogger上来，但是&lt;b&gt;万恶的土啬作祟&lt;/b&gt;，拼命封我们的ghs.google.com，没有办法，只好曲线救国。 废话少说，以我的域名Zhu8.Net为例，域名位于同样被频繁&lt;b&gt;土啬&lt;/b&gt;的Godaddy。相信很多域名位于天朝管理之外的朋友都有这样的问题，经过万能的Google和自己的摸索，总结如下：
 &lt;/p&gt;
@@ -899,9 +932,9 @@ RewriteRule (.*) http://chenjun.com/$1 [R=301,L]&lt;/p&gt;
  
  <entry>
    <title>Doodle 4 Google作品 &#8211; Through Google</title>
-   <link href="/blog/2009/01/doodle-4-google-through-google.html"/>
+   <link href="http://chenjun.com/blog/2009/01/doodle-4-google-through-google.html"/>
    <updated>2009-01-15T18:21:51+00:00</updated>
-   <id>/blog/2009/01/doodle-4-google-through-google</id>
+   <id>http://chenjun.com/blog/2009/01/doodle-4-google-through-google</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;当时，我曾在Google Reader里面分享了别人分享的这一篇Blog，也去投了一票的。可惜，不知道为什么，什么奖都没得？？？土啬伟大得超出我们的想象&amp;#8230;&amp;#8230;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/Google-wall.jpg&quot; alt=&quot;&quot;&gt; 
@@ -918,9 +951,9 @@ RewriteRule (.*) http://chenjun.com/$1 [R=301,L]&lt;/p&gt;
  
  <entry>
    <title>NOD32浩方等对战平台NO PING及解决</title>
-   <link href="/blog/2009/01/nod32-no-ping.html"/>
+   <link href="http://chenjun.com/blog/2009/01/nod32-no-ping.html"/>
    <updated>2009-01-14T18:53:00+00:00</updated>
-   <id>/blog/2009/01/nod32-no-ping</id>
+   <id>http://chenjun.com/blog/2009/01/nod32-no-ping</id>
    <content type="html">&lt;h2&gt;安装了ESET NOD32安全套装，登陆浩方对战平台后显示NO PING，在游戏房间看不到人?&lt;/h2&gt;
 
 &lt;p&gt;&lt;span style=&#39;font-size: 100%;&#39;&gt;&lt;strong&gt;关键词&lt;/strong&gt;：ESET NOD32,No Ping,浩方,对战平台&lt;/span&gt;&lt;br&gt;
@@ -959,9 +992,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>2008终结</title>
-   <link href="/blog/2008/12/end-of-2008.html"/>
+   <link href="http://chenjun.com/blog/2008/12/end-of-2008.html"/>
    <updated>2008-12-30T16:20:00+00:00</updated>
-   <id>/blog/2008/12/end-of-2008</id>
+   <id>http://chenjun.com/blog/2008/12/end-of-2008</id>
    <content type="html">&lt;p&gt;到底是要结束了——我的2008，我们的2008。等我回来再补充吧，今晚我将由北Jing到南Jing。&lt;/p&gt;
 
 &lt;hr&gt;
@@ -983,9 +1016,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>ScribeFire添加Blogger出错及解决</title>
-   <link href="/blog/2008/12/error-scribefire-to-blogger.html"/>
+   <link href="http://chenjun.com/blog/2008/12/error-scribefire-to-blogger.html"/>
    <updated>2008-12-26T07:33:00+00:00</updated>
-   <id>/blog/2008/12/error-scribefire-to-blogger</id>
+   <id>http://chenjun.com/blog/2008/12/error-scribefire-to-blogger</id>
    <content type="html">&lt;p style=&#39;text-indent: 2em;&#39;&gt;
   ScribeFire添加Blogger出错，按照常规的步骤来，提示消息只是说出错，没有任何内容。
 &lt;/p&gt;
@@ -1036,9 +1069,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>感谢有你</title>
-   <link href="/blog/2008/11/thanksgiving.html"/>
+   <link href="http://chenjun.com/blog/2008/11/thanksgiving.html"/>
    <updated>2008-11-27T10:22:04+00:00</updated>
-   <id>/blog/2008/11/thanksgiving</id>
+   <id>http://chenjun.com/blog/2008/11/thanksgiving</id>
    <content type="html">&lt;p&gt;感谢爸妈，给了我生命与成长中他们所能给的一切；&lt;/p&gt;
 
 &lt;p&gt;感谢朋友，平时的关怀、照顾、提携抑或激励；&lt;/p&gt;
@@ -1055,18 +1088,18 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>Movable Type 4网站重构记录</title>
-   <link href="/blog/2008/10/reborn-with-movable-type-4.html"/>
+   <link href="http://chenjun.com/blog/2008/10/reborn-with-movable-type-4.html"/>
    <updated>2008-10-30T08:22:40+00:00</updated>
-   <id>/blog/2008/10/reborn-with-movable-type-4</id>
+   <id>http://chenjun.com/blog/2008/10/reborn-with-movable-type-4</id>
    <content type="html">&lt;p&gt;即将使用MT进行网站的重构，全线启用&lt;a href=&quot;http://www.movabletype.com/&quot;&gt;Movable Type&lt;/a&gt; （MT.com貌似被GFW了，虽然不知道为什么连一个专业的Blog平台长城都要去过问&amp;#8230;&amp;#8230;请访问&lt;a href=&quot;http://www.movabletype.org/&quot;&gt;MT.org&lt;/a&gt;获得新消息。）&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>涅磐-WhoPig.COM</title>
-   <link href="/blog/2008/10/nirvana-at-whopig-dot-com.html"/>
+   <link href="http://chenjun.com/blog/2008/10/nirvana-at-whopig-dot-com.html"/>
    <updated>2008-10-30T08:21:40+00:00</updated>
-   <id>/blog/2008/10/nirvana-at-whopig-dot-com</id>
+   <id>http://chenjun.com/blog/2008/10/nirvana-at-whopig-dot-com</id>
    <content type="html">&lt;p&gt;2008年10月28日，小站&lt;strong&gt;浮生小筑&lt;/strong&gt; （WhoPig.COM）在WebHostingBUZZ重生，将用&lt;a href=&quot;http://chenjun.com/blog/2008/10/reborn-with-movable-type-4.html&quot;&gt;MT对整站进行重建&lt;/a&gt;。期待自己能有一个新的开始！以前的&lt;strike&gt;&lt;strong&gt;&lt;em&gt;Zhu8&lt;/em&gt;&lt;/strong&gt;&lt;/strike&gt;以及&lt;strong&gt;&lt;em&gt;&lt;strike&gt;Zhu8.Net&lt;/strike&gt;&lt;/em&gt;&lt;/strong&gt;就是今天和以后的&lt;strong&gt;WhoPig&lt;/strong&gt;。欢迎Gtalk到：&lt;strong&gt;WhoPig@Gmail&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;待补充（Reborning&amp;#8230;&amp;#8230;）&lt;a href=&quot;http://technorati.com/claim/kz3xq7ibs5&quot; rel=&quot;me&quot;&gt;Technorati Profile&lt;/a&gt;&lt;/p&gt;
@@ -1075,9 +1108,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>家驹十五载，永远的Beyond</title>
-   <link href="/blog/2008/06/beyond-wong-ka-kui-15-years.html"/>
+   <link href="http://chenjun.com/blog/2008/06/beyond-wong-ka-kui-15-years.html"/>
    <updated>2008-06-30T10:04:00+00:00</updated>
-   <id>/blog/2008/06/beyond-wong-ka-kui-15-years</id>
+   <id>http://chenjun.com/blog/2008/06/beyond-wong-ka-kui-15-years</id>
    <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/beyond-wong-ka-kui.jpg&quot; style=&quot;DISPLAY: inline; FLOAT: right; WIDTH: 288px; &quot; title=&quot;不死的家驹&quot; alt=&quot;beyond-wong-ka-kui.jpg&quot; /&gt;1996年，我在家乡的秤砣山上读初二，那时我们刚刚开始青春，小乡镇里消息闭塞、娱乐匮乏。我和小钱和建辉一起住在三张铁架子床的宿舍，后面就是食堂，西边是操场以及更西边的坟场。十多岁的我们并不知道外面世界的模样，我们的目标只是考上城里的高中，而已。建辉属于不太爱学习的那种，但是我们仨到现在为止都记得我们是如何一起度过那些岁月的，虽然见面后，感觉是有那么些陌生。毕竟离毕业分开，已整十年。&lt;/p&gt;
 
@@ -1098,9 +1131,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>Great Teacher Onizuka</title>
-   <link href="/blog/2008/06/gto-great-teacher-onizuka.html"/>
+   <link href="http://chenjun.com/blog/2008/06/gto-great-teacher-onizuka.html"/>
    <updated>2008-06-03T08:00:03+00:00</updated>
-   <id>/blog/2008/06/gto-great-teacher-onizuka</id>
+   <id>http://chenjun.com/blog/2008/06/gto-great-teacher-onizuka</id>
    <content type="html">&lt;p&gt;初次使用&lt;a title=&quot;Windows Live Writer&quot; href=&quot;http://writer.live.com&quot; rel=&quot;bookmark&quot;&gt;Live Writer&lt;/a&gt; 写日志，不知道是否能完美支持&lt;a title=&quot;WordPress&quot; href=&quot;http://wordpress.org/&quot; rel=&quot;bookmark&quot;&gt;WordPress&lt;/a&gt;。周末儿童节，终于看完了GTO，看到他牛X的跑到美国载着金发姐姐一脸YD，然后冲入某&lt;em&gt;California High School&lt;/em&gt;，一帮金毛孩成了Great Teacher Onizuka 即简称GTO的22岁单身教师鬼塚 英吉, &lt;em&gt;Onizuka Eikichi&lt;/em&gt;的学生，而天真可爱的冬月 あずさ, &lt;em&gt;Fuyutsuki Azusa&lt;/em&gt;还在武藏野圣林学苑苦等着他。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://static.chenjun.com/images/GTO.jpg&quot;&gt;&lt;img title=&quot;GTO&quot; height=&quot;200&quot; alt=&quot;GTO&quot; src=&quot;http://static.chenjun.com/images/GTO.jpg&quot; width=&quot;260&quot; class=&quot;alignleft&quot; /&gt;&lt;/a&gt;个人比较喜欢动画版（43集），因为电视剧和电影版的无法表现那么夸张，很多东西电视剧表现不了，比如，鬼塚那种猥琐的神情，十个反町隆史都不能刻画一二。而且对原著不忠实，很多地方看得人二楞二楞的……。感谢伟大的&lt;a href=&quot;http://www.emule.org.cn&quot;&gt;骡子&lt;/a&gt;，包罗万象，我可以把GTO的&lt;a href=&quot;http://lib.verycd.com/2007/12/25/0000175166.html&quot;&gt;《麻辣教师》(G.T.O.)[R2Jraw+外挂字幕][43更新][wmv][DVDRip]&lt;/a&gt;、&lt;a href=&quot;http://lib.verycd.com/2005/09/05/0000063934.html&quot;&gt;原声大碟 -《麻辣教师 1》(Great.Teacher.Onizuka OST 1)[MP3!]&lt;/a&gt;、&lt;a href=&quot;http://lib.verycd.com/2005/09/05/0000063936.html&quot;&gt;原声大碟 -《麻辣教师 2》(Great Teacher Onizuka Ost 2)[MP3!]&lt;/a&gt;、&lt;a href=&quot;http://lib.verycd.com/2005/11/08/0000073685.html&quot;&gt;《麻辣教师》(Great.Teacher.Onizuka)DVD转制蓝色字幕版（1-12集全）[RMVB]&lt;/a&gt;全部下齐了，然后慢慢看，刻到我一块三一张的紫光 16X DVD+R 里面去。对了，wmv版的动画片字幕不对，万能的电骡告诉我还有这个字幕&lt;a href=&quot;http://www.verycd.com/files/a680106dea1a3fdaee2bae8bec97cc11479318&quot;&gt;GTO.Lesson.01-43[R3DVDSUB].rar&lt;/a&gt;可以下载。&lt;/p&gt;
@@ -1125,9 +1158,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>【六一快乐】史上最惨的小白兔</title>
-   <link href="/blog/2008/05/most-tragic-rabbit-childrens-day.html"/>
+   <link href="http://chenjun.com/blog/2008/05/most-tragic-rabbit-childrens-day.html"/>
    <updated>2008-05-30T03:03:06+00:00</updated>
-   <id>/blog/2008/05/most-tragic-rabbit-childrens-day</id>
+   <id>http://chenjun.com/blog/2008/05/most-tragic-rabbit-childrens-day</id>
    <content type="html">&lt;p&gt;周末过儿童节，故在此先预祝各位儿童节快乐。好怀念当年拿到镇优秀少先队员上台领奖看到下面黑压压一片的景象啊！（镇上电影院破，灯光昏暗……）囧rz~&lt;/p&gt;
 
 &lt;p&gt;凄惨的小白兔，周末我就不来陪你了……（连环画，为减少载入时间，请入内……）&lt;/p&gt;
@@ -1163,9 +1196,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>南京，你悲伤吗？</title>
-   <link href="/blog/2008/05/are-you-sad-nanjing.html"/>
+   <link href="http://chenjun.com/blog/2008/05/are-you-sad-nanjing.html"/>
    <updated>2008-05-27T11:58:18+00:00</updated>
-   <id>/blog/2008/05/are-you-sad-nanjing</id>
+   <id>http://chenjun.com/blog/2008/05/are-you-sad-nanjing</id>
    <content type="html">&lt;p&gt;&lt;cite&gt;大屠杀时期的救助者拉贝说：“可以宽恕，但不可以忘却。”南京不可能忘却，他被赋予了帮助这个国家记忆或清晰或模糊历史的角色。每年的12月13日，南京人都要被集体唤醒，全国各地的人们在这里表达愤怒和同情。但是除了悲伤南京还需要生活，还要思考城市的未来和命运。 &lt;/cite&gt;&lt;/p&gt;
 
 &lt;p&gt;5月27日的奥运火炬传递在哀悼地震亡灵中开始，这符合南京的气质。全国的文人们经常忧郁地说，南京是座悲伤的城市。&lt;/p&gt;
@@ -1216,9 +1249,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>红色莫斯科</title>
-   <link href="/blog/2008/05/we-are-the-champions.html"/>
+   <link href="http://chenjun.com/blog/2008/05/we-are-the-champions.html"/>
    <updated>2008-05-22T14:08:35+00:00</updated>
-   <id>/blog/2008/05/we-are-the-champions</id>
+   <id>http://chenjun.com/blog/2008/05/we-are-the-champions</id>
    <content type="html">&lt;p&gt;&lt;img style=&quot;float: right;&quot; title=&quot;ManUtd_Win_The_Champions.jpg&quot; src=&quot;http://static.chenjun.com/images/ManUtd_Win_The_Champions.jpg&quot; alt=&quot;ManUtd_Win_The_Champions.jpg&quot; width=&quot;288px&quot; /&gt; 北京时间5月22日凌晨，07-08赛季欧洲足坛最大悬念在莫斯科卢日尼基球场揭晓，曼联与切尔西在120分钟比赛内战成1-1，点球大战中切尔西的特里与阿内尔卡将球罚失，曼联最终总比分7-6惊险捧杯！这也是他们第三次夺得冠军杯！&lt;/p&gt;
 
 &lt;p&gt;红魔与蓝军两队的竞争在本赛季空前激烈，在联赛中红魔在最后一轮方确保问鼎，而在欧冠两队实现会师，首次打入欧冠决赛的蓝军决心在欧冠上复仇，同时也一圆阿布的欧冠梦想，曼联在历史上曾分别在1968年与1999年两夺欧冠冠军，切尔西则决心填补本队荣誉室的一大空白。本场比赛的主办地莫斯科为了照顾西欧观众的收视习惯，将比赛放到了当地时间晚上22：45（北京时间22日凌晨2：45）举行，这也是欧冠决赛史上首次跨日比赛。&lt;/p&gt;
@@ -1253,9 +1286,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>又换回MovableType</title>
-   <link href="/blog/2008/05/back-to-movabletype.html"/>
+   <link href="http://chenjun.com/blog/2008/05/back-to-movabletype.html"/>
    <updated>2008-05-15T14:48:21+00:00</updated>
-   <id>/blog/2008/05/back-to-movabletype</id>
+   <id>http://chenjun.com/blog/2008/05/back-to-movabletype</id>
    <content type="html">&lt;p&gt;其实还是摆脱不了喜欢静态页面&lt;strong&gt;HTML&lt;/strong&gt;的癖好，所以说第一次用什么程序对个人的看法是最大的，我第一次选择了&lt;a href=&quot;http://www.rainbowsoft.org&quot;&gt;Z-Blog&lt;/a&gt;，然后就总是念念不忘。存档还在我的&lt;a href=&quot;http://chenjun.com/old/&quot;&gt;/old/&lt;/a&gt;目录下。&lt;/p&gt;
 
 &lt;p&gt;当时用Z-Blog搭建网站的乐趣，学习ASP的乐趣，修改模板的乐趣，都对我以后产生了很大的影响。其实现在是因为改用了PHP的缘故，所以没有办法再用Z-Blog了，但是很佩服zx.asd当年发布的这个程序，以及当时陪伴Z-Blog一起成长的过程，虽然也许现在没有一个人会记得我、记得我当年发布过2Sky和Firefox的Z-Blog模板、记得我写过的一篇弱智的&lt;a href=&quot;http://bbs.rainbowsoft.org/thread-254-1-2.html&quot;&gt;教程&lt;/a&gt;，呵呵，如今已经好些年过去了，我再次回到了可爱的&lt;strong&gt;HTML&lt;/strong&gt;身边&amp;#8230;&amp;#8230;&lt;/p&gt;
@@ -1264,9 +1297,9 @@ Web浏览器里面的叉叉跟空白究竟有什么不同？&lt;br&gt;
  
  <entry>
    <title>从wordpress到textpattern</title>
-   <link href="/blog/2008/04/from-wordpress-to-textpattern.html"/>
+   <link href="http://chenjun.com/blog/2008/04/from-wordpress-to-textpattern.html"/>
    <updated>2008-04-16T14:29:04+00:00</updated>
-   <id>/blog/2008/04/from-wordpress-to-textpattern</id>
+   <id>http://chenjun.com/blog/2008/04/from-wordpress-to-textpattern</id>
    <content type="html">&lt;p&gt;其实&lt;img class=&quot;right&quot; title=&quot;Textpattern&quot; style=&quot;FLOAT: right&quot; alt=&quot;Textpattern&quot; src=&quot;http://static.chenjun.com/images/txp.gif&quot; width=&quot;250px&quot; /&gt;很久以前就试用了 &lt;a href=&quot;http://textpattern.com/&quot;&gt;&lt;span class=&quot;caps&quot;&gt;TXP&lt;/span&gt;&lt;/a&gt; ，但是一直是一头雾水，今天终于 &lt;sup&gt;其实昨天&lt;/sup&gt; 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 &lt;strong&gt;记录：&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1323,9 +1356,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>小波十一年</title>
-   <link href="/blog/2008/04/wang-xiao-bo-11-years.html"/>
+   <link href="http://chenjun.com/blog/2008/04/wang-xiao-bo-11-years.html"/>
    <updated>2008-04-11T15:16:36+00:00</updated>
-   <id>/blog/2008/04/wang-xiao-bo-11-years</id>
+   <id>http://chenjun.com/blog/2008/04/wang-xiao-bo-11-years</id>
    <content type="html">&lt;p&gt;纪念小波逝世&lt;strong&gt;十一周年 *&lt;em&gt;»&lt;img class=&quot;alignright&quot; style=&quot;FLOAT: right&quot; height=&quot;290&quot; alt=&quot;当年的小波&quot; src=&quot;http://static.chenjun.com/images/xiaobo.jpg&quot; width=&quot;230&quot; /&gt; 特制作 *&lt;/em&gt;*•浮生小筑-王小波作品精选&lt;/strong&gt;*™ &lt;a title=&quot;王小波作品精选&quot; href=&quot;http://chenjun.com/wang2/&quot;&gt;/Wang2/&lt;/a&gt;（正在补充中），先把那边做好再说:roll:。。来源自停摆差不多五年的&lt;span style=&quot;COLOR: #888888&quot;&gt;&lt;strong&gt;&lt;em&gt;opig的《无声听雨》&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; &lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -1366,9 +1399,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>清明朝拜老佛爷</title>
-   <link href="/blog/2008/04/summer-palace.html"/>
+   <link href="http://chenjun.com/blog/2008/04/summer-palace.html"/>
    <updated>2008-04-08T17:18:50+00:00</updated>
-   <id>/blog/2008/04/summer-palace</id>
+   <id>http://chenjun.com/blog/2008/04/summer-palace</id>
    <content type="html">&lt;p&gt;清明→玉渊潭»樱花，人&lt;a title=&quot;10万人挤进玉渊潭赏花&quot; href=&quot;http://www.ynet.com/view.jsp?oid=32488594&quot;&gt;爆满&lt;/a&gt;，≠于是，颐和园»踏春。&lt;/p&gt;
 
 &lt;p&gt;风和、日丽、人山、人海。半数是老外，且半数神情呆滞。&lt;/p&gt;
@@ -1384,9 +1417,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>被遗忘的海子及其他</title>
-   <link href="/blog/2008/03/the-forgotten.html"/>
+   <link href="http://chenjun.com/blog/2008/03/the-forgotten.html"/>
    <updated>2008-03-28T02:00:27+00:00</updated>
-   <id>/blog/2008/03/the-forgotten</id>
+   <id>http://chenjun.com/blog/2008/03/the-forgotten</id>
    <content type="html">&lt;p&gt;数（贰-叁）年前，我忽然伤感莫明，写下了这么一段&lt;a title=&quot;面朝大海，春暖花开&quot; href=&quot;http://chenjun.com/blog/2004/10/poem-of-hai-zi.html&quot;&gt;酸文&lt;/a&gt;，并信誓旦旦的说为什么要&amp;#8221;&lt;strong&gt;从明天起&lt;/strong&gt;&amp;#8220;。&lt;img class=&quot;alignright&quot; style=&quot;float: right;&quot; alt=&quot;面朝大海，春暖花开&quot; src=&quot;http://static.chenjun.com/images/haizi-poem.jpeg&quot; width=&quot;500&quot; height=&quot;212&quot; /&gt;应该回去做点什么事情了，现在已经忘了当时的想法，从时间（2004年 10月 14日 23:26:14）上看，应是我大三的某日准备在网吧通宵之时（还是周四，明显要逃课睡觉了&amp;#8230;&amp;#8230;），写下的关于海子，昨天回家看报纸（&lt;a title=&quot;海子：诗意年代的非正常告别&quot; href=&quot;http://news.rednet.cn/c/2008/03/26/1470005.htm&quot;&gt;新京报&lt;/a&gt;），原来海子已经走了19年了（1989年3月26日在山海关卧轨自杀。）我没怎么读过他的诗，也几乎不了解他的诗除了最最流行的那一首。&lt;/p&gt;
 
 &lt;p&gt;我今天来写下这文字，只是因为我忽然发现现在的社会（不止是互联网）已经出离混乱了。人们的眼睛和心灵都已变得浮躁不已，从&amp;#8221;&lt;a title=&quot;华南虎事件始末追踪--社会--人民网&quot; href=&quot;http://society.people.com.cn/GB/8217/106495/index.html&quot;&gt;华南虎&lt;/a&gt;&amp;#8220;到&amp;#8221;&lt;a title=&quot;警钟长鸣-艳照门&quot; href=&quot;http://www.cnbeta.com/articles/49354.htm&quot;&gt;艳照门&lt;/a&gt;&amp;#8220;，从&amp;#8221;&lt;a title=&quot;女生上-新闻联播-称网页很黄很暴力 遭恶搞(图)&quot; href=&quot;http://www.cnbeta.com/articles/46556.htm&quot;&gt;很黄很暴力&lt;/a&gt;&amp;#8220;到&amp;#8221;好傻好天真&amp;#8221;，大家遗忘了&lt;a title=&quot;学雷锋日&quot; href=&quot;http://www.google.com/search?hl=zh-CN&amp;#038;lr=&amp;#038;newwindow=1&amp;#038;q=%E5%AD%A6%E9%9B%B7%E9%94%8B%E6%97%A5&amp;#038;suggest=2&amp;#038;sa=X&amp;#038;oi=cjkrefinements&amp;#038;ct=result&amp;#038;cd=3&quot;&gt;学雷锋&lt;/a&gt;（3月5日），遗忘了&lt;a title=&quot;植树节_百度百科&quot; href=&quot;http://baike.baidu.com/view/21813.htm&quot;&gt;植树节&lt;/a&gt;（3月12日），股市在广大人民工资增长永远无法赶上CPI的情况下给大家打了一注强心剂，就在中国陷入无人不股，无人不基的时候，这张无形的网以迅雷不及掩耳之势把大伙给套牢。 很悲哀的说，上面的每一点我都有参与，转眼我原来计划要写的&lt;em&gt;&lt;span style=&quot;text-decoration: line-through;&quot;&gt;&lt;a title=&quot;待完成&quot; href=&quot;http://chenjun.com/blog/2006/09/incomplete.html&quot;&gt;《大字报时代》、《洪水猛兽之网游》&lt;/a&gt;&lt;/span&gt;&lt;/em&gt;真就成了incomplete了。又是一年半前的事情了。&lt;/p&gt;
@@ -1409,9 +1442,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>WordPress 2.5</title>
-   <link href="/blog/2008/03/wordpress-25.html"/>
+   <link href="http://chenjun.com/blog/2008/03/wordpress-25.html"/>
    <updated>2008-03-19T00:48:02+00:00</updated>
-   <id>/blog/2008/03/wordpress-25</id>
+   <id>http://chenjun.com/blog/2008/03/wordpress-25</id>
    <content type="html">&lt;p&gt;&lt;img title=&quot;WordPress Logo&quot; style=&quot;float: right;&quot; alt=&quot;WordPress Logo&quot; src=&quot;http://static.chenjun.com/images/wordpress-logo.png&quot; width=&quot;250&quot; /&gt; 
 现在我正在用着 beta1，RC1就来了，真是神速，一会就上！（待修改&amp;#8230;&amp;#8230;）&lt;strong&gt;&lt;em&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;span style=&quot;color: rgb(136, 136, 136);&quot;&gt;修改于2008/3/31&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;&lt;/strong&gt; WordPress持续爆发中&amp;#8230;&amp;#8230;&lt;a title=&quot;域名比较......帅&quot; href=&quot;http://ma.tt/&quot;&gt;Matt&lt;/a&gt; 连续爆发了RC1、RC2后，正式版终于在愚人节前上线了。呼。更新到2.5就先停一下吧。两天更新一次实在是跟不上了。&lt;/p&gt;
 
@@ -1421,9 +1454,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>终于用上Movable Type!</title>
-   <link href="/blog/2008/03/change-to-movable-type.html"/>
+   <link href="http://chenjun.com/blog/2008/03/change-to-movable-type.html"/>
    <updated>2008-03-07T16:14:31+00:00</updated>
-   <id>/blog/2008/03/change-to-movable-type</id>
+   <id>http://chenjun.com/blog/2008/03/change-to-movable-type</id>
    <content type="html">&lt;p&gt;&lt;del datetime=&quot;2008-03-15T07:28:46+00:00&quot;&gt;准备慢慢玩玩MT，敬请期待！&lt;/del&gt;&lt;em&gt;By Zhu8 on Friday, Mar 7, 2008 12:14:53&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Update:2008/03/15&lt;/em&gt; 呵呵，玩了两天，还是不习惯，又换回&lt;strike&gt;WordPress&lt;/strike&gt;了。&lt;/p&gt;
@@ -1436,9 +1469,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>长江七号－我没跟上星爷的转型</title>
-   <link href="/blog/2008/02/cj7.html"/>
+   <link href="http://chenjun.com/blog/2008/02/cj7.html"/>
    <updated>2008-01-31T16:25:06+00:00</updated>
-   <id>/blog/2008/02/cj7</id>
+   <id>http://chenjun.com/blog/2008/02/cj7</id>
    <content type="html">&lt;p&gt;昨晚刚好有几张快到期的团体电影票，在王府井的新东安影城（八卦两句，新东安影城原来的域名&lt;a href=&quot;http://www.xfilmcity.com&quot;&gt;http://www.xfilmcity.com&lt;/a&gt; &lt;img src=&quot;http://chenjun.com/wp/wp-includes/images/smilies/icon_exclaim.gif&quot; alt=&quot;:!:&quot; class=&quot;wp-smiley&quot; /&gt; ｛&lt;strong&gt;请勿点击！&lt;/strong&gt;此域名目前&lt;a title=&quot;网页很黄很暴力&quot; href=&quot;http://www.cnbeta.com/articles/46556.htm&quot;&gt;&lt;strong&gt;很黄很暴力&lt;/strong&gt;&lt;/a&gt;｝，在我的电影票上标注的，我本来想去看下有什么电影上映的，结果该域名被别人抢注了，倒是暗合了这个域名的&lt;strong&gt;X&lt;/strong&gt;字样 &lt;img src=&quot;http://chenjun.com/wp/wp-includes/images/smilies/icon_eek.gif&quot; alt=&quot;:shock:&quot; class=&quot;wp-smiley&quot; /&gt; ，原来电影院被百老汇影城合并了，就用了&lt;a href=&quot;http://www.b-cinema.cn/&quot;&gt;http://www.b-cinema.cn&lt;/a&gt;代替了原域名，不过一个影城竟然不愿意把旧域名多花百来块钱多保留两年，真够绝的。）&amp;#8230;&amp;#8230;打住打住，切回正题，感谢北京无比&lt;strong&gt;流畅&lt;/strong&gt;的交通，前往影院已晚八点，于是赶上了20:20的场子。进去之后一串广告，开始了。&lt;/p&gt;
 
 &lt;p&gt;奔驰、劳斯莱斯&amp;#8212;-贵族学校&amp;#8212;-破球鞋&amp;#8212;-一个脏小孩周小狄（徐娇）&amp;#8212;-金丝眼镜的曹主任（李尚正）&amp;#8212;-旗袍装美女（个人觉得耳朵比较难看）袁老师（张雨绮），剧情就这样开始了。不过详细的也就不说了，无非一个看不起这穷人家的小孩，爱心满满的美女老师毫不在乎。&lt;/p&gt;
@@ -1457,9 +1490,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>爱是&#8230;&#8230;</title>
-   <link href="/blog/2007/05/love-is.html"/>
+   <link href="http://chenjun.com/blog/2007/05/love-is.html"/>
    <updated>2007-05-27T11:13:14+00:00</updated>
-   <id>/blog/2007/05/love-is</id>
+   <id>http://chenjun.com/blog/2007/05/love-is</id>
    <content type="html">&lt;p&gt;爱是什么？&lt;/p&gt;
 
 &lt;p&gt;今夜忽然不想睡，因为她承受了很大的压力，而我却只能嘴上安慰几句，连一个轻轻的、哪怕默默无语的拥抱都给不了。会兀然恨起自己来，为何要让她遭这样的罪。可是有时候，世界就是这么奇妙，明明不可能，却偏偏碰上了，还想努力去让它变成可能。&lt;/p&gt;
@@ -1566,9 +1599,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>指南针乐队－无法逃脱</title>
-   <link href="/blog/2007/05/the-compass-can-not-escape.html"/>
+   <link href="http://chenjun.com/blog/2007/05/the-compass-can-not-escape.html"/>
    <updated>2007-05-13T21:46:17+00:00</updated>
-   <id>/blog/2007/05/the-compass-can-not-escape</id>
+   <id>http://chenjun.com/blog/2007/05/the-compass-can-not-escape</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;无法逃脱&lt;/strong&gt;&lt;br&gt;
 歌手：&lt;em&gt;指南针乐队&lt;/em&gt;&lt;br&gt;
 专辑：&lt;em&gt;无法逃脱&lt;/em&gt;&lt;/p&gt;
@@ -1636,9 +1669,9 @@ Excerpt_html = &#39;&quot;.doSlash($Excerpt).&quot;&#39;,
  
  <entry>
    <title>木棉花－珍惜眼前的幸福</title>
-   <link href="/blog/2007/04/kapok-treasure-what-at-hand.html"/>
+   <link href="http://chenjun.com/blog/2007/04/kapok-treasure-what-at-hand.html"/>
    <updated>2007-04-20T04:22:34+00:00</updated>
-   <id>/blog/2007/04/kapok-treasure-what-at-hand</id>
+   <id>http://chenjun.com/blog/2007/04/kapok-treasure-what-at-hand</id>
    <content type="html">&lt;p&gt;几天前，Jing给我短信说：&amp;#8221;送我一束木棉花&amp;#8221;。我去网上查了，木棉花的花语是：&amp;#8221;珍惜眼前人&amp;#8221;或者&amp;#8221;珍惜眼前的幸福&amp;#8221;。其实很久我都不知道什么才是真正的幸福，我追求的应该是什么，当我看我她在我几乎一年前的&lt;a href=&quot;../../blog/2006/05/good_night_nanjing.html&quot; title=&quot;晚安南京&quot;&gt;日志&lt;/a&gt;里留言的时候，我才发觉其实日子在不经意间过得真的很快，你曾经怀念的或许已经不在在你的脑海中留下哪怕一丝的痕迹，而你没有想到的一些事情却真真切切的发生了。&lt;/p&gt;
 
 &lt;p&gt;当我真的向&lt;strong&gt;小白&lt;/strong&gt;同志说出我的想法的时候，当我通过&lt;a href=&quot;http://www.666my.com/bbs/index.asp?boardid=27&quot; title=&quot;朋友侃吧&quot;&gt;西游论坛&lt;/a&gt;竟然在二月十四号这天真的有一位素不相识的MM帮我送了一支花给她的时候，我还不知道我是否真的走进了一段恋情。但我知道也许我的生命因此事而变得值得怀念，日后想起仍会偷偷微笑，去回味很多人都不会相信的－&lt;em&gt;我竟然在情人节这天让一个素不相识的人帮我送了哪怕只是一支花给一个女孩&lt;/em&gt;－如此不可思议的事情。&lt;/p&gt;
@@ -1740,9 +1773,9 @@ I&amp;#8217;m thinking of you&lt;br&gt;
  
  <entry>
    <title>Oh！必胜，奉顺英</title>
-   <link href="/blog/2007/03/feelyoung.html"/>
+   <link href="http://chenjun.com/blog/2007/03/feelyoung.html"/>
    <updated>2007-03-01T23:06:56+00:00</updated>
-   <id>/blog/2007/03/feelyoung</id>
+   <id>http://chenjun.com/blog/2007/03/feelyoung</id>
    <content type="html">&lt;p&gt;哈哈，老夫愈发无聊了现在！&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Oh! Phil-Seung, Bong, Soon-Young&lt;/strong&gt;&lt;img src=&quot;http://static.chenjun.com/images/feelyoung.jpg&quot; alt=&quot;必胜和顺英&quot; title=&quot;必胜和顺英&quot;&gt;&lt;/p&gt;
@@ -1925,9 +1958,9 @@ Only you , I need for my life&amp;#8230;&amp;#8230;.&lt;br&gt;
  
  <entry>
    <title>乞丐、垃圾以及多数人的暴政</title>
-   <link href="/blog/2007/01/beggar-garbage-and-tyranny.html"/>
+   <link href="http://chenjun.com/blog/2007/01/beggar-garbage-and-tyranny.html"/>
    <updated>2007-01-10T14:57:20+00:00</updated>
-   <id>/blog/2007/01/beggar-garbage-and-tyranny</id>
+   <id>http://chenjun.com/blog/2007/01/beggar-garbage-and-tyranny</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;作者： 狄马&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;一&lt;/p&gt;
@@ -1974,9 +2007,9 @@ Only you , I need for my life&amp;#8230;&amp;#8230;.&lt;br&gt;
  
  <entry>
    <title>定制Trackback特定样式</title>
-   <link href="/blog/2006/12/style-wordpress-trackback.html"/>
+   <link href="http://chenjun.com/blog/2006/12/style-wordpress-trackback.html"/>
    <updated>2006-12-23T04:06:50+00:00</updated>
-   <id>/blog/2006/12/style-wordpress-trackback</id>
+   <id>http://chenjun.com/blog/2006/12/style-wordpress-trackback</id>
    <content type="html">&lt;p&gt;首先要自我打击一下，在产生这个想法之后，本来我是&lt;strong&gt;异想天开&lt;/strong&gt;地想编成一个插件的，但研究半天发现自己其实对PHP语言还是个大菜鸟，远没有我想的那么简单，只好用笨办法了：手动添加代码到模板中去。&lt;/p&gt;
 
 &lt;p&gt;本来想用的来自这里：&lt;a href=&quot;http://www.tamba2.org.uk/wordpress/commentstyling/&quot; title=&quot;Making Comments stand out&quot;&gt;WordPress &amp;#8211; Comment styling&lt;/a&gt;，确实是一篇不错的文章，里面不仅介绍了为Trackback和Pingback增加独特样式，也有为特定评论的与众不同的显示提供了解决方案。而且作者Podz所写的&lt;a href=&quot;http://www.tamba2.org.uk/wordpress/&quot; title=&quot;WordPress Help - Podz @ Tamba2&quot;&gt;The Temba2 WordPress Guides&lt;/a&gt;是一篇不错的基础教程。评论姑且不谈，我需要的是第一个。&lt;/p&gt;
@@ -2043,9 +2076,9 @@ Only you , I need for my life&amp;#8230;&amp;#8230;.&lt;br&gt;
  
  <entry>
    <title>津津乐道-有道</title>
-   <link href="/blog/2006/12/new-choice-of-search-yodao.html"/>
+   <link href="http://chenjun.com/blog/2006/12/new-choice-of-search-yodao.html"/>
    <updated>2006-12-19T04:26:04+00:00</updated>
-   <id>/blog/2006/12/new-choice-of-search-yodao</id>
+   <id>http://chenjun.com/blog/2006/12/new-choice-of-search-yodao</id>
    <content type="html">&lt;p&gt;无意中发现了一个新搜索引擎-有道(&lt;a href=&quot;http://www.yodao.com/&quot; title=&quot;有道搜索&quot;&gt;yodao.com&lt;/a&gt;)，界面简洁干净，目前包含了三个子搜索：网页、博客、海量词典。简单试用了一下，速度很不错，索引也比较齐全，网页搜索比较独特的是预览功能，小&lt;a href=&quot;http://www.yodao.com/search?lq=site%3Awww.zhu8.net&amp;#038;ue=utf8&amp;#038;keyfrom=web.bottom&amp;#038;q=site%3Awww.zhu8.net+zhu8&quot; title=&quot;site:www.zhu8.net zhu8 - 有道搜索&quot;&gt;测试&lt;/a&gt;了一下小站，可以看到在蜘蛛抓取的情况下，网页所呈现的样貌。在使用&lt;strong&gt;site:&lt;/strong&gt;单独定义的时候索引的不是该域名下的网页，而是含有该网址的网页（指内容之中），与不使用&lt;strong&gt;site:&lt;/strong&gt;标记的效果是一样的。必须要在&lt;strong&gt;site:&lt;/strong&gt;标记的前面或者后面加上关键词才能搜索出该域名下的网页内容。这与Google和百度有所不同，不知道是有意为之还是正在测试当中。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/yodao.gif&quot; title=&quot;有道logo&quot; alt=&quot;有道logo&quot; style=&quot;float: left;&quot; /&gt;其博客搜索的特色功能包括：&lt;a href=&quot;http://www.yodao.com/help/websearch/features/002/&quot;&gt;即时提示&lt;/a&gt;、&lt;a href=&quot;http://www.yodao.com/help/blogsearch/features/001/&quot;&gt;博客卡片&lt;/a&gt;、&lt;a href=&quot;http://www.yodao.com/help/blogsearch/features/002/&quot;&gt;博客档案&lt;/a&gt;、&lt;a href=&quot;http://www.yodao.com/help/dict/features/001/&quot;&gt;网络释义&lt;/a&gt;等等，很有意思，值得一提的是，刚刚发现他们的博客搜索因为和百度&lt;a href=&quot;http://blogsearch.baidu.com/&quot; title=&quot;百度博客搜索&quot;&gt;博客搜索&lt;/a&gt;一样，独立的Blogger相对于寄居BSP门下的更难索引到，且所用程序和样式千千万万，索引的并不多，刚好发现有道的交流论坛：&lt;a href=&quot;http://u.yodao.com/&quot; title=&quot;坐而论道&quot;&gt;坐而论道&lt;/a&gt;，于是进去发了个&lt;a href=&quot;http://u.yodao.com/viewthread.php?tid=229&amp;#038;extra=page%3D1&quot;&gt;帖子&lt;/a&gt;问一下，在别人的建议下去&lt;a href=&quot;http://tellbot.yodao.com/report?type=BLOG&quot; title=&quot;有道登录您的网站&quot;&gt;提交&lt;/a&gt;了一下自己的Blog，结果也许是机缘巧合，也许是真的就那么快，我的Blog就被&lt;a href=&quot;http://blog.yodao.com/search?q=zhu8&amp;#038;t=a&amp;#038;keyfrom=blog.bar&quot; title=&quot;zhu8 - 有道博客搜索&quot;&gt;收录&lt;/a&gt;了。&lt;/p&gt;
@@ -2115,9 +2148,9 @@ Google的人们提起兴趣，将自己早已习惯的东西为之改变，当�
  
  <entry>
    <title>当爱已成往事</title>
-   <link href="/blog/2006/12/when-love-have-been-passage.html"/>
+   <link href="http://chenjun.com/blog/2006/12/when-love-have-been-passage.html"/>
    <updated>2006-12-15T02:21:25+00:00</updated>
-   <id>/blog/2006/12/when-love-have-been-passage</id>
+   <id>http://chenjun.com/blog/2006/12/when-love-have-been-passage</id>
    <content type="html">&lt;p&gt;初识她，因为她的身边总是围满了人，&amp;#8221;大家都是东北人，喜欢热闹&amp;#8221;，但是总觉得在热闹的同时，还有着一层寂寞。平时嘻嘻哈哈，快乐的代言人。喜欢和人开各种各样的玩笑，让人有回绝的选择，也有着领导人的霸道。她的生日，十几个人一起去爬山，在清晨还不怎么看得清楚山路时，抓着两幅地图，研究着上山的路线，只为了逃掉大家的上山门票，一路上叽叽喳喳，热闹非凡，期间也发生了一件不怎么愉快的事情，算是一个小插曲；献上初吻作为生日礼物，认定了这么一个朋友。&lt;/p&gt;
 
 &lt;p&gt;随着时间的过去，她的身边换了一个人，有人诧异，有人反对，但是结局已定；我们之间仍是平平淡淡的一路走来，偶尔聊聊天，吃吃饭，或者就相对坐着，默默的坐着。又过了一年，她走到了我的身边，站在我的身旁，看着我，委屈的孩子一样，满脸的疲惫。我叹气，心疼，伸出手，把她抱在怀里，久久的。我们站在了一起，形影不离。&lt;/p&gt;
@@ -2136,9 +2169,9 @@ Google的人们提起兴趣，将自己早已习惯的东西为之改变，当�
  
  <entry>
    <title>发现自己原来一根筋</title>
-   <link href="/blog/2006/11/trouble-with-so-much-things.html"/>
+   <link href="http://chenjun.com/blog/2006/11/trouble-with-so-much-things.html"/>
    <updated>2006-11-26T22:39:54+00:00</updated>
-   <id>/blog/2006/11/trouble-with-so-much-things</id>
+   <id>http://chenjun.com/blog/2006/11/trouble-with-so-much-things</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;到底出了什么问题？&lt;/strong&gt;这句话是我刚才试着看发帖是否能通过的，结果还是给我空白页面，或者是&lt;strong&gt;&lt;em&gt;&amp;#8220;该页无法显示找不到服务器或发生DNS错误&amp;#8221;&lt;/em&gt;&lt;/strong&gt;。今天一天都在搞新Theme的修改，最后快大功告成的时候，准备发点小文字来，结果又出现了&amp;#8230;&lt;/p&gt;
 
 &lt;p&gt;不好意思，到现在还没说具体是哪儿的问题，其他都好的，就是修改或者新撰写文章时，&lt;strong&gt;&lt;em&gt;../wp-admin/post.php&lt;/em&gt;&lt;/strong&gt;就报上面的错误。但是我又犯了二十多年的老毛病，一根筋往这上面想，把&lt;a href=&quot;http://wordpress.org/support/forum/3&quot; title=&quot;How-To and Troubleshooting « WordPress Support&quot;&gt;WordPress Support Forum&lt;/a&gt;几乎翻了个底朝天，发现一些情况和我一样的空白页面的，但是没有一个好好回答的，因为我上午装了Php+Apche+Mysql调试的，在Wordpress支持论坛看到说有&lt;strong&gt;&lt;em&gt;php.ini&lt;/em&gt;&lt;/strong&gt;配置错误导致此种问题的，于是一根筋的我就正经八百的把这些全都卸载，结果还是不行啊。在WpCN的&lt;a href=&quot;http://groups.google.com/group/WordPressCN&quot; title=&quot;WordpressCN Google Group&quot;&gt;Group&lt;/a&gt;里问了一下，没人帮我解答，只好继续自己动手。&lt;span id=&quot;more-47&quot;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -2153,9 +2186,9 @@ Google的人们提起兴趣，将自己早已习惯的东西为之改变，当�
  
  <entry>
    <title>解决WP汉化和UTW链接问题</title>
-   <link href="/blog/2006/11/wordpress-language-pack-and-utw-permalink-structure-fix.html"/>
+   <link href="http://chenjun.com/blog/2006/11/wordpress-language-pack-and-utw-permalink-structure-fix.html"/>
    <updated>2006-11-18T20:17:00+00:00</updated>
-   <id>/blog/2006/11/wordpress-language-pack-and-utw-permalink-structure-fix</id>
+   <id>http://chenjun.com/blog/2006/11/wordpress-language-pack-and-utw-permalink-structure-fix</id>
    <content type="html">&lt;p&gt;其实严格说来是因为我在&lt;a href=&quot;http://www.512j.com/&quot; title=&quot;我要安家&quot;&gt;我要安家&lt;/a&gt;的服务器的关系，所以导致无法使用中文语言包。看下我要安家的配置：&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -2202,9 +2235,9 @@ OK了，虽然昨天我也试过，但是是在UTW还没有重新激活的情况
  
  <entry>
    <title>二三事</title>
-   <link href="/blog/2006/11/small-cases.html"/>
+   <link href="http://chenjun.com/blog/2006/11/small-cases.html"/>
    <updated>2006-11-05T13:10:10+00:00</updated>
-   <id>/blog/2006/11/small-cases</id>
+   <id>http://chenjun.com/blog/2006/11/small-cases</id>
    <content type="html">&lt;p&gt;瞎忙乎了老半天，觉得还是记下来好，要不老是犯迷糊。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -2249,9 +2282,9 @@ Viewer，后来发现只能看，不能修改，而我恰恰需要把Mdb文件�
  
  <entry>
    <title>混言乱语</title>
-   <link href="/blog/2006/11/chaos.html"/>
+   <link href="http://chenjun.com/blog/2006/11/chaos.html"/>
    <updated>2006-11-03T17:02:48+00:00</updated>
-   <id>/blog/2006/11/chaos</id>
+   <id>http://chenjun.com/blog/2006/11/chaos</id>
    <content type="html">&lt;p&gt;注：&lt;em&gt;（以下情景都为梦）&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;一个同学，抑或老乡、朋友，本来我们是要一起杀了某个人的，故我走在最前面吸引那个人，我同学走在最后。&lt;br&gt;
@@ -2266,9 +2299,9 @@ Viewer，后来发现只能看，不能修改，而我恰恰需要把Mdb文件�
  
  <entry>
    <title>龙虎人生、雪山飞狐重播</title>
-   <link href="/blog/2006/10/long-hu-ren-sheng-and-xue-shan-fei-hu-rebroadcast.html"/>
+   <link href="http://chenjun.com/blog/2006/10/long-hu-ren-sheng-and-xue-shan-fei-hu-rebroadcast.html"/>
    <updated>2006-10-27T01:28:25+00:00</updated>
-   <id>/blog/2006/10/long-hu-ren-sheng-and-xue-shan-fei-hu-rebroadcast</id>
+   <id>http://chenjun.com/blog/2006/10/long-hu-ren-sheng-and-xue-shan-fei-hu-rebroadcast</id>
    <content type="html">&lt;p&gt;最近在看电视《龙虎人生》&lt;img src=&quot;http://static.chenjun.com/images/tongyao.jpg&quot; style=&quot;width: 240px; height: 157px; float: right;&quot; title=&quot;童瑶-方淑晴&quot; alt=&quot;童瑶-方淑晴&quot; /&gt;（最近一两个月本人不幸迅速沦为电视机的奴隶，虽然基本都是看球赛，但还是挡不住电视剧电影的诱惑啊，虽然看的数量相比电视狂人来说很少而已），南京某某台放的，嗯，感觉还可以，挺喜欢里面的&amp;#8221;晴小姐&amp;#8221;的，护士的造型不禁让我想起了某某人&lt;em&gt;（唉，快嫁作他人妇了，不提不提&amp;#8230;&amp;#8230;）&lt;/em&gt;前去Google一下，原来是皇帝专业户张国立的儿子张默&lt;a href=&quot;http://ent.sina.com.cn/f/zglezdr/index.shtml&quot; title=&quot;张默打人事件_影音娱乐_新浪网&quot;&gt;曾经打过&lt;/a&gt;而大噪的其女友&lt;strong&gt;童瑶&lt;/strong&gt;小姐&lt;em&gt;（这句话咋这么绕口捏）&lt;/em&gt;。小&lt;strong&gt;汗&lt;/strong&gt;一下自己，原来就是她呀。恕我孤陋寡闻，还不知道这档子事情原来是如此。不过我无所谓谁是谁非，是谁想帮谁炒作。我只是看电视而已，绯闻啊，炒作啊，都见鬼去罢。&lt;/p&gt;
 
 &lt;p&gt;童瑶在她的&lt;a href=&quot;http://blog.sina.com.cn/m/tongyao&quot; title=&quot;童瑶的BLOG - 童瑶 - 新浪BLOG&quot;&gt;Blog&lt;/a&gt;里说：&lt;/p&gt;
@@ -2326,9 +2359,9 @@ Viewer，后来发现只能看，不能修改，而我恰恰需要把Mdb文件�
  
  <entry>
    <title>中国足球终于雄起了！</title>
-   <link href="/blog/2006/09/china-football.html"/>
+   <link href="http://chenjun.com/blog/2006/09/china-football.html"/>
    <updated>2006-09-12T18:20:06+00:00</updated>
-   <id>/blog/2006/09/china-football</id>
+   <id>http://chenjun.com/blog/2006/09/china-football</id>
    <content type="html">&lt;p&gt;昨日，中国国家少年队（U-17）&lt;img src=&quot;http://static.chenjun.com/images/china-football.jpg&quot; style=&quot;width: 400px; height: 292px; float: right;&quot; title=&quot;康玄秀领到红牌&quot; alt=&quot;康玄秀领到红牌&quot; /&gt;在&lt;br&gt;
 新加坡举行的亚足联U17少年锦标赛中拚搏努力，在昨晚的比赛中顽强的和十五分钟罚下一人，加时赛两人抽筋的朝鲜队拚搏到了加时赛的最后一分钟！并奋勇无&lt;br&gt;
 比的将比分从一比一追成了一比二，当仁不让的将狼狈的在场上乱奔的朝鲜队送进了四强，并无情的将朝鲜队接下来想好好休息以及明年可以好好休息不打世青赛的&lt;br&gt;
@@ -2350,9 +2383,9 @@ Viewer，后来发现只能看，不能修改，而我恰恰需要把Mdb文件�
  
  <entry>
    <title>WordPress插件:Add Bookmarks</title>
-   <link href="/blog/2006/09/wordpress-plugin-add-bookmarks.html"/>
+   <link href="http://chenjun.com/blog/2006/09/wordpress-plugin-add-bookmarks.html"/>
    <updated>2006-09-04T04:23:28+00:00</updated>
-   <id>/blog/2006/09/wordpress-plugin-add-bookmarks</id>
+   <id>http://chenjun.com/blog/2006/09/wordpress-plugin-add-bookmarks</id>
    <content type="html">&lt;p&gt;First plugin for WordPress:&lt;a href=&quot;#Eng&quot;&gt;English vision&lt;/a&gt; (2008/03/18)&lt;/p&gt;
 
 &lt;p&gt;这是我第一次做的插件，虽然是东参考西参考，也整整折腾了我半天的工夫，呼&amp;#8230;&amp;#8230;闲话少说，入正题。(现在想再做一个，但是发现却是是水平有限。在瞎折腾两三个小时之后，发现自己只是稍长于修改，真正要做确实不是我等门外汉能力所及。)&lt;/p&gt;
@@ -2447,9 +2480,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>待完成</title>
-   <link href="/blog/2006/09/incomplete.html"/>
+   <link href="http://chenjun.com/blog/2006/09/incomplete.html"/>
    <updated>2006-09-01T05:59:44+00:00</updated>
-   <id>/blog/2006/09/incomplete</id>
+   <id>http://chenjun.com/blog/2006/09/incomplete</id>
    <content type="html">&lt;p&gt;最近，很多想写的，却没闲心写。最近，很多困惑的，却没闲时想，最近，很多想做的，却没闲情做。&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -2475,9 +2508,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>UseBB汉化暨论坛搭建完成</title>
-   <link href="/blog/2006/08/usebb-chinese-simplified.html"/>
+   <link href="http://chenjun.com/blog/2006/08/usebb-chinese-simplified.html"/>
    <updated>2006-08-13T04:30:25+00:00</updated>
-   <id>/blog/2006/08/usebb-chinese-simplified</id>
+   <id>http://chenjun.com/blog/2006/08/usebb-chinese-simplified</id>
    <content type="html">&lt;p&gt;好啦，昨晚折腾了一个晚上，总算完成了。&lt;strong&gt;&lt;em&gt;〔Update:2007/03/08：把链接修改到我的永硕硬盘上去。〕&lt;/em&gt;&lt;/strong&gt;&lt;img src=&quot;http://static.chenjun.com/images/usebb-chinese.jpg&quot; style=&quot;width: 240px; height: 162px;float:right;&quot; title=&quot;ScreenShot of UseBB Chinese&quot; alt=&quot;ScreenShot of UseBB Chinese&quot; /&gt;最近想搭建一个论坛玩玩，结果，找到的个个功能惊人，体积同样&lt;strong&gt;惊人&lt;/strong&gt;。用UseBB的介绍文件来说就是&lt;acronym title=&quot;Unnecessary features&quot;&gt;&lt;strong&gt;bloat&lt;/strong&gt;&lt;/acronym&gt;。后来找到了&lt;a href=&quot;http://www.usebb.net/&quot; title=&quot;&quot;&gt;UseBB&lt;/a&gt;，汉化了一下，本来不想汉化后台的，就和WP一样，后来发现到现在为止还没有人弄简体中文的汉化包，后来发现了和WP一样存在中文字符截断的问题，今天就&lt;a href=&quot;http://groups.google.com/group/Zhu8/browse_thread/thread/7cf0947ec61ac13a/4cf29f9e175b04fe&quot; title=&quot;UseBB中文字符截断函数（UTF-8）修改&quot;&gt;修改&lt;/a&gt;了一下源代码，唉，发现玩程序真的有时候挺头大的，特别是这些英文软件压根就不可能考虑到咱中文的编码问题。可是要想程序如自己的意，只好自己动手，丰衣足食&lt;sub&gt;By Chairman Mao&lt;/sub&gt;了。&lt;/p&gt;
 
 &lt;p&gt;废话少说，简单介绍一下UseBB吧！&lt;/p&gt;
@@ -2502,9 +2535,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>向天真的女生投降</title>
-   <link href="/blog/2006/08/xiang-tian-zhen-de-nv-sheng-tou-xiang.html"/>
+   <link href="http://chenjun.com/blog/2006/08/xiang-tian-zhen-de-nv-sheng-tou-xiang.html"/>
    <updated>2006-08-09T05:00:21+00:00</updated>
-   <id>/blog/2006/08/xiang-tian-zhen-de-nv-sheng-tou-xiang</id>
+   <id>http://chenjun.com/blog/2006/08/xiang-tian-zhen-de-nv-sheng-tou-xiang</id>
    <content type="html">&lt;p&gt;只用了几分钟就喜欢上了这部电视剧，从刘烨向那个泼妇把献骨髓的价格从二十万到三十万开始，从&amp;#8221;那我们给了你钱，你跑了怎么办？&amp;#8221;、&amp;#8221;你们只能冒这个险了。&amp;#8221;开始。尽管我开始看的时候，已经快结束了。&lt;img src=&quot;http://static.chenjun.com/images/tianzhen.jpg&quot; style=&quot;width: 250px; height: 350px; float: right;&quot; title=&quot;向天真的女生投降&quot; alt=&quot;向天真的女生投降&quot; /&gt;
 虽然电视和小说不过是为了我们去想象一下生活中不会出现的那些情节罢了，让自己去好好享受也未尝不是一件好事情，虽然也许永远是幻想，现实还是要去面对。那里面演小宝的小女孩挺可爱的，叫&lt;a href=&quot;http://blog.sina.com.cn/u/1219450272&quot; title=&quot;温智美的新浪Blog&quot;&gt;温智美&lt;/a&gt;，一出场就让我记住了，我看的时候刚好到她出场：）&lt;/p&gt;
 
@@ -2555,9 +2588,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>贰拾叁？</title>
-   <link href="/blog/2006/08/23.html"/>
+   <link href="http://chenjun.com/blog/2006/08/23.html"/>
    <updated>2006-08-03T05:23:09+00:00</updated>
-   <id>/blog/2006/08/23</id>
+   <id>http://chenjun.com/blog/2006/08/23</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/a-dog.jpg&quot; alt=&quot;金坛茅麓致和的某只狗狗&quot; style=&quot;float: right;&quot; width=&quot;240&quot; height=&quot;180&quot; /&gt;待补充。&amp;#8212;-农历贰零零陆年柒月初玖。（能不能过&lt;acronym title=&quot;今年闰七月&quot;&gt;两个&lt;/acronym&gt;？）&lt;/p&gt;
 
 &lt;p&gt;Google终于完成了我的&lt;a href=&quot;http://www.google.com/search?hl=zh-CN&amp;#038;newwindow=1&amp;#038;q=zhu8&amp;#038;lr=&quot; title=&quot;zhu8 - Google 搜索&quot;&gt;站点&lt;/a&gt;收录！Yeah！且当生日礼物？&lt;sup&gt;&lt;span style=&quot;color: rgb(255, 128, 0);&quot;&gt;*1&lt;/span&gt;&lt;/sup&gt; &lt;/p&gt;
@@ -2580,9 +2613,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>时光倒回贰零零肆</title>
-   <link href="/blog/2006/08/time-back-to-2004.html"/>
+   <link href="http://chenjun.com/blog/2006/08/time-back-to-2004.html"/>
    <updated>2006-08-01T05:29:22+00:00</updated>
-   <id>/blog/2006/08/time-back-to-2004</id>
+   <id>http://chenjun.com/blog/2006/08/time-back-to-2004</id>
    <content type="html">&lt;p&gt;这两天一直在考虑关于域名的问题，我依稀记得当年想注册&lt;strong&gt;Zhu8&lt;/strong&gt;相关的域名的时候，发现&lt;em&gt;Zhu8.com&lt;/em&gt;是被某个站用来做如&lt;a href=&quot;http://my.yeah.net/&quot; title=&quot;网易域名转向&quot;&gt;My.yeah.net&lt;/a&gt;这样的域名转向的，&lt;em&gt;Zhu8.net&lt;/em&gt;是被杭州一家什么公司注册去的。而&lt;em&gt;Zhu8.cn&lt;/em&gt;和&lt;em&gt;Zhu8.org&lt;/em&gt;是没有被注册的，可我一直想的就是那&lt;strong&gt;Zhu8.net&lt;/strong&gt;，结果在今年四月份的时候我忽然发现Zhu8.Net可以被注册了！立刻把他注册了来，当时心里好一阵兴奋呀，后来到了今年6月27号，我在&lt;a href=&quot;http://www.512j.com/&quot; title=&quot;我要安家&quot;&gt;我要安家&lt;/a&gt;买了空间，并迅速把域名绑定了上去，结果到现在，是&lt;a href=&quot;http://chenjun.com/blog/2006/07/google-ban-zhu8-net.html&quot; title=&quot;我被Google封了？&quot;&gt;这个&lt;/a&gt;结果。今天忽然想起来去看看，原来的Zhu8.Net是什么样子的。好在我们有这么一个好东西：&lt;a href=&quot;http://web.archive.org/collections/web.html&quot; title=&quot;The Internet Archive Wayback Machine puts the history of the World Wide Web at your fingertips.&quot;&gt;Internet Archive&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/waybackmachine.gif&quot; title=&quot;The Internet Archive Wayback Machine&quot; alt=&quot;The Internet Archive Wayback Machine&quot; style=&quot;float: right;&quot; class=&quot;alignright&quot; /&gt;尝试了一下，发现竟然有&lt;a href=&quot;http://web.archive.org/web/20050202165727/http://chenjun.com//&quot; title=&quot;Feb 02, 2005&quot;&gt;记录&lt;/a&gt;！可是半天打不开，查看了一下源代码，然后用EditPlus打开，发现是一个2004年10月31日的记录，被指向了 &lt;a href=&quot;http://mediamax.streamload.com/zhu8cn/Hosted/web/Noname1.html&quot; title=&quot;CS 1.5 NoCDKey Server - 玩家排行榜&quot;&gt;该&lt;/a&gt; 地址：&lt;del datetime=&quot;2006-07-31T14:44:20+00:00&quot;&gt;http://218.75.43.7/stats/&lt;/del&gt;。是一个CS的服务器排行榜。然后又找到了上面记载的论坛&lt;a href=&quot;http://web.archive.org/web/20040608081444/www.skyco.org/cgi-bin/lb/forums.cgi?forum=19&quot; title=&quot;『 CS 演练场 』&quot;&gt;地址&lt;/a&gt;，时间赫然停留在公元贰零零肆年陆月陆日。而其中的&lt;a href=&quot;http://web.archive.org/web/20040609190650/www.skyco.org/cgi-bin/lb/leoboard.cgi&quot; title=&quot;天空 社&quot;&gt;天空 社&lt;/a&gt;，时间则是：&lt;em&gt;现在时间是 2004年06月10日 03:07am (北京时间)&lt;/em&gt;。在&lt;a href=&quot;http://www.google.com/search?hl=zh-CN&amp;#038;newwindow=1&amp;#038;q=site%3A218.75.43.7&amp;#038;lr=&quot; title=&quot;site:218.75.43.7 - Google 搜索&quot;&gt;Google&lt;/a&gt;上，我还可以发现以前一个叫做&amp;#8221;&lt;strong&gt;猪吧&lt;/strong&gt;&amp;#8220;的论坛，以及那个两年前的&lt;strong&gt;CS 1.5 NoCDKey Server &amp;#8211; 玩家排行榜&lt;/strong&gt;。&lt;/p&gt;
@@ -2597,9 +2630,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>我被Google封了？</title>
-   <link href="/blog/2006/07/google-ban-zhu8-net.html"/>
+   <link href="http://chenjun.com/blog/2006/07/google-ban-zhu8-net.html"/>
    <updated>2006-07-21T05:30:26+00:00</updated>
-   <id>/blog/2006/07/google-ban-zhu8-net</id>
+   <id>http://chenjun.com/blog/2006/07/google-ban-zhu8-net</id>
    <content type="html">&lt;p&gt;好多天没写日志了，工作了之后没什么热情了，不知道该写些什么了。我不知道是怎么一回事，我的这个站Zhu8.Net我也不知道原来是干什么的，好象在Google一直没有被收录过。我把它弄来之后，架这个站已经有快一个月了，在百度、Yahoo!、MSN都收录了之后，Google在开始的时候还收录了我的Blog&lt;a href=&quot;http://zhu8.512j.com/blog/&quot;&gt;原始地址&lt;/a&gt;里可怜的两篇文章，但后来，不光原始地址的记录没有了，就连连接到这里的&lt;a href=&quot;http://feeds.feedburner.com/Zhu8&quot;&gt;FeedBurner&lt;/a&gt;也没有了，仅仅留下一个地址，连标题都没有了。更不要提我的这个顶级域名了。&lt;/p&gt;
 
 &lt;p&gt;可笑的是，从统计里看，百度已经收录了我几乎所有的页面，关于WP的某些关键词还相当靠前；而Google里没有一丝一毫关于本站的东西，当我在用着这些服务的时候：&lt;/p&gt;
@@ -2643,9 +2676,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>在IE中为abbr标签加样式</title>
-   <link href="/blog/2006/07/ie-abbr.html"/>
+   <link href="http://chenjun.com/blog/2006/07/ie-abbr.html"/>
    <updated>2006-07-21T03:27:45+00:00</updated>
-   <id>/blog/2006/07/ie-abbr</id>
+   <id>http://chenjun.com/blog/2006/07/ie-abbr</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&amp;lt;abbr&amp;gt;是用来为web页面上的简称（译者注：这里把简称和缩写分开而论，简称范围比缩写大，取首字母的缩写用&amp;lt;acronym&amp;gt;标签）&lt;a href=&quot;http://www.evolt.org/article/HTML_is_not_an_acronym/17/35750/index.html&quot;&gt;添加适当标注&lt;/a&gt;的XHTML标签，Windows的IE浏览器暂不支持&amp;lt;abbr&amp;gt;标签。 在IE里，你可以应用CSS给&amp;lt;acronym&amp;gt;但是不能应用给&amp;lt;abbr&amp;gt;标签，IE会为&amp;lt;acronym&amp;gt;标签的title属性显示提示，但是会忽略&amp;lt;abbr&amp;gt;标签。&lt;/p&gt;
@@ -2715,9 +2748,9 @@ Fell free to &lt;a href=&quot;http://chenjun.com/contact/&quot;&gt;Contact&lt;/a
  
  <entry>
    <title>我的WordPress插件列表</title>
-   <link href="/blog/2006/07/my-wordpress-plugins.html"/>
+   <link href="http://chenjun.com/blog/2006/07/my-wordpress-plugins.html"/>
    <updated>2006-07-09T05:18:20+00:00</updated>
-   <id>/blog/2006/07/my-wordpress-plugins</id>
+   <id>http://chenjun.com/blog/2006/07/my-wordpress-plugins</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/wordpress-logo.png&quot; style=&quot;width: 250px; height: 68px; float: right;&quot; title=&quot;WordpressLogo&quot; alt=&quot;Wordpress Logo&quot; /&gt;&lt;a href=&quot;http://wordpress.org/&quot;&gt;WordPress&lt;/a&gt;是个好东西，虽然使用各种各样的插件调试的时候有时会为了某几段代码怎么修改都不成焦头烂额，但弄好了，就可以好好享受啦！&lt;/p&gt;
 
 &lt;p&gt;在开始的时候先是拼命寻找Theme，在alexking和wordpress.net里找了好久，最后选择了现在的&lt;a href=&quot;http://www.ilemoned.com/wordpress/theme-greenery&quot; traget=&quot;_blank&quot;&gt;Greenery&lt;/a&gt;，出自国人之手哦！初始的对FF下的中文显示效果不太好，不过简单修改了下CSS就好了。 好了不多说了，下面就是我的插件列表：（其中某些我做了一些简单的汉化，可以到我的永硕硬盘去下载，地址和详细修改在最下边在最下边。）&lt;/p&gt;
@@ -2806,9 +2839,9 @@ $grins .=
  
  <entry>
    <title>世界杯&#8211;难得疯狂</title>
-   <link href="/blog/2006/06/worldcup-2006.html"/>
+   <link href="http://chenjun.com/blog/2006/06/worldcup-2006.html"/>
    <updated>2006-06-11T01:58:10+00:00</updated>
-   <id>/blog/2006/06/worldcup-2006</id>
+   <id>http://chenjun.com/blog/2006/06/worldcup-2006</id>
    <content type="html">&lt;p&gt;&lt;img title=&quot;揭幕战德国对哥斯达黎加--拉姆打进06世界杯首粒进球&quot; alt=&quot;揭幕战德国对哥斯达黎加--拉姆打进06世界杯首粒进球&quot; style=&quot;width: 350px; height: 244px; float: right;&quot; src=&quot;http://static.chenjun.com/images/worldcup-2006.jpg&quot; class=&quot;alignright&quot; /&gt;昨夜压着一阵阵袭来的睡意，在我那十多平的破旧小屋里，几近裸身，坐在刚买的凉席上，四只眼睛紧盯着一个礼拜前买的14寸小彩电，开始了我的2006世界杯之旅。&lt;/p&gt;
 
 &lt;p&gt;00：10分，我的乖徒儿给我发来消息：&amp;#8221;五分十一秒，德国进球了！帅呆了！！&amp;#8221;我立刻回了电话给她，原来她以为我没有在看，哈哈，她都忘了已&lt;br&gt;
@@ -2824,9 +2857,9 @@ $grins .=
  
  <entry>
    <title>《1699·桃花扇》、钞票、石占明及其它</title>
-   <link href="/blog/2006/05/1699-the-peach-blossom-fan.html"/>
+   <link href="http://chenjun.com/blog/2006/05/1699-the-peach-blossom-fan.html"/>
    <updated>2006-05-19T02:48:18+00:00</updated>
-   <id>/blog/2006/05/1699-the-peach-blossom-fan</id>
+   <id>http://chenjun.com/blog/2006/05/1699-the-peach-blossom-fan</id>
    <content type="html">&lt;p&gt;这个时候，南京的紫金大剧院正在上演着昆曲《1699·桃花扇》，票价似乎&lt;a href=&quot;http://culture.longhoo.net/news/userobject1ai497106.html&quot;&gt;很低&lt;/a&gt;，但我却只能坐在这，四处翻看着不同的新闻、旧闻，听着&lt;a href=&quot;http://www.wangfeng.com.cn/&quot;&gt;汪峰&lt;/a&gt;的老歌，来写上两个字。倒不是说我已然落魄得连最低20元的票价都出不起，确实是因为，我来南京，&lt;strong&gt;竟然还没拿过一分钱工资&lt;/strong&gt;。其实也没什么，就是我从常州来到南京，需要北京总公司批；而我这样一个无足轻重的小职位，也许人家根本没有放在心上。&lt;img src=&quot;http://static.chenjun.com/images/peach-blossom-fan.jpg&quot; title=&quot;昆曲--桃花扇&quot; alt=&quot;昆曲--桃花扇&quot; style=&quot;float: right;&quot; height=&quot;240&quot; width=&quot;166&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;不过我也不能走，因为我走了，不止这儿的钱拿不到，到什么地方去再找这样一个&amp;#8221;无足轻重的小职位&amp;#8221;或许都还是个&lt;a href=&quot;http://www.yangtse.com/pub/yzweb/dzbpd/zyxw/t20060507_76346.htm&quot;&gt;问题&lt;/a&gt;，因为公司还算是个全国性的大公司，所以固然会如经理说的工资肯定会到时候一起发下来的。所以，我也就只能等着了。&lt;/p&gt;
@@ -2852,9 +2885,9 @@ $grins .=
  
  <entry>
    <title>晚安南京</title>
-   <link href="/blog/2006/05/good-night-nanjing.html"/>
+   <link href="http://chenjun.com/blog/2006/05/good-night-nanjing.html"/>
    <updated>2006-05-18T04:31:17+00:00</updated>
-   <id>/blog/2006/05/good-night-nanjing</id>
+   <id>http://chenjun.com/blog/2006/05/good-night-nanjing</id>
    <content type="html">&lt;p&gt;日子如流水，&lt;a href=&quot;http://www.yangtse.com/dzbpd/zyxw/t20060517_82618.htm&quot;&gt;&lt;strike&gt;《又到一年毕业时》&lt;/strike&gt;&lt;/a&gt;&lt;small&gt;&lt;em&gt;（链接已失效）&lt;/em&gt;&lt;/small&gt;，转眼我来南京也有快两个月了，不知不觉我的Blog也停止了，虽然每天忙忙碌碌，却有时候忽然想起去年的&lt;a href=&quot;http://chenjun.com/blog/2005/05/for-the-forgetting-memories.html&quot; title=&quot;祝你一路顺风--为了忘却的纪念&quot;&gt;自己&lt;/a&gt;，去年的今天，我正在&lt;a title=&quot;贵阳中医学院&quot; href=&quot;http://www.gyctcm.edu.cn/&quot;&gt;学校&lt;/a&gt;附属一院里面，忙着踩气球，断然不会想到今天的我会在哪儿，而我那些曾经坐在一起的&lt;a href=&quot;http://mediamax.streamload.com/zhu8cn/Hosted/images/yifa.jpg&quot;&gt;兄弟姐妹们&lt;/a&gt;，如今又在哪儿，欢笑流泪、甘苦自知。我曾经以为我还有很长的路要走，曾经以为自己还是个孩子，却忽然在工作了之后，发现自己的路不知道在哪方，谈女朋友，很现实的东西：房子（&lt;a title=&quot;从农村人到城里人18年难道就是为了买套房&quot; href=&quot;http://www.ehomeday.com/news/2005-11/20051121142410.htm&quot;&gt;1&lt;/a&gt;）、（&lt;a title=&quot;南京房价高得离谱 每平方米叫价已纷纷超过万元&quot; href=&quot;http://economy.enorth.com.cn/system/2006/04/03/001271441.shtml&quot;&gt;2&lt;/a&gt;）就摆在我的面前，看来我不得不单身好久，因为人家跟我讲：现在的女生都很&lt;a href=&quot;http://sh.house.sina.com.cn/focus/20051025/7.html&quot;&gt;现实&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;每天，我早晨八点出门，骑着我的无证无牌在南农花一百三十块钱买来的破捷安特，从破败的老居民区涌入龙蟠中路的人行横道（&lt;a title=&quot;城东干道2期工程中旬开挖 龙蟠中路全部被占用&quot; href=&quot;http://news.soufun.com/2006-05-05/701619.htm&quot;&gt;？&lt;/a&gt;），或者坐在办公室，或者换乘各条线路的公交车出入各大医院的医务处和病案室。然后晚上回家，等待周末。&lt;/p&gt;
@@ -2905,9 +2938,9 @@ $grins .=
  
  <entry>
    <title>真实的幻梦</title>
-   <link href="/blog/2006/02/ture-dream.html"/>
+   <link href="http://chenjun.com/blog/2006/02/ture-dream.html"/>
    <updated>2006-02-06T13:06:06+00:00</updated>
-   <id>/blog/2006/02/ture-dream</id>
+   <id>http://chenjun.com/blog/2006/02/ture-dream</id>
    <content type="html">&lt;p&gt;&lt;em&gt;原来作诗这么简单&lt;/em&gt;:em07:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -2940,9 +2973,9 @@ $grins .=
  
  <entry>
    <title>我随时随地在等待</title>
-   <link href="/blog/2005/12/waiting-any-time.html"/>
+   <link href="http://chenjun.com/blog/2005/12/waiting-any-time.html"/>
    <updated>2005-12-28T20:41:28+00:00</updated>
-   <id>/blog/2005/12/waiting-any-time</id>
+   <id>http://chenjun.com/blog/2005/12/waiting-any-time</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/libai.jpg&quot; title=&quot;李白----将进酒&quot; alt=&quot;李白----将进酒&quot; style=&quot;float: right;&quot; /&gt;今天去了苏州，参加平安保险的书面考试，接下来就是等面试了。也不知道什么原因，现在没有兴趣去写Blog了，可能是因为自身的不确定吧！&lt;/p&gt;
 
 &lt;p&gt;前两天域名服务商忽然挂了，我还不知道。也就是&lt;strong&gt;聚网&lt;/strong&gt;，他提供的免费php+Mysql服务器在国内来说少见的坚持了那么长时间&amp;#8212;-两年多，我还正准备找到工作之后第一件事情就是在他那弄个空间+域名好好研究研究WordPress，没想到，就象一夜之间，就蒸发了。虽然花了40块钱买的原来的域名挂了，但还得庆幸自己还没有把新的砸上去。&lt;/p&gt;
@@ -3007,9 +3040,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>国家公务员考试&#8211;结束</title>
-   <link href="/blog/2005/11/government-workers-exam-over.html"/>
+   <link href="http://chenjun.com/blog/2005/11/government-workers-exam-over.html"/>
    <updated>2005-11-27T10:11:27+00:00</updated>
-   <id>/blog/2005/11/government-workers-exam-over</id>
+   <id>http://chenjun.com/blog/2005/11/government-workers-exam-over</id>
    <content type="html">&lt;p&gt;石头城晃荡二日，廿五日害同学去通宵（他宿舍只有张单人床），廿六日考试，早晨《行政能力测验》，数字推理忒复杂（或是我反应不过来），耗时甚长，以致后15题没时间答了，遂于3分钟内涂鸦成功，估计&amp;#8212;-惨。&lt;/p&gt;
 
 &lt;p&gt;下午《申论》，与&lt;a href=&quot;http://sars.eastday.com/&quot;&gt;非典&lt;/a&gt;、&lt;a href=&quot;http://news.xinhuanet.com/weekend/2005-10/11/content_3608002.htm&quot;&gt;禽流感&lt;/a&gt;等等突发公共事件有关，幸而在廿五日去往南京的车上买了份&lt;a href=&quot;http://www.yangtse.com/&quot;&gt;扬子&lt;/a&gt;，在上面看到了&lt;a href=&quot;http://www.xinhuanet.com/society/zt051124/&quot;&gt;松花江水污染&lt;/a&gt;相关的报道，于是在考试时涉及一些，考试前10分钟完成全部文章，手酸无比，于是坐着发呆。&lt;/p&gt;
@@ -3022,9 +3055,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>只是朱颜改</title>
-   <link href="/blog/2005/11/the-dog-ages.html"/>
+   <link href="http://chenjun.com/blog/2005/11/the-dog-ages.html"/>
    <updated>2005-11-01T10:11:01+00:00</updated>
-   <id>/blog/2005/11/the-dog-ages</id>
+   <id>http://chenjun.com/blog/2005/11/the-dog-ages</id>
    <content type="html">&lt;p&gt;曾经我天真的想，我要等到我工作了以后，来好好的怀念一下我的初中和高中，那些无暇阴暗的岁月。因为我以为到那时候，我才能真正告别我的青春时代，现在仍可以如 &lt;a title=&quot;Sendoh&quot; href=&quot;http://sendoh.yculblog.com/&quot;&gt;&lt;strong&gt;S&lt;/strong&gt;&lt;/a&gt; 所说的那样：&lt;strong&gt;&lt;em&gt;好在仍然可以大言不惭说一句&amp;#8221;还年轻&amp;#8221;。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;但就在昨夜，确切说是今晨，我从一个梦中惊醒，拿起手机蒙胧的给 &lt;em&gt;T&lt;/em&gt; 和 &lt;em&gt;LY&lt;/em&gt; 发去了短信。我以为一切似乎还都&lt;br&gt;
@@ -3074,9 +3107,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>庄周又化蝶</title>
-   <link href="/blog/2005/10/in-the-dream-of-butterfly.html"/>
+   <link href="http://chenjun.com/blog/2005/10/in-the-dream-of-butterfly.html"/>
    <updated>2005-10-15T14:21:15+00:00</updated>
-   <id>/blog/2005/10/in-the-dream-of-butterfly</id>
+   <id>http://chenjun.com/blog/2005/10/in-the-dream-of-butterfly</id>
    <content type="html">&lt;p&gt;忙活了一天，总算把国家公务员报名完成了，也通过了资格审查。就等传上相关东西之后考试了。不过，最要命的是，书刚买来一天，看来要很多的努力和很多的运气才有希望&lt;strong&gt;达线&lt;/strong&gt;了，加油！Zhu8，有点苍白罢。&lt;/p&gt;
 
 &lt;p&gt;昨夜做梦，在南京乱走，进一小巷，豁然就进了我们村了！（我家在金坛呢！），然后忽然遇到9J，说：“再坚持一会就可以到家了！”然后场景就忽的一跳，我躺在我原来睡的床上（现已拆了），折着身子，9J拍着我的后背，说，吐吧！吐出来就好了。原来我喝了酒，刚才在南京只是一场梦，一阵吐意又涌上来。（吐过的兄弟应该有过那种感受吧，想吐吐不出，喉咙里酸的辣人的感觉。）我一下就惊醒了（是在&lt;strong&gt;这&lt;/strong&gt;醒了），我迷迷糊糊在床边摸摸，原来吐也是一场梦（我那时迷糊着呢，根本没喝酒，怎么吐嘛！但好象嘴里真有种酸酸的感觉一样。忽然就头脑清醒了，但思想却模糊着，感觉我真成了庄周了，这梦中梦然后我醒了是否也是一个梦呢？&lt;/p&gt;
@@ -3109,9 +3142,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>讨厌简历—兼谈我还没经历过的面试</title>
-   <link href="/blog/2005/09/hate-resume-and-interview.html"/>
+   <link href="http://chenjun.com/blog/2005/09/hate-resume-and-interview.html"/>
    <updated>2005-09-24T11:16:24+00:00</updated>
-   <id>/blog/2005/09/hate-resume-and-interview</id>
+   <id>http://chenjun.com/blog/2005/09/hate-resume-and-interview</id>
    <content type="html">&lt;p&gt;简历是什么？去&lt;a href=&quot;http://www.google.com/&quot;&gt;&lt;font color=&quot;#9cbceb&quot;&gt;Google&lt;/font&gt;&lt;/a&gt;搜索一下模版吧！&lt;/p&gt;
 
 &lt;p&gt;还可以搜索下求职信的模版。&lt;/p&gt;
@@ -3146,9 +3179,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>想念，在不同的时刻来临</title>
-   <link href="/blog/2005/09/miss-any-time.html"/>
+   <link href="http://chenjun.com/blog/2005/09/miss-any-time.html"/>
    <updated>2005-09-15T22:10:15+00:00</updated>
-   <id>/blog/2005/09/miss-any-time</id>
+   <id>http://chenjun.com/blog/2005/09/miss-any-time</id>
    <content type="html">&lt;p&gt;昨晚，忽然就梦见了&lt;a href=&quot;http://alumni.chinaren.com/class/class_index.jsp?classuuid=2917034545012212546&quot; title=&quot;永远的医法01&quot;&gt;&lt;font color=&quot;#9cbceb&quot;&gt;好些人&lt;/font&gt;&lt;/a&gt;，所以我今早就给Fish发去短信，得知她已经在我们当年军训的地方带学生了，只不过待遇不一样了。仿佛还是昨日的事，眼前却是物是人非了。而我们，也已经天个一方，各自算计着不知道是否是以后自己该走的路了，想念猛然间似乎强烈了起来，耳边想起&lt;a href=&quot;http://chenjun.com/old/post/Shunza_Dear_Friend.html&quot; title=&quot;顺子《Dear Friend》&quot;&gt;&lt;font color=&quot;#99aadd&quot;&gt;顺子&lt;/font&gt;&lt;/a&gt;的歌：&lt;strong&gt;跟夏天才告別/转眼满地落叶/远远的/白云依旧无言/像我心里感觉/还有增无減//跟去年说再见/转眼又是冬天/才一年/看著世界变迁/有种沧海桑田/无常的感觉&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;而昨日惊闻两位通过Blog认识的老友，竟因为种种因缘际会从一南一北走到了一起，不日我可能还将成为他们喜宴的食客，更是惊叹这世界在无声无息中已在我眼前变化得如此迅疾，不舍昼夜。曾经对自己的大学&lt;a href=&quot;http://chenjun.com/blog/2005/05/for-the-forgetting-memories.html&quot; title=&quot;祝你一路顺风—为了忘却的纪念&quot;&gt;&lt;font color=&quot;#99aadd&quot;&gt;几尽鄙夷&lt;/font&gt;&lt;/a&gt;，但现在想来，我只是讨厌那个躯壳，而我早已将自己的灵魂刻在了那些狗脸的岁月里，现在的我们大概都会在怀念吧，怀念那夜半歌声、怀念那关了灯的“209 Disco Club”、怀念那点着蜡烛斗地主喝开水的日子。&lt;/p&gt;
@@ -3170,9 +3203,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>在路上</title>
-   <link href="/blog/2005/08/on-the-way.html"/>
+   <link href="http://chenjun.com/blog/2005/08/on-the-way.html"/>
    <updated>2005-08-16T01:39:15+00:00</updated>
-   <id>/blog/2005/08/on-the-way</id>
+   <id>http://chenjun.com/blog/2005/08/on-the-way</id>
    <content type="html">&lt;p&gt;今天的事就是办档案和户籍了。先是在常州火车站，等2002次车。本是8点39分到的，结果要晚点至10点才到，心里一不舒服，就跑去汽车站了，结果，豪华VOLVO，价格自然上去了1倍。一到南京已经是中午11点半了。摇到一家KFC，要了个新出的新奥尔良鸡腿堡套餐：19文。饕餮完了赶快去找车，在网上查到：&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -3199,9 +3232,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>纪念我即将逝去的大学</title>
-   <link href="/blog/2005/06/commemorate-my-college-life.html"/>
+   <link href="http://chenjun.com/blog/2005/06/commemorate-my-college-life.html"/>
    <updated>2005-06-27T14:12:27+00:00</updated>
-   <id>/blog/2005/06/commemorate-my-college-life</id>
+   <id>http://chenjun.com/blog/2005/06/commemorate-my-college-life</id>
    <content type="html">&lt;p&gt;大学四年，似乎眨眼间，便已然走到了尽头，现在似乎没什么想法，就好像浑浑噩噩的睡过了四年，一觉醒来，便忘却了曾经做过的那些梦了。身边的同学，都在忙着工作的事情，似乎只有我，像个闲人似的，天天就在玩。&lt;/p&gt;
 
 &lt;p&gt;在大头的&lt;a href=&quot;http://www.bighead.cn/?p=129&quot; title=&quot;凤凰花开Liǎo：凤凰花又开Liǎo，可是那个城市连我的一张床都没有了。&quot;&gt;&lt;font color=&quot;#99aadd&quot;&gt;文章&lt;/font&gt;&lt;/a&gt;里，他说到：&lt;/p&gt;
@@ -3232,9 +3265,9 @@ I just can&amp;#8217;t be your friend&lt;/p&gt;
  
  <entry>
    <title>祝你一路顺风—为了忘却的纪念</title>
-   <link href="/blog/2005/05/for-the-forgetting-memories.html"/>
+   <link href="http://chenjun.com/blog/2005/05/for-the-forgetting-memories.html"/>
    <updated>2005-05-18T06:18:18+00:00</updated>
-   <id>/blog/2005/05/for-the-forgetting-memories</id>
+   <id>http://chenjun.com/blog/2005/05/for-the-forgetting-memories</id>
    <content type="html">&lt;p&gt;我一向不屑于表现我很喜欢我的大学，以及我的大学生活的。我一直固执的认为，我不喜欢、甚至于厌烦我这4年来的龌龊大学生活——因为于我，就像是一段真空，空空而无物——似乎什么都没有经历，我的大学生涯就这样结束了。&lt;/p&gt;
 
 &lt;p&gt;昨天，在学校一附院的礼堂，我竟然会去参加毕业晚会，并且从开始一直坐到最后。完全忘了我去之前说的，半小时后走人的想法了。——倒不是昨日的节目有多么精彩，讲话有多么煽情，都没有。&lt;/p&gt;
@@ -3276,9 +3309,9 @@ Oh ~ Friend　我对你的想念&lt;br&gt;
  
  <entry>
    <title>《罗生门》——透视人性</title>
-   <link href="/blog/2005/04/rashomon.html"/>
+   <link href="http://chenjun.com/blog/2005/04/rashomon.html"/>
    <updated>2005-04-29T01:02:28+00:00</updated>
-   <id>/blog/2005/04/rashomon</id>
+   <id>http://chenjun.com/blog/2005/04/rashomon</id>
    <content type="html">&lt;p&gt;《罗生门》&lt;br&gt;
 &lt;span style=&quot;font-size: 85%; color: #666699&quot;&gt;&lt;br /&gt; &lt;font size=&quot;2&quot;&gt;&lt;br /&gt; 日本&lt;br /&gt; 大映株式会社出品&lt;br /&gt; 年份：1950年&lt;br /&gt; 制式：黑白&lt;br /&gt; 片长：88分钟&lt;br /&gt; 原著：芥川龙之介&lt;br /&gt; 编剧：桥本忍 　　　黑泽明&lt;br /&gt; 导演：黑泽明&lt;br /&gt; 摄影：宫川一夫&lt;br /&gt; 美工：松山崇&lt;br /&gt; 作曲：早坂文雄&lt;br /&gt; 主要演员：三船敏郎、京町子、森雅之、志村乔&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;
 
@@ -3304,9 +3337,9 @@ Oh ~ Friend　我对你的想念&lt;br&gt;
  
  <entry>
    <title>风飞飞_追梦人、萨冈、孤独</title>
-   <link href="/blog/2005/03/lonely-dream-catcher-and-francoise-sagan.html"/>
+   <link href="http://chenjun.com/blog/2005/03/lonely-dream-catcher-and-francoise-sagan.html"/>
    <updated>2005-03-16T03:12:15+00:00</updated>
-   <id>/blog/2005/03/lonely-dream-catcher-and-francoise-sagan</id>
+   <id>http://chenjun.com/blog/2005/03/lonely-dream-catcher-and-francoise-sagan</id>
    <content type="html">&lt;p&gt;忽然间伤感莫名，就在这快毕业而没毕业的当口。想到未来，那不确定的未来；就不免回忆起那无忧无虑的中小学的时光。&lt;/p&gt;
 
 &lt;p&gt;如倒流般，又听到了这首歌，记忆里鲜活的跳出了那幅画面——在树林中，胡斐追寻袁紫衣；而痴情的程灵素却来追寻胡斐，三人在同一画面的那个定格，在我的脑海里久久挥而不去。&lt;/p&gt;
@@ -3339,9 +3372,9 @@ Oh ~ Friend　我对你的想念&lt;br&gt;
  
  <entry>
    <title>讲政治别讲法律</title>
-   <link href="/blog/2005/01/politics-no-law.html"/>
+   <link href="http://chenjun.com/blog/2005/01/politics-no-law.html"/>
    <updated>2005-01-16T01:50:15+00:00</updated>
-   <id>/blog/2005/01/politics-no-law</id>
+   <id>http://chenjun.com/blog/2005/01/politics-no-law</id>
    <content type="html">&lt;p&gt;这些天，因为天气冷，再加上带我的老师去学习，整个办案的事都落到了我头上，于是就以公安局为家，10天没回来过了。&lt;/p&gt;
 
 &lt;p&gt;大家都还好吧！&lt;/p&gt;
@@ -3395,9 +3428,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>他和她的故事</title>
-   <link href="/blog/2005/01/just-a-story.html"/>
+   <link href="http://chenjun.com/blog/2005/01/just-a-story.html"/>
    <updated>2005-01-03T20:40:03+00:00</updated>
-   <id>/blog/2005/01/just-a-story</id>
+   <id>http://chenjun.com/blog/2005/01/just-a-story</id>
    <content type="html">&lt;p&gt;&lt;em&gt;竟然是去年的同一时间写的……&lt;/em&gt;&amp;#8211;2006.1.3 By Zhu8&lt;/p&gt;
 
 &lt;p&gt;&lt;span style=&quot;color: silver&quot;&gt;如果你不小心路过这里，请你停住脚步，看一下下面他和她的故事，你的解答，也许会给他很多启发。我先代他谢谢你了！另外，请您不要去任意猜测谁是谁，这只是一个故事，而故事，仅仅是用来读的，不是用来猜测的。&lt;/span&gt;&lt;/p&gt;
@@ -3490,9 +3523,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>2期`艾瑞克.霍布斯鲍姆`极端的年代</title>
-   <link href="/blog/2004/12/panorama-2nd.html"/>
+   <link href="http://chenjun.com/blog/2004/12/panorama-2nd.html"/>
    <updated>2004-12-08T02:10:07+00:00</updated>
-   <id>/blog/2004/12/panorama-2nd</id>
+   <id>http://chenjun.com/blog/2004/12/panorama-2nd</id>
    <content type="html">&lt;p&gt;今日去书店,看到我2月没买到的2期万象,遂立刻买回来翻了.&lt;/p&gt;
 
 &lt;p&gt;读到了 张汝伦先生的&amp;lt;醒的理性主义者还是顽固的浪漫主义者&amp;gt;,讲的是霍氏对历史的态度,和他那超脱的政治观,以他学术上的显赫名声,却在日益声名狼藉的英国共产党里呆了六十年之久,而且对一切政治斗争犹如超脱一般.&lt;/p&gt;
@@ -3513,9 +3546,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>再见，灵素……</title>
-   <link href="/blog/2004/10/bye-bye-ling-su.html"/>
+   <link href="http://chenjun.com/blog/2004/10/bye-bye-ling-su.html"/>
    <updated>2004-10-19T02:23:18+00:00</updated>
-   <id>/blog/2004/10/bye-bye-ling-su</id>
+   <id>http://chenjun.com/blog/2004/10/bye-bye-ling-su</id>
    <content type="html">&lt;p&gt;今日，看完了23，24两集，就让时间停滞在第25集罢。因为，即使他们的故事再吸引我，再令我伤感，我也只能停止了。因为，现在不是在清朝，我不是胡斐，也没有一个程灵素，袁紫衣，甚至苗若兰，为了我伤神。我需要面对的是现实，是那越来越近的考试，是那越压越紧的未来。看到24集结束，我才知道原来袁是想成全斐和素，就让他们停在这吧，在谁也没有伤害谁之前。以后，我会重新看的，我会买下一套碟（如果还能买到的话），然后慢慢地，慢慢地，跟着他们一起去追梦吧！现在，该追的是自己的梦。&lt;/p&gt;
 
 &lt;p&gt;BLOG也停滞在2004年10月18日。今后应该不会再有什么时间，来写这些了，只希望，所有人都幸福，平安.Sendoh,希望你快乐！徒儿，希望你快乐！所有关心过我，帮助过我，我所关心，我所帮助过的，你们都能快乐！好么？希望每个人都能有一个心目中的他（她），希望你们幸福！&lt;/p&gt;
@@ -3528,9 +3561,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>《雪山飞狐》今日观感</title>
-   <link href="/blog/2004/10/xue-shan-fei-hu-today-feeling.html"/>
+   <link href="http://chenjun.com/blog/2004/10/xue-shan-fei-hu-today-feeling.html"/>
    <updated>2004-10-18T14:09:18+00:00</updated>
-   <id>/blog/2004/10/xue-shan-fei-hu-today-feeling</id>
+   <id>http://chenjun.com/blog/2004/10/xue-shan-fei-hu-today-feeling</id>
    <content type="html">&lt;p&gt;昨晚和今晚看了18集，现在已经看到23集了。&lt;/p&gt;
 
 &lt;p&gt;忽然，就喜欢上了程灵素，龚慈恩所诠释的程灵素。看原书的时候可能只是感觉，这个女孩确实很悲凉，为了自己爱的人所死，然而生前却只能被“逼”得被胡斐强扣上兄妹的名分，眼看着自己的爱人为了别人伤心，憔悴，去安慰他，却从来没有想过，自己的伤悲，谁人来安慰？&lt;/p&gt;
@@ -3547,9 +3580,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>《雪山飞狐》孟飞`龚慈恩`伍宇娟</title>
-   <link href="/blog/2004/10/xue-shan-fei-hu-gong-ci-en.html"/>
+   <link href="http://chenjun.com/blog/2004/10/xue-shan-fei-hu-gong-ci-en.html"/>
    <updated>2004-10-17T02:54:16+00:00</updated>
-   <id>/blog/2004/10/xue-shan-fei-hu-gong-ci-en</id>
+   <id>http://chenjun.com/blog/2004/10/xue-shan-fei-hu-gong-ci-en</id>
    <content type="html">&lt;p&gt;居然可以看了！两年前我几乎看不了！&lt;img src=&quot;http://static.chenjun.com/images/xueshanfeihu-logo.jpg&quot; title=&quot;雪山飞狐&quot; alt=&quot;雪山飞狐&quot; class=&quot;alignleft&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://vod.sdtv.cn/filmvod/filmplay.aspx?bianh=40&quot;&gt;山东台的播放地址&lt;/a&gt;&lt;strong&gt;&lt;em&gt;（播放地址已更新。）&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -3658,9 +3691,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>圣斗士星矢——你一定爱过它</title>
-   <link href="/blog/2004/10/saint-seiya.html"/>
+   <link href="http://chenjun.com/blog/2004/10/saint-seiya.html"/>
    <updated>2004-10-16T01:26:15+00:00</updated>
-   <id>/blog/2004/10/saint-seiya</id>
+   <id>http://chenjun.com/blog/2004/10/saint-seiya</id>
    <content type="html">&lt;p&gt;忽然就想起了星矢，想起童年的那些观看动画片的愉快和不愉快的回忆。&lt;/p&gt;
 
 &lt;p&gt;记得星矢刚放的那段时间，我带着比我小四岁的弟弟，看星矢，有天晚上，5点多，要开始的时候，我们还在楼下，忽然我看见钟上面已经到时间了，马上大叫一声：星矢开始啦！弟弟虽小，但条件反射似的跟着我就往楼上跑，然后他就摔倒了。&lt;/p&gt;
@@ -3680,9 +3713,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>面朝大海，春暖花开</title>
-   <link href="/blog/2004/10/poem-of-hai-zi.html"/>
+   <link href="http://chenjun.com/blog/2004/10/poem-of-hai-zi.html"/>
    <updated>2004-10-15T05:26:14+00:00</updated>
-   <id>/blog/2004/10/poem-of-hai-zi</id>
+   <id>http://chenjun.com/blog/2004/10/poem-of-hai-zi</id>
    <content type="html">&lt;p&gt;忽然想起海子的诗，又想起他的死。——面朝大海，春暖花开&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -3714,9 +3747,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>在雨中</title>
-   <link href="/blog/2004/10/in-the-rain.html"/>
+   <link href="http://chenjun.com/blog/2004/10/in-the-rain.html"/>
    <updated>2004-10-13T18:05:13+00:00</updated>
-   <id>/blog/2004/10/in-the-rain</id>
+   <id>http://chenjun.com/blog/2004/10/in-the-rain</id>
    <content type="html">&lt;p&gt;今日微寒，中雨。&lt;/p&gt;
 
 &lt;p&gt;未拿伞，行走雨中，看着身边忙碌且小心翼翼的人们，莫名就想起了你。&lt;/p&gt;
@@ -3761,9 +3794,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>梦里花落..</title>
-   <link href="/blog/2004/10/falling-dreams.html"/>
+   <link href="http://chenjun.com/blog/2004/10/falling-dreams.html"/>
    <updated>2004-10-04T21:15:04+00:00</updated>
-   <id>/blog/2004/10/falling-dreams</id>
+   <id>http://chenjun.com/blog/2004/10/falling-dreams</id>
    <content type="html">&lt;p&gt;今晨4点,忽然醒来,CD还开着,里面的碟是&lt;span style=&quot;color: navy&quot;&gt;老歌150首&lt;/span&gt;.放着的正是梁雁翎的&amp;lt;像雾像雨又像风&amp;gt;,转身乱按了一通CD,翻身准备继续睡.&lt;/p&gt;
 
 &lt;p&gt;忽然记起梦好象是随着歌的内容做的,于是急忙打开手电,准备找寻梦的痕迹.但由于是MP3碟,数量又大,读的速度又慢,每首歌加上序曲差不多要30秒以上,然后就想,不如顺便听下能不能找到几首好听的老歌,说实话,这张碟好多回都是伴着我入眠的,真正听还没几次.&lt;/p&gt;
@@ -3790,9 +3823,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>两年前ChinaRen上的日记</title>
-   <link href="/blog/2004/03/diary-on-chinaren-two-years-ago.html"/>
+   <link href="http://chenjun.com/blog/2004/03/diary-on-chinaren-two-years-ago.html"/>
    <updated>2004-03-18T20:42:18+00:00</updated>
-   <id>/blog/2004/03/diary-on-chinaren-two-years-ago</id>
+   <id>http://chenjun.com/blog/2004/03/diary-on-chinaren-two-years-ago</id>
    <content type="html">&lt;p&gt;&lt;span style=&quot;color: #ffa500&quot;&gt;第一篇&lt;/span&gt; &lt;strong&gt;自以为清醒的我&lt;/strong&gt;&lt;br&gt;
 笔名：不会飞的云 2002年01月05日 天气：sunny 心情：gray&lt;/p&gt;
 
@@ -3858,9 +3891,9 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
  
  <entry>
    <title>第一篇：留声机</title>
-   <link href="/blog/2004/03/gramophone.html"/>
+   <link href="http://chenjun.com/blog/2004/03/gramophone.html"/>
    <updated>2004-03-18T20:41:54+00:00</updated>
-   <id>/blog/2004/03/gramophone</id>
+   <id>http://chenjun.com/blog/2004/03/gramophone</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;此文的内容已经不再重要；&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;我只是为了记住这个时间。&lt;/strong&gt;&lt;/p&gt;

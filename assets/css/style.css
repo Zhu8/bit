@@ -2,7 +2,7 @@
 @import url(http://zhu8.qiniudn.com/assets/css/auticons/auticons.css);
 body {
     padding: 50px;
-    font: 16px/1.5 'Gentium Book Basic',PMingLiU,"Microsoft YaHei","Lucida Grande","Helvetica Neue",sans-serif;
+    font: 16px/1.5 'Noto Sans',PMingLiU,"Microsoft YaHei","Lucida Grande","Helvetica Neue",sans-serif;
     color: #777;
     font-weight: 300;
 }
@@ -398,7 +398,7 @@ img.right { padding: 0 0 8px 8px }
 .justify { text-align: justify }
 .center { text-align: center }
 /* Layout */
-h1, h2, h3, h4, h5, h6 .title, .about { font-family: 'Gentium Book Basic',PMingLiU,"Microsoft YaHei","Lucida Grande","Helvetica Neue",sans-serif; }
+h1, h2, h3, h4, h5, h6 .title, .about { font-family: 'Noto Sans',PMingLiU,"Microsoft YaHei","Lucida Grande","Helvetica Neue",sans-serif; }
 pre.prettyprint {
     background-color: #f5f5f5;
     display: block;

@@ -1,24 +1,24 @@
 @font-face {
-  font-family: 'Gentium Book Basic';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url(http://zhu8.qiniudn.com/assets/fonts/IRFxB2matTxrjZt6a3FUnsiUQA3_wO-qQTJfqhvSKS0.woff) format('woff');
+  src: local('Noto Sans'), local('NotoSans'), url(http://zhu8.qiniudn.com/assets/fonts/LeFlHvsZjXu2c3ZRgBq9nD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 @font-face {
-  font-family: 'Gentium Book Basic';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Gentium Book Basic Bold'), local('GentiumBookBasic-Bold'), url(http://zhu8.qiniudn.com/assets/fonts/T2vUYmWzlqUtgLYdlemGnVIi2N2FDuziJMXLp6dUo54.woff) format('woff');
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(http://zhu8.qiniudn.com/assets/fonts/PIbvSEyHEdL91QLOQRnZ13hCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 @font-face {
-  font-family: 'Gentium Book Basic';
+  font-family: 'Noto Sans';
   font-style: italic;
   font-weight: 400;
-  src: local('Gentium Book Basic Italic'), local('GentiumBookBasic-Italic'), url(http://zhu8.qiniudn.com/assets/fonts/qHqW2lwKO8-uTfIkh8FsUfrqj88NXfAsM1m2qetzTrY.woff) format('woff');
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'), url(http://zhu8.qiniudn.com/assets/fonts/ByLA_FLEa-16SpQuTcQn4IbN6UDyHWBl620a-IRfuBk.woff) format('woff');
 }
 @font-face {
-  font-family: 'Gentium Book Basic';
+  font-family: 'Noto Sans';
   font-style: italic;
   font-weight: 700;
-  src: local('Gentium Book Basic Bold Italic'), local('GentiumBookBasic-BoldItalic'), url(http://zhu8.qiniudn.com/assets/fonts/632u7TMIoFDWQYUaHFUp5HLdHZVRci2HdkkDqhT5urM.woff) format('woff');
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'), url(http://zhu8.qiniudn.com/assets/fonts/9Z3uUWMRR7crzm1TjRicDjqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
 }
