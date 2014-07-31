@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>陈俊的网：浮生志</title>
- <link href="http://chenjun.com/" rel="self"/>
- <link href="http://chenjun.com"/>
- <updated>2014-07-29T23:13:54+08:00</updated>
+ <link href="http://chenjun.com/atom.xml" rel="self"/>
+ <link href="http://chenjun.com/"/>
+ <updated>2014-07-31T22:52:26+08:00</updated>
  <id>http://chenjun.com</id>
  <author>
    <name>Chen Jun(Zhu8)</name>
@@ -3904,5 +3904,5 @@ liu6 @ 2005-02-05 22:56&lt;br&gt;
 </content>
  </entry>
  
- 
+
 </feed>
