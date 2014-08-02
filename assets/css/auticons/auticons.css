@@ -74,10 +74,10 @@ a:before { padding-right: 0.125em }
 
 /* tag archives */
 
-[rel="tag"]:before {
+/* [rel="tag"]:before {
 	content: '\E016';
 }
-
+*/
 /* permalinks */
 
 [rel="bookmark"]:before {
@@ -86,7 +86,7 @@ a:before { padding-right: 0.125em }
 
 /* previous and next pages/fragments */ 
 
-[rel="prev"]:before {
+/* [rel="prev"]:before {
 	content: '\E00A';
 }
 
@@ -94,7 +94,7 @@ a:before { padding-right: 0.125em }
 	content: '\E009';
 	padding-left: 0.3em;
 }
-
+*/
 /**
 * PROTOCOLS
 ----------------------------------------------------------------------
@@ -147,7 +147,7 @@ a:before { padding-right: 0.125em }
 ----------------------------------------------------------------------
 */
 
-[href$=".xml"]:before {
+/*[href$=".xml"]:before {
 	content: '\E00D';
 }
 
@@ -157,7 +157,7 @@ a:before { padding-right: 0.125em }
 [href*="/rss/"]:before {
 	content: '\E018';
 }
-
+*/
 /**
 * JAVASCRIPT & JSON
 ----------------------------------------------------------------------

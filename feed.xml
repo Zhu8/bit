@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title></title>
+		<description></description>		
+		<link>http://chenjun.com</link>
+		<atom:link href="http://chenjun.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>使用BitBucket和FTPloy私有Jekyll源码</title>
+				<description>
+					&lt;h2&gt;为何用BitBucket&amp;amp;FTPloy？&lt;/h2&gt;
+
+&lt;p&gt;网站使用&lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;Jekyll &amp;amp;bull; Simple, blog-aware, static sites&quot;&gt;Jekyll&lt;/a&gt;建成之后，放置在&lt;a href=&quot;https://pages.github.com&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt;的源码属于公开的访问，处于一些个人安全考虑，最重要的是放置在自己的FTP空间会相对安全一些，所以，我采用了支持私有源码的&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;作为Git仓库，并使用&lt;a href=&quot;https://ftploy.com&quot; title=&quot;FTP Deploy&quot;&gt;FTPloy&lt;/a&gt;作为Deploy方案，实现了自动发布到个人FTP的目的。
+&lt;img src=&quot;http://static.chenjun.com/images/FTPloy.png&quot; alt=&quot;FTPloy&quot; title=&quot;FTPloy&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;注册并使用BitBucket&lt;/h2&gt;
+
+&lt;p&gt;Github私有源码的话，是需要美刀的，作为小站长，一个虚拟空间的钱还是要省的，所以，去注册&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;吧：）注册完成之后，创建一个仓库，如 &lt;strong&gt;&lt;em&gt;下图&lt;/em&gt;&lt;/strong&gt; 所示，注意可选 &lt;strong&gt;私人仓库&lt;/strong&gt; 选项。当然，也可以按右上角的&lt;strong&gt;import&lt;/strong&gt;导入你的Github仓...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Sun, 27 Jul 2014 13:23:33 +0800</pubDate>
+				<link>http://chenjun.com/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll.html</guid>
+			</item>
+		
+			<item>
+				<title>重生@Jekyll+GitHub Pages</title>
+				<description>
+					&lt;p&gt;本博开篇，Zhu8.Net Reborn!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Enjoy it!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/vector_jerry_8ball_by_svezate-d6lzyyh.png&quot; alt=&quot;Jerry and the 8 Ball&quot; title=&quot;Jerry and the 8 Ball&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;为何用Github&amp;amp;Jekyll？&lt;/h3&gt;
+
+&lt;p&gt;我想这不需要多说了吧？&lt;strong&gt;版本记录+Markdown+本地编辑&lt;/strong&gt;。嗯！爽！&lt;/p&gt;
+
+&lt;h2&gt;1.如何离线或在线编辑？&lt;/h2&gt;
+
+&lt;p&gt;经过无数试用，建议Chrome+&lt;a href=&quot;https://stackedit.io&quot; title=&quot;StackEdit&quot;&gt;Stackedit&lt;/a&gt;（&lt;a href=&quot;https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg?utm_source=chrome-ntp-launcher&quot;&gt;应用商店下载地址&lt;/a&gt;）！一个搞定所有！Stackedit可以支持安装应用商店使用离线功能，并且有完整的快捷键面板以及物理快捷键！&lt;/p&gt;
+
+&lt;h2&gt;2. Markdown新手快捷键参考&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;加粗——Ctrl+B&lt;br&gt;
+斜体——Ctrl+I&lt;br&gt;
+网址——Ctrl+L&lt;br&gt;
+引用——Ctrl+Q&lt;br&gt;
+代码——Ctrl+K&lt;br&gt;
+图片——Ctrl+G&lt;br&gt;
+有序列表——Ctrl+O&lt;br&gt;
+无序列表——Ct...&lt;/p&gt;
+&lt;/blockquote&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2014/07/jekyll-github.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Fri, 04 Jul 2014 23:23:44 +0800</pubDate>
+				<link>http://chenjun.com/blog/2014/07/jekyll-github.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2014/07/jekyll-github.html</guid>
+			</item>
+		
+			<item>
+				<title>Typecho个性化常用代码</title>
+				<description>
+					&lt;p&gt;发觉自己真的老了，好多东西折腾不动了……一个网站模版和个性化，竟然每天就只能折腾一点点。遥想公瑾当年，一晚上不睡觉，整个网站页面就优化完毕了。&lt;/p&gt;
+
+&lt;p&gt;网站以前用&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.movabletype.com&quot;&gt;MT&lt;/a&gt;，最喜欢的当然是静态化，虽然用的是3.X，但是能达到我的要求，就一直没有换。但是后来不知道为什么，反垃圾评论功能失效了……作为一个强迫症兼偏执狂，当然受不了这个，但是自己又没劲再去折腾了。于是，换到了&lt;a rel=&quot;nofollow&quot; href=&quot;http://www.typecho.org&quot;&gt;Typecho&lt;/a&gt;，因为实在是不想用大众脸的&lt;a rel=&quot;nofollow&quot; href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt;！&lt;/p&gt;
+
+&lt;p&gt;诚如我&lt;a rel=&quot;nofollow&quot; href=&quot;http://chenjun.com/2014/06/start.html&quot;&gt;第一篇日志&lt;/a&gt;所言，微博微信都是危险...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2014/06/typecho-personalize.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Mon, 30 Jun 2014 20:51:49 +0800</pubDate>
+				<link>http://chenjun.com/blog/2014/06/typecho-personalize.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2014/06/typecho-personalize.html</guid>
+			</item>
+		
+			<item>
+				<title>今天开始</title>
+				<description>
+					&lt;p&gt;上一篇 &lt;a rel=&quot;nofollow&quot; href=&quot;http://chenjun.com/&quot;&gt;日志&lt;/a&gt; 还是&lt;strong&gt;三年&lt;/strong&gt;前了。&lt;br&gt;
+选择在&lt;strong&gt;今天&lt;/strong&gt;，开始新的网站更新吧。微博、微信，都是危险的东西。&lt;/p&gt;
+
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2014/06/start.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Wed, 04 Jun 2014 22:27:20 +0800</pubDate>
+				<link>http://chenjun.com/blog/2014/06/start.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2014/06/start.html</guid>
+			</item>
+		
+			<item>
+				<title>转移到Ubuntu同时开启ipv6</title>
+				<description>
+					&lt;p&gt;转眼又大半年过去了，曾经的火炉南京也烧到了35度的高温，风就像蒸汽一样的薰人。不过晚上的凉风仍然让人感觉到夏天还没有正在到来。生活依然平淡的在继续，“要加薪”没有成功，但是也没有胜利者，就如同在法院外放鞭炮的人一样，他们也仅仅是在那一刹那得到了一些病态的慰籍。如同在微博上“狂欢”的人们一样，生活并没有因此也改变，生存环境也不会因此而宽大，铁屋子似乎越来越密封。一如南京中午13：00的空气。&lt;/p&gt;
+
+&lt;p&gt;闲得无事，终于想去折腾Linux，选择自然是我在06还是07年索取过的漂洋过海来到中国的&lt;a href=&quot;http://www.ubuntu.com&quot; rel=&quot;external&quot; title=&quot;Ubuntu&quot;&gt;Ubuntu&lt;/a&gt;。不料冲动坏事，在格式化的时候把我的1TB硬盘全部格掉，更始料未及的是两天前冲动的那个我用Re...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2011/05/change-to-ubuntu-and-ipv6.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Sat, 21 May 2011 00:46:07 +0800</pubDate>
+				<link>http://chenjun.com/blog/2011/05/change-to-ubuntu-and-ipv6.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2011/05/change-to-ubuntu-and-ipv6.html</guid>
+			</item>
+		
+			<item>
+				<title>最新1991台视版《雪山飞狐》480P下载及絮叨</title>
+				<description>
+					&lt;p&gt;曾经一段时间，我近乎痴迷的看《&lt;a href=&quot;http://chenjun.com/blog/2004/10/xue-shan-fei-hu-gong-ci-en.html&quot; title=&quot;《雪山飞狐》孟飞`龚慈恩`伍宇娟&quot;&gt;雪山飞狐&lt;/a&gt;》。但是可惜的一直没有清晰的版本可以给我们重温，迄今为止，最&lt;strong&gt;清晰&lt;/strong&gt;的，&lt;strong&gt;分辨率&lt;/strong&gt;最高的，可以&lt;strong&gt;免费&lt;/strong&gt;获得的，&lt;strong&gt;1991台视版《雪山飞狐》&lt;/strong&gt;，出来啦！感谢网络上一位朋友的提醒，他曾经帮我找了以前绿标台视国际台的雪山飞狐，分辨率448*336的，大小在160M左右一集的MKV，清晰度是当时最清晰的，我一直琢磨着分享给大家，但是第一由于要&lt;a href=&quot;http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng.html&quot;&gt;从北京回南京&lt;/a&gt;，一直在折腾。第二一直觉得这种清晰度对大家来说也许没有什么质的提高。&lt;/p&gt;
+
+&lt;p&gt;今天，终于有新的出来了！600M一集，480P...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/11/new-flying-fox-of-snowy-mountain-1991.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Tue, 30 Nov 2010 22:45:08 +0800</pubDate>
+				<link>http://chenjun.com/blog/2010/11/new-flying-fox-of-snowy-mountain-1991.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2010/11/new-flying-fox-of-snowy-mountain-1991.html</guid>
+			</item>
+		
+			<item>
+				<title>[流水]N97在太原火车站被狗日的维族佬偷了</title>
+				<description>
+					&lt;p&gt;很久没有写&lt;strong&gt;日志&lt;/strong&gt;了，因为一直没有啥动力，本来世界杯完了准备再写一篇&lt;a href=&quot;http://chenjun.com/blog/2006/06/worldcup-2006.html&quot; title=&quot;世界杯–难得疯狂&quot;&gt;&lt;strong&gt;世界杯感受&lt;/strong&gt;&lt;/a&gt;的，可是我可爱的&lt;strong&gt;&lt;a href=&quot;http://twitter.com/5CJ/status/17593626413&quot;&gt;斯内德&lt;/a&gt;（要翻土啬，你懂的。）&lt;/strong&gt;没有带领荷兰笑到最后，与数个被&lt;strong&gt;无比功利&lt;/strong&gt;的1个净胜球杀回家的球队一样，被西班牙1：0送回了阿姆斯特丹。 &lt;/p&gt;
+
+&lt;p&gt;今天&lt;a href=&quot;http://static.chenjun.com/images/o_N97.jpg&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/s_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97-点击看大图&quot; class=&quot;alignright&quot;&gt;&lt;/a&gt;写的目的，是说下我在太原火车站，丢了我半年前引以为豪，机缘巧合用1900元人民币买回来的全新的&lt;strong&gt;Nokia N97&lt;/strong&gt;行货（当时N97的行货价是3900大洋），&lt;strong&gt;不是丢！是偷！2010年8月11日&lt;/strong&gt;，我第二次来太原出差，下午&lt;strong&gt;15：40&lt;/strong&gt;分左右，出了出站口，因为一只手拿着行李和笔记本包，另一只手打着伞，所以身上斜跨的小KAPPA包赤果果的暴露在了不法之徒的眼底。 &lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;5分钟后，我走到了过马路的人行横道，这里要说一下，那天下雨，本来太原火车站就全是人，门口的路永远的拥堵着（貌似中国的每个火车站都是这样）。等着过马路的档口，一个小伙子很小声的跟...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Thu, 12 Aug 2010 16:53:24 +0800</pubDate>
+				<link>http://chenjun.com/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html</guid>
+			</item>
+		
+			<item>
+				<title>ChenJun.COM重生及继续折腾</title>
+				<description>
+					&lt;p&gt;自从去年&lt;a href=&quot;http://chenjun.com/blog/2009/03/chenjun-dot-com-online.html&quot;&gt;被不幸&lt;del datetime=&quot;2010-06-04T13:52:45+00:00&quot;&gt;与世隔绝&lt;/del&gt;&lt;/a&gt;1年余，&lt;strong&gt;今日&lt;/strong&gt;幸得真主眷顾，冲出牢笼。&lt;/p&gt;
+
+&lt;p&gt;兴奋不已，重燃激情，欣闻&lt;a href=&quot;http://wordpress.org/development/2010/05/wordpress-3-0-release-candidate/&quot;&gt;WordPress快到3.0&lt;/a&gt;，且使用Movable Type已有倦意，而WordPress的用户群广大，插件众多，用户感受颇好。且多年前我就是从&lt;a href=&quot;http://www.rainbowsoft.org&quot;&gt;Z-Blog&lt;/a&gt;之后就是&lt;a href=&quot;http://chenjun.com/blog/2006/07/my-wordpress-plugins.html&quot;&gt;从WordPress开始&lt;/a&gt;的，遂重新启用域名的同时，也改头换面，用回WP，继续折腾！&lt;/p&gt;
+
+&lt;p&gt;另：WordPress 3.0的默认主题TwentyTen很不错，也不至于像Kubrick那么久了难免有些审美疲劳，网上搜了一下未发现&lt;strong&gt;中文包&lt;/strong&gt;，遂做了一个：有需要的尽管自取：&lt;a href=&quot;http://static.chenjun.com/images/languages.zip&quot; title=&quot;Chinese Simplified Language Pack for WordPress 3.0 Defult Theme:TwentyTen&quot;&gt;&lt;strong&gt;zh_CN.po/mo&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下周三开始即将&lt;strong&gt;休假半月&lt;/strong&gt;，回来后可能还...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/06/chenjun-com-reborn-and-zheteng.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Fri, 04 Jun 2010 21:52:37 +0800</pubDate>
+				<link>http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng.html</guid>
+			</item>
+		
+			<item>
+				<title>招行信用卡绑定Google Checkout</title>
+				<description>
+					&lt;p&gt;使用招行信用卡购买了Google的&lt;strong&gt;$5&lt;/strong&gt;/年的&lt;strong&gt;20GB&lt;/strong&gt;存储空间！没有办法，&lt;a href=&quot;https://checkout.google.com/&quot; style=&quot;text-decoration: none; color: rgb(128, 255, 0); &quot;&gt;Google Checkout&lt;/a&gt;不支持&lt;strong&gt;中国（P.R.C）&lt;/strong&gt;，所以只能&lt;strong&gt;“被”&lt;/strong&gt;成为香港（&lt;strong&gt;Hong.Kong&lt;/strong&gt;）公民了，因为只能购买一年的，Google提示是：&lt;strong&gt;您目前的方案將在 2011/1/20自動續約&lt;/strong&gt;。目前已经增容成功，关键一点就是害怕，会不会因为卡片的注册地不在香港被停止这张信用卡在Google Checkout的使用，明年会自动续费么？这些都得等明年才知道了。&lt;/p&gt;
+
+&lt;p&gt;信用卡使用的是&lt;strong&gt;双币&lt;/strong&gt;信用卡，&lt;strong&gt;Visa&lt;/strong&gt;的，开通了&lt;strong&gt;Visa验证&lt;/strong&gt;，购买后，招行短信提示有两条：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; 您尾号XXXX的招行信用卡于1月21日10时15分网上交易&lt;strong&gt;当地币&lt;/strong&gt;8.00...&lt;/li&gt;
+&lt;/ol&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/01/use-cmb-card-as-google-checkout.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Thu, 21 Jan 2010 14:02:35 +0800</pubDate>
+				<link>http://chenjun.com/blog/2010/01/use-cmb-card-as-google-checkout.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2010/01/use-cmb-card-as-google-checkout.html</guid>
+			</item>
+		
+			<item>
+				<title>Google Go Le?</title>
+				<description>
+					&lt;p&gt;Google &lt;a title=&quot;Official Google Blog: A new approach to China&quot; href=&quot;http://googleblog.blogspot.com/2010/01/new-approach-to-china.html&quot; style=&quot;text-decoration: none; color: rgb(102, 181, 255); &quot;&gt;要走了&lt;/a&gt;？大家都在这么说，各处新闻长篇累牍，也不需要我等草民复述。我与&lt;a title=&quot;三言二拍：Google退出中国 - 对牛乱弹琴 | Playin&#39; with IT - DonewsBlog&quot; href=&quot;http://blog.donews.com/keso/archive/2010/01/13/1580275.aspx&quot; style=&quot;text-decoration: none; color: rgb(102, 181, 255); &quot;&gt;Keso&lt;/a&gt;（妄自尊大了）的想法如出一辙，我的这么多服务怎么办？我的&lt;strike&gt;Gmail、Google Reader、Analytics、AdSense、Blogger、Talk、Chrome、PinYin、PicasaWeb&lt;/strike&gt;以及还没有盼到的&lt;strike&gt;Nexus One&lt;/strike&gt;，它们怎么办？&lt;/p&gt;
+
+&lt;p&gt;也许有一天，我的所有这些都无法访问，我得把我的身体练得愈发强壮，好爬过那耸入云霄的文明用语；也许有一天，我会发现我惟一的祈祷就是能亲手砸烂那伟岸无比的文明用语；也许有一天，我得不停的说着：“文明用语你文明用语的文明用语。”才能倾泄我对文明用语的文明用语。&lt;/p&gt;
+
+...
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/01/google-go-le.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Fri, 15 Jan 2010 23:25:14 +0800</pubDate>
+				<link>http://chenjun.com/blog/2010/01/google-go-le.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2010/01/google-go-le.html</guid>
+			</item>
+		
+			<item>
+				<title>2010新开始</title>
+				<description>
+					&lt;p&gt;2010年终于到来了，北京的两场大雪也下的扎扎实实，我的未来却还没有扎实，中国的未来吾等草民还是继续为我们的那座小屋努力吧！&lt;/p&gt;
+
+&lt;p&gt;也许是厌倦了不停的升级，虽然SixApart终于在两次跳票后发布了&lt;strong&gt;Movable Type 5&lt;/strong&gt;，Wordpress的更新速度更甚，反而是默默的Blogger，被关注的次数也越来越少，所以，我还是继续小众好了。害怕&lt;strike&gt;看不到&lt;/strike&gt;这里的更新？&lt;strong&gt;Who Cares!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; clear: both; &quot;&gt;
+  &lt;img title=&quot;怒吼吧，中国！——李桦 1935年&quot; border=&quot;0&quot; alt=&quot;怒吼吧，中国！——李桦 1935年&quot; src=&quot;http://static.chenjun.com/images/nuhou.png&quot; width=&quot;225&quot; height=&quot;324&quot;&gt; &lt;br&gt;&lt;strong&gt;&lt;em&gt;版画：怒吼吧，中国！——李桦 1935&lt;/em&gt;&lt;/strong&gt;
+&lt;/p&gt;
+
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/01/new-start-form-2010.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Mon, 11 Jan 2010 12:01:41 +0800</pubDate>
+				<link>http://chenjun.com/blog/2010/01/new-start-form-2010.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2010/01/new-start-form-2010.html</guid>
+			</item>
+		
+			<item>
+				<title>战争的艺术（War Craft）</title>
+				<description>
+					&lt;p&gt;&lt;strong&gt;战争&lt;/strong&gt;还是爆发了。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnbeta.com/articles/96873.htm&quot;&gt;&lt;strong&gt;版署终止《魔兽世界》审批 要求网易停止违规&lt;/strong&gt;&lt;/a&gt;（2009-11-02 19:16）&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;日前，新闻出版总署发出通知，终止《魔兽世界》(燃烧的远征)审批，退回关于引进出版《魔兽世界》的申请。通知要求，网之易公司立即停止违规行为，纠正错误，停止收费和新账号注册。新闻出版总署将视情依法对其作出相应的行政处罚，包括停止其互联网接入服务。&lt;/p&gt;
+
+&lt;p&gt;新闻出版总署相关负责人告诉记者，在对网之易公司申请代理运营境外著作权人授权的网络游戏《魔兽世界》的审批过程中，新闻出版总署考虑到该游戏运营代理转 换过程中...&lt;/p&gt;
+&lt;/blockquote&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/11/warcraft.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Tue, 03 Nov 2009 12:04:44 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/11/warcraft.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/11/warcraft.html</guid>
+			</item>
+		
+			<item>
+				<title>Rokr E2从Outlook Express中导入联系人</title>
+				<description>
+					&lt;p&gt;最近购入了Moto的Rokr E2，一部已经停产快两年，但我一直想拥有但苦于一直行货缺货的机器。前段时间卓越竟然有货了，毫不犹豫的购入了一台，刷机，很好很强大，用着也挺顺心的。&lt;/p&gt;
+
+&lt;p&gt;就是一直为如何将原来Palm 680的通讯录导过来以及更新烦恼。寻找了如下方法：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; 装Moto的官方软件Motorola Phone Tools，可以与Outlook Express互相同步，但是不知道什么原因，老是无法连接机器，我想再次更新的时候却没辙了。只好—-&lt;strong&gt;放弃&lt;/strong&gt;。 &lt;/li&gt;
+&lt;li&gt; 使用网上流传的用Google 的Sync，但是我配置了之后一直是更新失败，无法连接到Google的服务器上面。—-&lt;strong&gt;放弃&lt;/strong&gt;。 &lt;/li&gt;
+&lt;li&gt; 研究了一下Mo...&lt;/li&gt;
+&lt;/ol&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/07/rokr-e2-import-contacts-from-outlook-express.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Mon, 27 Jul 2009 15:04:22 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/07/rokr-e2-import-contacts-from-outlook-express.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/07/rokr-e2-import-contacts-from-outlook-express.html</guid>
+			</item>
+		
+			<item>
+				<title>Movable Type中文化书签插件-Bookmarks Chinese</title>
+				<description>
+					&lt;p&gt;&lt;font style=&quot;font-size: 1.25em;&quot;&gt;&lt;b&gt;描述：&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;BookmarksChinese&lt;/em&gt;&lt;/strong&gt;是我在使用了一些如&lt;a class=&quot;&quot; title=&quot;AddThis&quot; href=&quot;http://www.addthis.com/&quot;&gt;addthis.com&lt;/a&gt;的按钮之后，发现对中文支持很差，所以弄的一个中文化的书签插件如果你还需要其他的按钮，请自行参考开发即可。&lt;br&gt;
+作者信息：Zhu8 (&lt;a class=&quot;&quot; title=&quot;Zhu8&#39;&#39;s Web&quot; href=&quot;http://chenjun.com/&quot;&gt;http://www.zhu8.net&lt;/a&gt;)&lt;br&gt;
+插件地址：&lt;a class=&quot;&quot; title=&quot;Zhu8&#39;&#39;s Web&quot; href=&quot;http://chenjun.com/blog/2009/06/bookmarks-chinese.html&quot;&gt;http://chenjun.com/blog/2009/06/bookmarks-chinese.html&lt;/a&gt;&lt;br&gt;
+插件版本：1.0 Final (2009.6.4)&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;font style=&quot;font-size: 1.25em;&quot;&gt;&lt;b&gt;插件结构：&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;mt-static/&lt;br&gt;
+　　　　plugins/&lt;br&gt;
+　　　　　　　　BookmarksChinese/&lt;br&gt;
+　　　　　　　　　　　　style.css&lt;br&gt;
+　　　　　　　　　　　　ima...&lt;/p&gt;
+&lt;/blockquote&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/06/bookmarks-chinese.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Tue, 16 Jun 2009 20:58:44 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/06/bookmarks-chinese.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/06/bookmarks-chinese.html</guid>
+			</item>
+		
+			<item>
+				<title>【Braid/时空幻境】图文介绍+视频攻略</title>
+				<description>
+					&lt;blockquote&gt;
+&lt;p&gt;&lt;img style=&quot;FLOAT: left&quot; src=&quot;http://static.chenjun.com/images/killsign.png&quot;&gt;当我看到&lt;a title=&quot;Woooh:Braid&quot; href=&quot;http://woooh.com/2009/05/braid.html&quot;&gt;Aether&lt;/a&gt;在FriendFeed上推荐了这个游戏的时候，回家我用最快的速度下载了下来。很小（100多Mb，仅相当于动辄N个G的一些”&lt;strike&gt;大作&lt;/strike&gt;“的数十分之一），但是画面细腻有加，音乐有些像我们当年玩&lt;strong&gt;《英雄无敌3之死亡阴影》&lt;/strong&gt;时候的背景音乐，唯美动听。&lt;strong&gt;&lt;em&gt;Updated on 2009/05/09 21：15—-&lt;/em&gt;&lt;/strong&gt;变态的玩了一晚上，真的对自己的游戏体验有了一种全新的感受，从95年...&lt;/p&gt;
+&lt;/blockquote&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/05/braid.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Sat, 09 May 2009 00:44:10 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/05/braid.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/05/braid.html</guid>
+			</item>
+		
+			<item>
+				<title>Sub字幕转换Srt字幕&amp;#8211;赠：大话西游字幕及Srt编辑器</title>
+				<description>
+					&lt;p&gt;还是没事做，又欣赏了一遍鬼斧神道的大话西游，心中默念着台词，然后在周星星的某个表情还没有开始的时候偷偷笑，肆意模仿着星爷的夸张语气和表演，忍不住回想起当年，才发觉初次在家中用那台2800大洋的Panasonic录像机看它的时候，已经是10年甚至更早了（大约是在96-98之间）。那时的我刚刚初三或者高一，仍然懵懂，记得当时的录像带上有周星星的孙悟空扮相，当时的录像带上名字分明是：《齐天大圣东游记》。&lt;/p&gt;
+
+&lt;p&gt;饶有兴致的翻出我的刻录碟：Verycd上下的：&lt;a href=&quot;http://www.verycd.com/topics/8613/&quot;&gt;《大话西游之月光宝盒》(A Chinese Odyssey Part One: Pandora’s Box)&lt;/a&gt;&amp;amp;&lt;a href=&quot;http://www.verycd.com/topics/17571/&quot;&gt;《大话西游之仙履奇缘》(A Chinese Odyssey Par...&lt;/a&gt;&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/04/sub-to-srt-and-srt-editor.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Thu, 23 Apr 2009 01:34:27 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/04/sub-to-srt-and-srt-editor.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/04/sub-to-srt-and-srt-editor.html</guid>
+			</item>
+		
+			<item>
+				<title>ChenJun dot COM上线!</title>
+				<description>
+					&lt;p&gt;在Godaddy BackOrder了我的名字：&lt;em&gt;陈俊：&lt;/em&gt;&lt;strong&gt;ChenJun dot COM&lt;/strong&gt; 作为&lt;strong&gt;&lt;em&gt;个人&lt;/em&gt;&lt;/strong&gt;域名。&lt;strong&gt;&lt;em&gt;2009-2-17&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It’s Blocked and Not Forgive By The Big Brother Yet. &lt;em&gt;2009.3～2009.6&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;*&lt;em&gt;I will hold it till the God Die.Forever.
+*&lt;/em&gt;&lt;/p&gt;
+
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/03/chenjun-dot-com-online.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Thu, 12 Mar 2009 23:10:33 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/03/chenjun-dot-com-online.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/03/chenjun-dot-com-online.html</guid>
+			</item>
+		
+			<item>
+				<title>关闭WordPress的Revision功能</title>
+				<description>
+					&lt;p&gt;还是使用 &lt;a href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt; 吧！。因为它的2.7实在是太诱人了。我从WP1.3开始用到现在，实在是太习惯和依赖了。虽然他有讨厌的Revision……&lt;/p&gt;
+
+&lt;p&gt;如何关闭Revision？我试用了几种方法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;第一种&lt;/strong&gt;：在&lt;em&gt;wp-config.php&lt;/em&gt;中加入如下代码：&lt;br&gt;
+&lt;code&gt;php
+define(&amp;amp;#8216;WP_POST_REVISIONS&amp;amp;#8217;, 0 );  
+define(&amp;amp;#8216;AUTOSAVE_INTERVAL&amp;amp;#8217;, 72000 );
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;经测试，新建文章没有问题，似乎是可以关掉，但当你在修改已经发布的文章的时候，仍然在其作用。——&lt;strong&gt;放弃&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;第二种&lt;/strong&gt;：使用插件：&lt;a href=&quot;http://www.hostscope.com/wordpress-plugins/norevisions-wordpress-plugin/&quot; title=&quot;The No Revisions WordPress Plugin&quot;&gt;No Re...&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/03/disable-wordpress-revision.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Tue, 03 Mar 2009 23:25:55 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/03/disable-wordpress-revision.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/03/disable-wordpress-revision.html</guid>
+			</item>
+		
+			<item>
+				<title>等待编辑中</title>
+				<description>
+					&lt;p&gt;还是使用 &lt;a href=&quot;http://wordpress.org&quot;&gt;WordPress&lt;/a&gt; 吧！。因为它的2.7实在是太诱人了。我从WP1.3开始用到现在，实在是太习惯和依赖了。虽然他有讨厌的Revision……——&lt;strong&gt;如何关闭？&lt;/strong&gt;看这里：&lt;a href=&quot;http://chenjun.com/blog/2009/03/disable-wordpress-revision.html&quot; rel=&quot;bookmark&quot;&gt;关闭Wordpress的Revision功能&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;其他事项将补充在这篇&lt;strong&gt;/?p=1&lt;/strong&gt;的置顶文章中……&lt;/p&gt;
+
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/03/waitting-for-edit.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Mon, 02 Mar 2009 07:32:20 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/03/waitting-for-edit.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/03/waitting-for-edit.html</guid>
+			</item>
+		
+			<item>
+				<title>技嘉主板安装IDE光驱和硬盘跳线问题(赠：Beyond-情人)</title>
+				<description>
+					&lt;p&gt;原来的板子坏了，新买了一块技嘉的板子（GA-M61PME-S2），因为我原来的硬盘和DVD-ROM都是...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/02/ide-cdrom-on-gigabyte-error.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Sat, 14 Feb 2009 01:31:38 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/02/ide-cdrom-on-gigabyte-error.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/02/ide-cdrom-on-gigabyte-error.html</guid>
+			</item>
+		
+	</channel>
+</rss>
