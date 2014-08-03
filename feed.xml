@@ -9,12 +9,12 @@
 			<item>
 				<title>使用BitBucket和FTPloy私有Jekyll源码</title>
 				<description>
-					&lt;h2&gt;为何用BitBucket&amp;amp;FTPloy？&lt;/h2&gt;
+					&lt;h2 id=&quot;为何用bitbucket&amp;amp;ftploy？&quot;&gt;为何用BitBucket&amp;amp;FTPloy？&lt;/h2&gt;
 
 &lt;p&gt;网站使用&lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;Jekyll &amp;amp;bull; Simple, blog-aware, static sites&quot;&gt;Jekyll&lt;/a&gt;建成之后，放置在&lt;a href=&quot;https://pages.github.com&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt;的源码属于公开的访问，处于一些个人安全考虑，最重要的是放置在自己的FTP空间会相对安全一些，所以，我采用了支持私有源码的&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;作为Git仓库，并使用&lt;a href=&quot;https://ftploy.com&quot; title=&quot;FTP Deploy&quot;&gt;FTPloy&lt;/a&gt;作为Deploy方案，实现了自动发布到个人FTP的目的。
-&lt;img src=&quot;http://static.chenjun.com/images/FTPloy.png&quot; alt=&quot;FTPloy&quot; title=&quot;FTPloy&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;http://cloud.chenjun.com/static/images/FTPloy.png&quot; alt=&quot;FTPloy&quot; title=&quot;FTPloy&quot;&gt;&lt;/p&gt;
 
-&lt;h2&gt;注册并使用BitBucket&lt;/h2&gt;
+&lt;h2 id=&quot;注册并使用bitbucket&quot;&gt;注册并使用BitBucket&lt;/h2&gt;
 
 &lt;p&gt;Github私有源码的话，是需要美刀的，作为小站长，一个虚拟空间的钱还是要省的，所以，去注册&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;吧：）注册完成之后，创建一个仓库，如 &lt;strong&gt;&lt;em&gt;下图&lt;/em&gt;&lt;/strong&gt; 所示，注意可选 &lt;strong&gt;私人仓库&lt;/strong&gt; 选项。当然，也可以按右上角的&lt;strong&gt;import&lt;/strong&gt;导入你的Github仓...&lt;/p&gt;
 					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2014/07/use-bitbucket-and-ftploy-to-private-jekyll.html&quot;&gt;
@@ -33,17 +33,17 @@
 
 &lt;p&gt;&lt;strong&gt;Enjoy it!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/vector_jerry_8ball_by_svezate-d6lzyyh.png&quot; alt=&quot;Jerry and the 8 Ball&quot; title=&quot;Jerry and the 8 Ball&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://cloud.chenjun.com/static/images/vector_jerry_8ball_by_svezate-d6lzyyh.png&quot; alt=&quot;Jerry and the 8 Ball&quot; title=&quot;Jerry and the 8 Ball&quot;&gt;&lt;/p&gt;
 
-&lt;h3&gt;为何用Github&amp;amp;Jekyll？&lt;/h3&gt;
+&lt;h3 id=&quot;为何用github&amp;amp;jekyll？&quot;&gt;为何用Github&amp;amp;Jekyll？&lt;/h3&gt;
 
 &lt;p&gt;我想这不需要多说了吧？&lt;strong&gt;版本记录+Markdown+本地编辑&lt;/strong&gt;。嗯！爽！&lt;/p&gt;
 
-&lt;h2&gt;1.如何离线或在线编辑？&lt;/h2&gt;
+&lt;h2 id=&quot;1.如何离线或在线编辑？&quot;&gt;1.如何离线或在线编辑？&lt;/h2&gt;
 
 &lt;p&gt;经过无数试用，建议Chrome+&lt;a href=&quot;https://stackedit.io&quot; title=&quot;StackEdit&quot;&gt;Stackedit&lt;/a&gt;（&lt;a href=&quot;https://chrome.google.com/webstore/detail/stackedit/iiooodelglhkcpgbajoejffhijaclcdg?utm_source=chrome-ntp-launcher&quot;&gt;应用商店下载地址&lt;/a&gt;）！一个搞定所有！Stackedit可以支持安装应用商店使用离线功能，并且有完整的快捷键面板以及物理快捷键！&lt;/p&gt;
 
-&lt;h2&gt;2. Markdown新手快捷键参考&lt;/h2&gt;
+&lt;h2 id=&quot;2.-markdown新手快捷键参考&quot;&gt;2. Markdown新手快捷键参考&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;加粗——Ctrl+B&lt;br&gt;
@@ -131,7 +131,7 @@
 				<description>
 					&lt;p&gt;很久没有写&lt;strong&gt;日志&lt;/strong&gt;了，因为一直没有啥动力，本来世界杯完了准备再写一篇&lt;a href=&quot;http://chenjun.com/blog/2006/06/worldcup-2006.html&quot; title=&quot;世界杯–难得疯狂&quot;&gt;&lt;strong&gt;世界杯感受&lt;/strong&gt;&lt;/a&gt;的，可是我可爱的&lt;strong&gt;&lt;a href=&quot;http://twitter.com/5CJ/status/17593626413&quot;&gt;斯内德&lt;/a&gt;（要翻土啬，你懂的。）&lt;/strong&gt;没有带领荷兰笑到最后，与数个被&lt;strong&gt;无比功利&lt;/strong&gt;的1个净胜球杀回家的球队一样，被西班牙1：0送回了阿姆斯特丹。 &lt;/p&gt;
 
-&lt;p&gt;今天&lt;a href=&quot;http://static.chenjun.com/images/o_N97.jpg&quot;&gt;&lt;img src=&quot;http://static.chenjun.com/images/s_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97-点击看大图&quot; class=&quot;alignright&quot;&gt;&lt;/a&gt;写的目的，是说下我在太原火车站，丢了我半年前引以为豪，机缘巧合用1900元人民币买回来的全新的&lt;strong&gt;Nokia N97&lt;/strong&gt;行货（当时N97的行货价是3900大洋），&lt;strong&gt;不是丢！是偷！2010年8月11日&lt;/strong&gt;，我第二次来太原出差，下午&lt;strong&gt;15：40&lt;/strong&gt;分左右，出了出站口，因为一只手拿着行李和笔记本包，另一只手打着伞，所以身上斜跨的小KAPPA包赤果果的暴露在了不法之徒的眼底。 &lt;/p&gt;
+&lt;p&gt;今天&lt;a href=&quot;http://cloud.chenjun.com/static/images/o_N97.jpg&quot;&gt;&lt;img src=&quot;http://cloud.chenjun.com/static/images/s_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97-点击看大图&quot; class=&quot;alignright&quot;&gt;&lt;/a&gt;写的目的，是说下我在太原火车站，丢了我半年前引以为豪，机缘巧合用1900元人民币买回来的全新的&lt;strong&gt;Nokia N97&lt;/strong&gt;行货（当时N97的行货价是3900大洋），&lt;strong&gt;不是丢！是偷！2010年8月11日&lt;/strong&gt;，我第二次来太原出差，下午&lt;strong&gt;15：40&lt;/strong&gt;分左右，出了出站口，因为一只手拿着行李和笔记本包，另一只手打着伞，所以身上斜跨的小KAPPA包赤果果的暴露在了不法之徒的眼底。 &lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -152,7 +152,7 @@
 
 &lt;p&gt;兴奋不已，重燃激情，欣闻&lt;a href=&quot;http://wordpress.org/development/2010/05/wordpress-3-0-release-candidate/&quot;&gt;WordPress快到3.0&lt;/a&gt;，且使用Movable Type已有倦意，而WordPress的用户群广大，插件众多，用户感受颇好。且多年前我就是从&lt;a href=&quot;http://www.rainbowsoft.org&quot;&gt;Z-Blog&lt;/a&gt;之后就是&lt;a href=&quot;http://chenjun.com/blog/2006/07/my-wordpress-plugins.html&quot;&gt;从WordPress开始&lt;/a&gt;的，遂重新启用域名的同时，也改头换面，用回WP，继续折腾！&lt;/p&gt;
 
-&lt;p&gt;另：WordPress 3.0的默认主题TwentyTen很不错，也不至于像Kubrick那么久了难免有些审美疲劳，网上搜了一下未发现&lt;strong&gt;中文包&lt;/strong&gt;，遂做了一个：有需要的尽管自取：&lt;a href=&quot;http://static.chenjun.com/images/languages.zip&quot; title=&quot;Chinese Simplified Language Pack for WordPress 3.0 Defult Theme:TwentyTen&quot;&gt;&lt;strong&gt;zh_CN.po/mo&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;另：WordPress 3.0的默认主题TwentyTen很不错，也不至于像Kubrick那么久了难免有些审美疲劳，网上搜了一下未发现&lt;strong&gt;中文包&lt;/strong&gt;，遂做了一个：有需要的尽管自取：&lt;a href=&quot;http://cloud.chenjun.com/static/images/languages.zip&quot; title=&quot;Chinese Simplified Language Pack for WordPress 3.0 Defult Theme:TwentyTen&quot;&gt;&lt;strong&gt;zh_CN.po/mo&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;下周三开始即将&lt;strong&gt;休假半月&lt;/strong&gt;，回来后可能还...&lt;/p&gt;
 					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/06/chenjun-com-reborn-and-zheteng.html&quot;&gt;
@@ -208,7 +208,7 @@
 &lt;p&gt;也许是厌倦了不停的升级，虽然SixApart终于在两次跳票后发布了&lt;strong&gt;Movable Type 5&lt;/strong&gt;，Wordpress的更新速度更甚，反而是默默的Blogger，被关注的次数也越来越少，所以，我还是继续小众好了。害怕&lt;strike&gt;看不到&lt;/strike&gt;这里的更新？&lt;strong&gt;Who Cares!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center; clear: both; &quot;&gt;
-  &lt;img title=&quot;怒吼吧，中国！——李桦 1935年&quot; border=&quot;0&quot; alt=&quot;怒吼吧，中国！——李桦 1935年&quot; src=&quot;http://static.chenjun.com/images/nuhou.png&quot; width=&quot;225&quot; height=&quot;324&quot;&gt; &lt;br&gt;&lt;strong&gt;&lt;em&gt;版画：怒吼吧，中国！——李桦 1935&lt;/em&gt;&lt;/strong&gt;
+  &lt;img title=&quot;怒吼吧，中国！——李桦 1935年&quot; border=&quot;0&quot; alt=&quot;怒吼吧，中国！——李桦 1935年&quot; src=&quot;http://cloud.chenjun.com/static/images/nuhou.png&quot; width=&quot;225&quot; height=&quot;324&quot;&gt; &lt;br&gt;&lt;strong&gt;&lt;em&gt;版画：怒吼吧，中国！——李桦 1935&lt;/em&gt;&lt;/strong&gt;
 &lt;/p&gt;
 
 					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/01/new-start-form-2010.html&quot;&gt;
@@ -296,7 +296,7 @@
 				<title>【Braid/时空幻境】图文介绍+视频攻略</title>
 				<description>
 					&lt;blockquote&gt;
-&lt;p&gt;&lt;img style=&quot;FLOAT: left&quot; src=&quot;http://static.chenjun.com/images/killsign.png&quot;&gt;当我看到&lt;a title=&quot;Woooh:Braid&quot; href=&quot;http://woooh.com/2009/05/braid.html&quot;&gt;Aether&lt;/a&gt;在FriendFeed上推荐了这个游戏的时候，回家我用最快的速度下载了下来。很小（100多Mb，仅相当于动辄N个G的一些”&lt;strike&gt;大作&lt;/strike&gt;“的数十分之一），但是画面细腻有加，音乐有些像我们当年玩&lt;strong&gt;《英雄无敌3之死亡阴影》&lt;/strong&gt;时候的背景音乐，唯美动听。&lt;strong&gt;&lt;em&gt;Updated on 2009/05/09 21：15—-&lt;/em&gt;&lt;/strong&gt;变态的玩了一晚上，真的对自己的游戏体验有了一种全新的感受，从95年...&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;FLOAT: left&quot; src=&quot;http://cloud.chenjun.com/static/images/killsign.png&quot;&gt;当我看到&lt;a title=&quot;Woooh:Braid&quot; href=&quot;http://woooh.com/2009/05/braid.html&quot;&gt;Aether&lt;/a&gt;在FriendFeed上推荐了这个游戏的时候，回家我用最快的速度下载了下来。很小（100多Mb，仅相当于动辄N个G的一些”&lt;strike&gt;大作&lt;/strike&gt;“的数十分之一），但是画面细腻有加，音乐有些像我们当年玩&lt;strong&gt;《英雄无敌3之死亡阴影》&lt;/strong&gt;时候的背景音乐，唯美动听。&lt;strong&gt;&lt;em&gt;Updated on 2009/05/09 21：15—-&lt;/em&gt;&lt;/strong&gt;变态的玩了一晚上，真的对自己的游戏体验有了一种全新的感受，从95年...&lt;/p&gt;
 &lt;/blockquote&gt;
 					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/05/braid.html&quot;&gt;
 						Continue Reading

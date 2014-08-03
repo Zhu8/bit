@@ -559,36 +559,35 @@ a.pagination-item:hover {
 
 section.main .homepage-archive { float: right }
 /* tag_box & category_box */
+/* TAGS ======================================================== */
 .tag_box, .category_box {
-    list-style: none;
-    margin: 0;
-    padding: 2px 0;
-    overflow: hidden;
+  list-style:none;
+  margin:0;
+  padding:5px 0 ;
+  overflow:hidden;
 }
 .tag_box li, .category_box li {
-    line-height: 20px;
-    margin: 0;
+  line-height:1.7em;
 }
 .tag_box.inline li, .category_box.inline li {
-    float: left;
-    padding: 2px 0;
+  float:left;
 }
 .tag_box a, .category_box a {
-    padding: 2px;
-    margin: 2px;
-    background: #eee;
-    color: #005F6B;
-    border-radius: 3px;
-    text-decoration: none;
+  padding: 3px 6px;
+  margin: 2px;
+  background: #eee;
+  border-radius: 3px;
+  border:1px dashed #ccc;
+  text-decoration:none;
 }
 .tag_box a span, .category_box a span {
-    vertical-align: super;
-    font-size: 0.8em;
+  vertical-align:super;
+  font-size:0.6em;
 }
 .tag_box a.active, .category_box a.active {
-    background: #57A957;
-    border: 1px solid #4C964D;
-    color: #FFF;
+  background:#57A957;
+  border:1px solid #4C964D;
+  color:#FFF;
 }
 /* tag_box & category_box end */
 /* custom layouts */
@@ -610,7 +609,7 @@ img.right { padding: 0 0 8px 8px }
 .center { text-align: center }
 
 .pfooter {
-    font-size: 12px;
+    font-size: .7em;
     font-style: italic;
     text-align: right;
 }
