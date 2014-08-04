@@ -1,0 +1,43 @@
+# This is the default format. 
+# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+# permalink: /:categories/:year/:month/:day/:title 
+permalink: /blog/:year/:month/:title.html 
+include: ['.htaccess']
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - with_toc_data
+    - html_toc
+lsi: false
+safe: false
+highlighter: rouge
+encoding: utf-8
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
+paginate:         5
+paginate_path: "/page/:num"
+JB :
+  ASSET_PATH : http://cloud.chenjun.com/assets
+  IMAGE_PATH : http://cloud.chenjun.com/images
+  STATIC_PATH : http://cloud.chenjun.com/static
+
+# auto: true # deprecated
+
+# Themes are encouraged to use these universal variables 
+# so be sure to set them if your theme uses them.
+#
+url: http://chenjun.com
+title: 陈俊的网：浮生志
+tagline: On The Way to Philistinism...
+about: <a href="http://chenjun.com/"><strong>陈俊</strong></a>ChenJun(Zhu8)的个人网站，江苏人士，83年生人，电子产品自虐狂，<a href="http://chenjun.com/wang2/"><strong>王小波</strong></a>门下走狗。
+author:
+  name: Chen Jun(Zhu8)
+  email: zhu8.net@gmail.com
+  github: Zhu8
+  twitter: 5CJ
+  facebook: ichenjun
+  googleplus: +ChenJun
+  feedburner : Zhu8
+  weibo : Zhu8
+ # Custom vars
+version:          2014.08.02

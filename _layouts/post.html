@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date"><b>发布于：</b> <i class="fa fa-calendar"></i>&nbsp; <time datetime="{{ page.date |  date_to_xmlschema }}" pubdate>
+			{{ page.date | date: "%Y年%-m月%-d日 %H时%M分%S秒" }}</time>
+      <a href="https://plus.google.com/{{ site.author.googleplus }}?rel=author">{{ site.author.name }}</a></span>
+  {{ content }}
+</div>
+	<div class="pfooter">
+      {% unless page.tags == empty %}
+        <h1><b><i class="fa fa-tags"></i>&nbsp; Tag | 标签：</b></h1>
+        <ul>
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+        </ul>
+      {% endunless %}
+
+      {% unless page.categories == empty %}
+        <h1><b><i class="fa fa-book"></i>&nbsp; Cat | 分类：</b></h1>
+        <ul>
+        {% assign categories_list = page.categories %}
+        {% include JB/categories_list %}
+        </ul>
+      {% endunless %}
+	</div>
+<div class="share">
+   <p>{% include shares.html %}</p>
+</div>
+<div id="page-navigation">
+        <div class="left"> 
+        {% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" rel="prev"><i class="fa fa-arrow-circle-left"></i>&nbsp;上一篇</a> {% endif %} 
+        </div> 
+        <div class="post-archive"> 
+                <a href="/archive.html" title="ChenJun.COM Archive Page"><i class="fa fa-archive"></i>&nbsp;归档页</a> 
+        </div>
+        <div class="right"> 
+        {% if page.next.url %} <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}" rel="next">下一篇&nbsp;<i class="fa fa-arrow-circle-right"></i></a> {% endif %} 
+        </div>
+        <div class="clear">&nbsp;</div> 
+</div>
+<div class="GoogleAD">
+	{% include ads-large.html %}
+  </div>
+<div class="disqus">
+	{% include disqus.html %}
+</div>
