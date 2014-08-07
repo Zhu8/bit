@@ -7,7 +7,6 @@ noToc: true
 categories:
   - 言吾 | Talk
 tags:
-  - Poem
   - 海子
   - 诗歌
 ---

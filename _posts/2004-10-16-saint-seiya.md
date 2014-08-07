@@ -7,7 +7,6 @@ noToc: true
 categories:
   - 景彡 | Vision
 tags:
-  - Comic
   - 动画片
 ---
 忽然就想起了星矢，想起童年的那些观看动画片的愉快和不愉快的回忆。
@@ -20,7 +19,9 @@ tags:
 
 在当时，他们是怎么吸引我们的？
 
-<img src="{{ site.JB.STATIC_PATH }}/images/saint-seiya.jpg" style="width: 400px; height: 300px" title="你还记得他们吗" alt="你还记得他们吗" class="centered" />  
-<img src="{{ site.JB.STATIC_PATH }}/images/xingshi.jpg" style="width: 150px; height: 120px" title="永远的斗士" alt="永远的斗士" class="centered" />
+<span class="center">![你还记得他们吗？][1]</span>
 
 谁，都会想当英雄的，我永远相信：人的血液里总有追求更好的目标的因子。
+
+
+  [1]: {{ site.JB.STATIC_PATH }}/images/saint-seiya.jpg "你还记得他们吗？"

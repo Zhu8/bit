@@ -7,9 +7,6 @@ noToc: true
 categories:
   - 言吾 | Talk
 tags:
-  - College
-  - Daily
-  - Love
   - 大学
   - 日记
   - 爱情
