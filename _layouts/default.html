@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh">
   {% include head.html %}
   <body class="layout-reverse sidebar-overlay">
-    {% include sidebar.html %}
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
@@ -22,7 +21,7 @@
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+    {% include sidebar.html %}
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
@@ -41,7 +40,14 @@
       })(document);
     </script>
 		<script src="{{ site.JB.ASSET_PATH }}/js/scale.fix.js" type="text/javascript"></script>
-		<script src="//cdn.staticfile.org/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    if (!window.jQuery) {
+    var script = document.createElement('script');
+    script.src = "//ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.1.min.js";
+    document.body.appendChild(script);
+    }
+    </script>
 		<script src="{{ site.JB.ASSET_PATH }}/js/go-top.js" type="text/javascript"></script>
 	{% include ga.html %}
   </body>

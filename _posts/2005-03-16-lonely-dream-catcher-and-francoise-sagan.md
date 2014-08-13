@@ -39,4 +39,4 @@ tags:
 
 *孤独始终伴随着我——此记*
 
-  [1]: {{ site.JB.STATIC_PATH }}/images/sanjiao.gif "雪山飞狐-三角关系"
+  [1]: {{ site.JB.STATIC_PATH }}/images/sanjiao.jpg "雪山飞狐-三角关系"

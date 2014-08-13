@@ -12,7 +12,7 @@ tags:
   - 乱码
   - 网站
 ---
-其实<img class="right" title="Textpattern" style="FLOAT: right" alt="Textpattern" src="{{ site.JB.STATIC_PATH }}/images/txp.gif" width="250px" />很久以前就试用了 [<span class="caps">TXP</span>][1] ，但是一直是一头雾水，今天终于 <sup>其实昨天</sup> 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 **记录：**
+其实<span class="right">![Textpattern]({{ site.JB.STATIC_PATH }}/images/txp.gif "Textpattern")</span>很久以前就试用了 [TXP][1] ，但是一直是一头雾水，今天终于 <sup>其实昨天</sup> 就已经弄好了。不过一直wordpress导入有点小问题，所以一直没有换过来。现在折腾好了，做一下小 **记录：**
 
 * **解决乱码问题**
 

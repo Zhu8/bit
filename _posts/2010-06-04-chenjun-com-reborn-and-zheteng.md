@@ -7,13 +7,11 @@ noToc: true
 categories:
   - 立占 | Site
 tags:
-  - Domain
-  - Essay
   - 域名
   - 网站
   - 随笔
 ---
-自从去年[被不幸<del datetime="2010-06-04T13:52:45+00:00">与世隔绝</del>][1]1年余，**今日**幸得真主眷顾，冲出牢笼。
+自从去年[被不幸~~与世隔绝~~][1]1年余，**今日**幸得真主眷顾，冲出牢笼。
 
 兴奋不已，重燃激情，欣闻[WordPress快到3.0][2]，且使用Movable Type已有倦意，而WordPress的用户群广大，插件众多，用户感受颇好。且多年前我就是从[Z-Blog][3]之后就是[从WordPress开始][4]的，遂重新启用域名的同时，也改头换面，用回WP，继续折腾！
 
@@ -29,4 +27,4 @@ tags:
  [2]: http://wordpress.org/development/2010/05/wordpress-3-0-release-candidate/
  [3]: http://www.rainbowsoft.org
  [4]: http://chenjun.com/blog/2006/07/my-wordpress-plugins.html
- [5]: {{ site.JB.STATIC_PATH }}/images/languages.zip "Chinese Simplified Language Pack for WordPress 3.0 Defult Theme:TwentyTen"
+ [5]: {{ site.url }}/files/languages.zip "Chinese Simplified Language Pack for WordPress 3.0 Defult Theme:TwentyTen"

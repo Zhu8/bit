@@ -3,70 +3,29 @@
   <head>
     <link href="http://gmpg.org/xfn/11" rel="profile">
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-    
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="  在IE中为abbr标签加样式  发布于：   			2006年7月21日 11时27分45秒      Chen Jun(Zhu8)  简介&lt;abbr&gt;是用来为web页面上的简称（译者注：这里把简称和缩写分开而论，简称范围比缩写大，取..." name="description">
     <meta content="Jekyll" name="generator" />
     <meta content="Chen Jun(Zhu8)" name="author" />
     <meta content="Mfl8lf6NN0DWPluv8lQpBL-mrKi22ZOcnlKXYURni1Y" name="google-site-verification" />
     <meta content="EfohsDsVrB" name="baidu-site-verification" />
-  <!-- Enable responsiveness on mobile devices-->
+    <!-- Enable responsiveness on mobile devices-->
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
     <link href="http://feeds.feedburner.com/Zhu8/" rel="alternate" title=" Feed" type="application/atom+xml" />
     <link href="https://plus.google.com/+ChenJun" rel="author" />
-  <title>
-    
-      在IE中为abbr标签加样式 &middot; 陈俊的网：浮生志
-    
-  </title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/poole.css">
-  <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/syntax.css">
-  <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/lanyon.css">
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cloud.chenjun.com/assets/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="http://cloud.chenjun.com/assets/favicon.ico">
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+    <title>在IE中为abbr标签加样式 &middot; 陈俊的网：浮生志</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/poole.css">
+    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/syntax.css">
+    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/lanyon.css">
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cloud.chenjun.com/assets/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="http://cloud.chenjun.com/assets/favicon.ico">
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
 
   <body class="layout-reverse sidebar-overlay">
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-<!-- Toggleable sidebar -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p><a href="http://chenjun.com/"><strong>陈俊</strong></a>ChenJun(Zhu8)的个人网站，江苏人士，83年生人，电子产品自虐狂，<a href="http://chenjun.com/wang2/"><strong>王小波</strong></a>门下走狗。</p>
-  </div>
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/"><i class="fa fa-home fa-fw"></i>&nbsp; 站点首页 &middot; Home</a>
-
-    <a class="sidebar-nav-item" href="/about.html"><i class="fa fa-book fa-fw"></i>&nbsp; 关于本站 &middot; About</a>
-
-    <a class="sidebar-nav-item" href="/archive.html"><i class="fa fa-book fa-fw"></i>&nbsp; 日志归档 &middot; Archive</a>
-
-    <a class="sidebar-nav-item" href="/categories.html"><i class="fa fa-book fa-fw"></i>&nbsp; 日志分类 &middot; Categories</a>
-
-    <a class="sidebar-nav-item" href="/links.html"><i class="fa fa-book fa-fw"></i>&nbsp; 友情链接 &middot; Links</a>
-
-    <a class="sidebar-nav-item" href="/search.html"><i class="fa fa-book fa-fw"></i>&nbsp; 搜索本站 &middot; Search</a>
-
-    <a class="sidebar-nav-item" href="/tags.html"><i class="fa fa-book fa-fw"></i>&nbsp; 日志标签 &middot; Tags</a>
-
-    <span class="sidebar-nav-item"><i class="fa fa-info-circle"></i>&nbsp; Ver. 2014.08.02</span>
-  </nav>
-  <div class="sidebar-item">
-    <p>
-      &copy; 2014. All rights reserved.
-    </p>
-	<h3>Sponsors&nbsp; <i class="fa fa-rocket"></i></h3>
-            <p><small><a href="http://jekyllrb.com/">Jekyll</a> & <a href="https://bitbucket.org/">BitBucket</a> & <a href="https://stackedit.io/">StackEdit</a> & <a href="https://ftploy.com/">FTPloy</a></small></p>
-			<span class="sidebar-item"><a href="javascript:scroll(0,0)"><img src="/images/google-doraemon.png" width="100%" alt="I'M a Fan of Google & Doraemon!" title="I'M a Fan of Google & Doraemon!" /></a></span>
-  </div>
-</div>
-
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
@@ -108,6 +67,8 @@
 
 <p>这个IE的bug（或者特色）使得一些网站人员认为&lt;abbr&gt;标签一点用都没有，而显然这么认为是不对的。在Mozilla和Opera里还是很正确的处理了这个标签，并且它对于web内容的可读性和语义化来说非常重要。这也是我为什么一直在寻找解决方法，最终我找到了。</p>
 
+<!--more-->
+
 <p><strong>解决方法</strong></p>
 
 <p>本方法基于一个简单的事实：即使IE会忽略&lt;abbr&gt;标签，但是其他嵌套在&lt;abbr&gt;标签里的标签还是正常的。所以我在嵌了一个&lt;span&gt;标签在&lt;abbr&gt;里，设置&lt;span&gt;的title和class属性，然后&lt;abbr&gt;开始变得和&lt;acronym&gt;标签一样了。</p>
@@ -115,30 +76,30 @@
 <p><strong>代码例子</strong></p>
 
 <p>看一下下面的代码，是一个简单的缩写词的例子：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;
+<div class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;Cascading Style Sheets&quot;</span><span class="nt">&gt;</span>CSS<span class="nt">&lt;/abbr&gt;</span>
 </code></pre></div>
 <p>现在，对比一下修改后的代码：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;abbr title="Cascading Style Sheets"&gt;&lt;span class="abbr" title="Cascading Style Sheets"&gt;CSS&lt;/span&gt;&lt;/abbr&gt;
+<div class="highlight"><pre><code class="language-html" data-lang="html">    <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;Cascading Style Sheets&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;abbr&quot;</span> <span class="na">title=</span><span class="s">&quot;Cascading Style Sheets&quot;</span><span class="nt">&gt;</span>CSS<span class="nt">&lt;/span&gt;&lt;/abbr&gt;</span>
 </code></pre></div>
 <p><strong>自动操作</strong></p>
 
 <p>手动的给每一个&lt;abbr&gt;标签嵌入&lt;span&gt;显然不可能&amp;#8212;-既无聊又对Mozilla和Opera没必要。幸运的是，现在有一个自动的、基于客户端脚本的解决方法。</p>
 
 <p>你可能注意到了，这个页面（译者注：<a href="http://www.sovavsiti.cz/css/abbr.html">原作者的页面</a>）上的简写词语即使在IE里都会有提示，并且加了CSS样式（虚下划线和一个问号状的鼠标光标）。然而你如果看一下源代码，你将找不到在上文提到的&lt;span&gt;标签。这得益于本页加载的一个简单的JavaScript：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">function styleAbbr() {
- var oldBodyText, newBodyText, reg
- if (isIE) {
- oldBodyText = document.body.innerHTML;
- reg = /&lt;abbr([^&gt;]*)&gt;([^&lt;]*)&lt;/ABBR&gt;/g;
- newBodyText = oldBodyText.replace(reg, &amp;#8216;&lt;abbr $1=""&gt;&lt;span class=""abbr"" $1=""&gt;$2&lt;/span&gt;&lt;/abbr&gt;&amp;#8216;);
- document.body.innerHTML = newBodyText;
- }
- }
- window.onload = function(){
- styleAbbr()
- };
- isIE = (document.all) ? true:false;
- &lt;/abbr([^&gt;
+<div class="highlight"><pre><code class="language-java" data-lang="java">    <span class="n">function</span> <span class="nf">styleAbbr</span><span class="o">()</span> <span class="o">{</span>
+     <span class="n">var</span> <span class="n">oldBodyText</span><span class="o">,</span> <span class="n">newBodyText</span><span class="o">,</span> <span class="n">reg</span>
+     <span class="nf">if</span> <span class="o">(</span><span class="n">isIE</span><span class="o">)</span> <span class="o">{</span>
+     <span class="n">oldBodyText</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="na">body</span><span class="o">.</span><span class="na">innerHTML</span><span class="o">;</span>
+     <span class="n">reg</span> <span class="o">=</span> <span class="o">/&lt;</span><span class="n">abbr</span><span class="o">([^&gt;]*)&gt;([^&lt;]*)&lt;/</span><span class="n">ABBR</span><span class="o">&gt;/</span><span class="n">g</span><span class="o">;</span>
+     <span class="n">newBodyText</span> <span class="o">=</span> <span class="n">oldBodyText</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="n">reg</span><span class="o">,</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">8216</span><span class="o">;&lt;</span><span class="n">abbr</span> <span class="n">$1</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="n">class</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="n">abbr</span><span class="s">&quot;&quot;</span> <span class="n">$1</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="o">&gt;</span><span class="n">$2</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;&lt;/</span><span class="n">abbr</span><span class="o">&gt;&amp;</span><span class="err">#</span><span class="mi">8216</span><span class="o">;);</span>
+     <span class="n">document</span><span class="o">.</span><span class="na">body</span><span class="o">.</span><span class="na">innerHTML</span> <span class="o">=</span> <span class="n">newBodyText</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="o">}</span>
+     <span class="n">window</span><span class="o">.</span><span class="na">onload</span> <span class="o">=</span> <span class="n">function</span><span class="o">(){</span>
+     <span class="n">styleAbbr</span><span class="o">()</span>
+     <span class="o">};</span>
+     <span class="n">isIE</span> <span class="o">=</span> <span class="o">(</span><span class="n">document</span><span class="o">.</span><span class="na">all</span><span class="o">)</span> <span class="o">?</span> <span class="kc">true</span><span class="o">:</span><span class="kc">false</span><span class="o">;</span>
+     <span class="o">&lt;/</span><span class="n">abbr</span><span class="o">([^&gt;</span>
 </code></pre></div>
 <p>你可能注意到了，我的站点也具有了此功效，是因为我将上面的代码写入了一个名为<em>abbr.js</em>的脚本中，然后在<em>Theme</em>的<em>header.php</em>中加入了这样一段代码，同时和插件<a href="http://chenjun.com/blog/?p=5">Acronym Replacer</a>配合使用就可以了。<strong>Zhu8[注]</strong></p>
 
@@ -147,10 +108,10 @@
 <p><strong>样式化</strong></p>
 
 <p>最后看一下这个页面上使用的CSS。相当简单：</p>
-<div class="highlight"><pre><code class="language-" data-lang="">abbr, acronym, span.abbr {
- cursor: help;
- border-bottom: 1px dashed #000;
- }
+<div class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">span</span><span class="nc">.abbr</span> <span class="p">{</span>
+     <span class="k">cursor</span><span class="o">:</span> <span class="k">help</span><span class="p">;</span>
+     <span class="k">border-bottom</span><span class="o">:</span> <span class="m">1px</span> <span class="k">dashed</span> <span class="m">#000</span><span class="p">;</span>
+     <span class="p">}</span>
 </code></pre></div>
 <p>Mozilla和Opera使用abbr和acronym属性选择器，IE则使用acronym和span.abbr。无论如何，&lt;abbr&gt;和&lt;acronym&gt;都被样式化了——一个问号状的鼠标光标（当鼠标指上后）和虚下划线。</p>
 
@@ -199,7 +160,7 @@
 
 	 
 		<li><a href="/categories.html#石马 | code-ref">
-			石马 | code <span>15</span>
+			石马 | code <span>14</span>
 		</a></li>
 	
 	
@@ -208,7 +169,19 @@
       
 	</div>
 <div class="share">
-   <p><div class="bshare-custom icon-medium"><div class="bsPromo bsPromo1"></div><span style="font-size:20px;">【分享&nbsp;<i class="fa fa-share-square-o"></i>】：</span><a title="分享到Google+" class="bshare-gplus" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);"></a><a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="分享到Google翻译" class="bshare-gtranslate" href="javascript:void(0);"></a><a title="分享到Delicious" class="bshare-delicious" href="javascript:void(0);"></a><a title="分享到Facebook" class="bshare-facebook" href="javascript:void(0);"></a><a title="分享到Twitter" class="bshare-twitter" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/button.js#style=-1&amp;uuid=f948c694-8e29-4100-989b-423551f07c9f&amp;pophcol=2&amp;lang=zh"></script><a class="bshareDiv" onclick="javascript:return false;"></a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></p>
+   <p><!-- PO.ST BEGIN -->
+<div class="pw-widget pw-size-large">
+	<span style="font-size:32px;"><i class="fa fa-share-square-o"></i>&nbsp;</span>
+	<a class="pw-button-googleplus"></a>
+	<a class="pw-button-weibo"></a>
+	<a class="pw-button-delicious"></a>
+	<a class="pw-button-facebook"></a>
+	<a class="pw-button-twitter"></a>
+	<a class="pw-button-tumblr"></a>
+	<a class="pw-button-post"></a>
+</div>
+<script src="http://i.po.st/static/v3/post-widget.js#publisherKey=p6pqlb53ca18934cteu2&retina=true" type="text/javascript"></script>
+<!-- PO.ST END --></p>
 </div>
 <div id="page-navigation">
         <div class="left"> 
@@ -258,7 +231,33 @@
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-misc">
+        <img src="/images/zhubajie.png" alt="Zhu Ba Jie!" title="Zhu Ba Jie!" /><!-- Stephen Chow「你以為你匿喺度就搵你唔到咩？冇用㗎！你啲咁出色嘅難忍，無論喺邊度，就好似漆黑中嘅螢火蟲一樣，咁鮮明、咁出眾。你憂鬱嘅眼神、唏噓嘅鬚根、神乎奇技嘅刀法、同埋嗰杯Dry Martini，都徹底咁將你出賣咗！」 -->
+    </div>
+    <nav class="sidebar-nav">
+        <a class="sidebar-nav-item" href="/"><i class="fa fa-home fa-fw"></i>&nbsp; 站点首页 &middot; Home</a>
+        
+        <a class="sidebar-nav-item" href="/about.html"><i class="fa fa-book fa-fw"></i>&nbsp; 关于本站 &middot; About</a>
+        <a class="sidebar-nav-item" href="/archive.html"><i class="fa fa-book fa-fw"></i>&nbsp; 日志归档 &middot; Archive</a>
+        <a class="sidebar-nav-item" href="/categories.html"><i class="fa fa-book fa-fw"></i>&nbsp; 日志分类 &middot; Categories</a>
+        <a class="sidebar-nav-item" href="/links.html"><i class="fa fa-book fa-fw"></i>&nbsp; 友情链接 &middot; Links</a>
+        <a class="sidebar-nav-item" href="/search.html"><i class="fa fa-book fa-fw"></i>&nbsp; 搜索本站 &middot; Search</a>
+        <a class="sidebar-nav-item" href="/tags.html"><i class="fa fa-book fa-fw"></i>&nbsp; 日志标签 &middot; Tags</a>
+        <span class="sidebar-nav-item"><i class="fa fa-info-circle"></i>&nbsp; Ver. 2014.08.13</span>
+    </nav>
+    <div class="sidebar-misc">
+        <a href="http://www.apple.com/mac/"><img src="/images/mwmac_white.png" alt="Made on a Mac!" title="Made on a Mac!" /></a>
+        <span class="copyright">
+            <small>&copy; 2014.<i class="fa fa-rocket"></i> Build with <a href="http://jekyllrb.com/">Jekyll</a> & <a href="https://bitbucket.org/">BitBucket</a></small>
+        </span>
+        <a href="javascript:scroll(0,0)"><img src="/images/google-doraemon.png" width="70%" alt="I'M a Fan of Google & Doraemon!" title="I'M a Fan of Google & Doraemon!" /></a>
+    </div>
+</div>
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
@@ -277,7 +276,14 @@
       })(document);
     </script>
 		<script src="http://cloud.chenjun.com/assets/js/scale.fix.js" type="text/javascript"></script>
-		<script src="//cdn.staticfile.org/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    if (!window.jQuery) {
+    var script = document.createElement('script');
+    script.src = "//ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.1.min.js";
+    document.body.appendChild(script);
+    }
+    </script>
 		<script src="http://cloud.chenjun.com/assets/js/go-top.js" type="text/javascript"></script>
 	<div style="display:none;"><script src="http://s95.cnzz.com/stat.php?id=17872&web_id=17872" language="JavaScript"></script></div>
   </body>

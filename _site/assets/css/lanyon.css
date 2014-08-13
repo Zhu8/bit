@@ -616,6 +616,9 @@ img.right { padding: 0 0 8px 8px }
 .post p{
     text-indent:2em;
 }
+.post blockquote p{
+    text-indent:0em!important;
+}
 .pfooter h1 {
     font-weight: normal;
     display: inline;
@@ -701,4 +704,8 @@ img.right { padding: 0 0 8px 8px }
   color: #fff!important;
   text-shadow: 0 1px 0 #239a55;
   box-shadow: 0 .25em 0 0 #239a55;
+}
+
+.sidebar-misc{
+  padding: 0.3rem 1.2rem;
 }

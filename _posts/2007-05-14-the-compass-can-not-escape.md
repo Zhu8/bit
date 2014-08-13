@@ -7,9 +7,6 @@ noToc: true
 categories:
   - 弓玄 | Melody
 tags:
-  - Download
-  - Music
-  - 下载
   - 指南针乐队
   - 无法逃脱
   - 老歌
@@ -67,14 +64,8 @@ tags:
 > 噢~~~
 
 [http://www.zhu8.org/music/WuFaTaoTuo.mp3]  
-<span class="dl"><a href="http://www.box.net/shared/1na0zxtx6b" title="单曲 无法逃脱">下载</a></span>此单曲  
-<span class="dl"><a href="http://www.box.net/shared/1na0zxtx6b" title="歌词 无法逃脱">下载</a></span>《**无法逃脱**》的歌词，网上的歌词都有错误，我根据MTV编的，应该没什么错误了吧：）
+[下载](http://www.box.net/shared/1na0zxtx6b "单曲 无法逃脱")《**无法逃脱**》的单曲及歌词，网上的歌词都有错误，我根据MTV编的，应该没什么错误了吧：）
 
-<!--eMule-->
-
-  
 eMule下载链接： [指南针乐队.-.[无法逃脱].专辑.(APE).rar][1] 
-
-<!--End eMule-->
 
  [1]: ed2k://%7Cfile%7C%E6%8C%87%E5%8D%97%E9%92%88%E4%B9%90%E9%98%9F.-.%5B%E6%97%A0%E6%B3%95%E9%80%83%E8%84%B1%5D.%E4%B8%93%E8%BE%91.%28APE%29.rar%7C362624802%7Cce06927067c9d448f92347c935f294da%7Ch=3BJF3S56OMH7UVBKOCDJP3CZ2JR5XHCI%7C/

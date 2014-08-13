@@ -15,15 +15,16 @@ tags:
 
 <!--more-->
 
-*   [<img src="https://www.google.com/accounts/analytics20x20.gif" title="Analytics（分析）" vspace="1" width="20" border="0" height="20" />][3]**[Analytics（分析）][3]**
-*   [<img src="https://www.google.com/accounts/gmail20x20.gif" title="Gmail" vspace="1" width="20" border="0" height="20" />][4]**[Gmail][4]**
-*   [<img src="https://www.google.com/accounts/default20x20.gif" title="Notebook" vspace="1" width="20" border="0" height="20" />][5]**[Notebook][5]**
-*   [<img src="https://www.google.com/accounts/default20x20.gif" title="Page Creator" vspace="1" width="20" border="0" height="20" />][6]**[Page Creator][6]**
-*   [<img src="https://www.google.com/accounts/default20x20.gif" title="Picasa" vspace="1" width="20" border="0" height="20" />][7]**[Picasa][7]**
-*   [<img src="https://www.google.com/accounts/web20x20.gif" title="个性化搜索" vspace="1" width="20" border="0" height="20" />][8]**[个性化搜索][8]**
-*   [<img src="https://www.google.com/accounts/default20x20.gif" title="个性化主页" vspace="1" width="20" border="0" height="20" />][9]**[个性化主页][9]**
-*   [<img src="https://www.google.com/accounts/calendar20x20.gif" title="日历" vspace="1" width="20" border="0" height="20" />][10]**[日历][10]**
-*   [<img src="https://www.google.com/accounts/groups20x20.gif" title="网上论坛" vspace="1" width="20" border="0" height="20" />][11]**[网上论坛][11]**
+*   **[Analytics（分析）][3]**
+*   **[Gmail][4]**
+*   **[Notebook][5]**
+*   **[Page Creator][6]**
+*   **[Picasa][7]**
+*   **[个性化搜索][8]**
+*   **[个性化主页][9]**
+*   **[日历][10]**
+*   **[网上论坛][11]**
+
 唉，不说了。以图为鉴。
 
 #### 我离不开它，它却离得开我。

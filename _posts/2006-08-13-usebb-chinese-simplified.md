@@ -11,9 +11,11 @@ tags:
   - 汉化
   - 论坛
 ---
-好啦，昨晚折腾了一个晚上，总算完成了。***〔Update:2007/03/08：把链接修改到我的永硕硬盘上去。〕***<img src="{{ site.JB.STATIC_PATH }}/images/usebb-chinese.jpg" style="width: 240px; height: 162px;float:right;" title="ScreenShot of UseBB Chinese" alt="ScreenShot of UseBB Chinese" />最近想搭建一个论坛玩玩，结果，找到的个个功能惊人，体积同样**惊人**。用UseBB的介绍文件来说就是<acronym title="Unnecessary features"><strong>bloat</strong></acronym>。后来找到了<a href="http://www.usebb.net/" title="">UseBB</a>，汉化了一下，本来不想汉化后台的，就和WP一样，后来发现到现在为止还没有人弄简体中文的汉化包，后来发现了和WP一样存在中文字符截断的问题，今天就<a href="http://groups.google.com/group/Zhu8/browse_thread/thread/7cf0947ec61ac13a/4cf29f9e175b04fe" title="UseBB中文字符截断函数（UTF-8）修改">修改</a>了一下源代码，唉，发现玩程序真的有时候挺头大的，特别是这些英文软件压根就不可能考虑到咱中文的编码问题。可是要想程序如自己的意，只好自己动手，丰衣足食<sub>By Chairman Mao</sub>了。
+好啦，昨晚折腾了一个晚上，总算完成了。***〔Update:2007/03/08：把链接修改到我的永硕硬盘上去。〕***<span class="right">![ScreenShot of UseBB Chinese]({{ site.JB.STATIC_PATH }}/images/usebb-chinese.jpg "ScreenShot of UseBB Chinese")</span>最近想搭建一个论坛玩玩，结果，找到的个个功能惊人，体积同样**惊人**。用UseBB的介绍文件来说就是<acronym title="Unnecessary features">**bloat**</acronym>。后来找到了[UseBB](http://www.usebb.net/)，汉化了一下，本来不想汉化后台的，就和WP一样，后来发现到现在为止还没有人弄简体中文的汉化包，后来发现了和WP一样存在中文字符截断的问题，今天就[修改](http://groups.google.com/group/Zhu8/browse_thread/thread/7cf0947ec61ac13a/4cf29f9e175b04fe "UseBB中文字符截断函数（UTF-8）修改")了一下源代码，唉，发现玩程序真的有时候挺头大的，特别是这些英文软件压根就不可能考虑到咱中文的编码问题。可是要想程序如自己的意，只好自己动手，丰衣足食<sub>By Chairman Mao</sub>了。
 
 废话少说，简单介绍一下UseBB吧！
+
+<!--more-->
 
 *   UseBB使用*PHP+Mysql*编写，支持mod_rewrite*（可惜我的空间并不支持）*整个程序简洁小巧。
 *   **独立**的模版和语言包，可定制程度高。
@@ -25,6 +27,6 @@ tags:
 *   支持**RSS** 2.0订阅
 *   **搜索引擎友好 .html 格式的URL**（需mod_rewrite支持）
 
-当前不具备的功能也有一些，简单列举一下，包括：附件上传、投票、站内信件、子论坛、用户组等等。不过UseBB团队已经在开发<a href="http://usebb.sourceforge.net/UseBB2/" title="UseBB2">UseBB2</a>了，相信不久会有全新的出来的。
+当前不具备的功能也有一些，简单列举一下，包括：附件上传、投票、站内信件、子论坛、用户组等等。不过UseBB团队已经在开发[UseBB2](http://usebb.sourceforge.net/UseBB2/ "UseBB2")了，相信不久会有全新的出来的。
 
-好了，如果你感兴趣，可以到 <a href="http://zhu8.ys168.com/" title="我的永硕硬盘">这里</a> 下载 :em02:
+好了，如果你感兴趣，可以到 [这里](http://zhu8.ys168.com/ "我的永硕硬盘") 下载。

@@ -6,18 +6,19 @@ permalink: /blog/2010/11/new-flying-fox-of-snowy-mountain-1991.html
 noToc: true
 categories:
   - 景彡 | Vision
-  - 言吾 | Talk
 tags:
   - 下载
   - 雪山飞狐
+  - 480P
+  - 感恩
 ---
 曾经一段时间，我近乎痴迷的看《[雪山飞狐][1]》。但是可惜的一直没有清晰的版本可以给我们重温，迄今为止，最**清晰**的，**分辨率**最高的，可以**免费**获得的，**1991台视版《雪山飞狐》**，出来啦！感谢网络上一位朋友的提醒，他曾经帮我找了以前绿标台视国际台的雪山飞狐，分辨率448*336的，大小在160M左右一集的MKV，清晰度是当时最清晰的，我一直琢磨着分享给大家，但是第一由于要[从北京回南京][2]，一直在折腾。第二一直觉得这种清晰度对大家来说也许没有什么质的提高。
 
 今天，终于有新的出来了！600M一集，480P（720*480）的TVRip，应该不会辜负大家的期望！我还正在下载中，但是还是迫不及待的来更新下我的濒死的小小Weblog，希望能够帮到要找的兄弟姐妹！
 
-<img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="雪山飞狐.Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv" border="0" alt="雪山飞狐.Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv" src="{{ site.JB.STATIC_PATH }}/images/Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv.jpg" width="500"/>
+<span class="center">![雪山飞狐.Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv]({{ site.JB.STATIC_PATH }}/images/Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv.jpg "雪山飞狐.Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv")</span>
 
-闲话不多说，地址在这里：<a title="http://www.verycd.com/topics/2852020/" href="http://www.verycd.com/topics/2852020/">《雪山飞狐》(Flying Fox of Snowy Mountain)[更新完毕][MKV]</a>，不过有一点小遗憾，因为其原始文件就没有，所以楼主没有提供**第21集**的下载。这里附上我上次找到的448*336的第21集，聊胜于无吧：
+闲话不多说，地址在这里：[《雪山飞狐》(Flying Fox of Snowy Mountain)[更新完毕][MKV]](http://www.verycd.com/topics/2852020/ "http://www.verycd.com/topics/2852020/")，不过有一点小遗憾，因为其原始文件就没有，所以楼主没有提供**第21集**的下载。这里附上我上次找到的448*336的第21集，聊胜于无吧：
 
 > 文件名称：雪山飞狐21.mkv   
 > 文件大小：168.48MB   
@@ -25,7 +26,7 @@ tags:
 > 上传者：chenjuncom   
 > 提取码：f8d4d1b30d   
 > sha1：A739DAA8A11498BA166CBD1C278D187E888A0D21   
-> 下载地址：<a href="http://u.115.com/file/f8d4d1b30d">115网盘下载：雪山飞狐21.mkv（支持迅雷、旋风下载）</a> 
+> 下载地址：[115网盘下载：雪山飞狐21.mkv（支持迅雷、旋风下载）](http://u.115.com/file/f8d4d1b30d) 
 
 另外再附上片头曲和片尾曲的下载，给只需要下载这两个文件的朋友啦：
 
@@ -34,7 +35,7 @@ tags:
 
 还有还有，电驴的威力就在于发布了之后，它就不再是死的了，总有人在默默的为你上传，所以，记下地址最重要：
 
-> 地址太长了，撑坏了页面，请到此下载：<a title="雪山飞狐ED2K地址" href="{{ site.JB.STATIC_PATH }}/files/flying-fox-ed2k.txt">flying-fox-ed2k.txt</a>
+> 地址太长了，撑坏了页面，请到此下载：[flying-fox-ed2k.txt]({{ site.JB.STATIC_PATH }}/files/flying-fox-ed2k.txt "雪山飞狐ED2K地址")
 
 还有还有，等我下完了，我会慢慢传到115网盘上，然后在这里更新地址的。**不管，有没有人来看。**
 
@@ -50,10 +51,7 @@ tags:
 
 愿所有认识不认识的朋友，**你们都好**。记得你的青葱岁月，记得你的每一滴感动。
 
-<p style="float: right">
   陈俊，2010年11月30日晚22点，南京，扇骨里，顶楼。
-</p>
-
 
  [1]: http://chenjun.com/blog/2004/10/xue-shan-fei-hu-gong-ci-en.html "《雪山飞狐》孟飞`龚慈恩`伍宇娟"
  [2]: http://chenjun.com/blog/2010/06/chenjun-com-reborn-and-zheteng.html
