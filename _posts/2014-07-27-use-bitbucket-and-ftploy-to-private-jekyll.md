@@ -5,7 +5,7 @@ layout: post
 date: 2014-07-27 13:23:33 +0800
 thumbnail: http://static.chenjun.com/images/ftploy.png
 categories: 
-  - 立占 | sit
+  - 立占 | site
 tags: 
   - Jekyll
   - Github

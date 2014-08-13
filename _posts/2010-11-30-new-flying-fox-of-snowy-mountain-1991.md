@@ -16,6 +16,8 @@ tags:
 
 今天，终于有新的出来了！600M一集，480P（720*480）的TVRip，应该不会辜负大家的期望！我还正在下载中，但是还是迫不及待的来更新下我的濒死的小小Weblog，希望能够帮到要找的兄弟姐妹！
 
+<!--more-->
+
 <span class="center">![雪山飞狐.Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv]({{ site.JB.STATIC_PATH }}/images/Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv.jpg "雪山飞狐.Flying.Fox.of.Snowy.Mountain.1991.Ep01.TVRip.mkv")</span>
 
 闲话不多说，地址在这里：[《雪山飞狐》(Flying Fox of Snowy Mountain)[更新完毕][MKV]](http://www.verycd.com/topics/2852020/ "http://www.verycd.com/topics/2852020/")，不过有一点小遗憾，因为其原始文件就没有，所以楼主没有提供**第21集**的下载。这里附上我上次找到的448*336的第21集，聊胜于无吧：
@@ -38,8 +40,6 @@ tags:
 > 地址太长了，撑坏了页面，请到此下载：[flying-fox-ed2k.txt]({{ site.JB.STATIC_PATH }}/files/flying-fox-ed2k.txt "雪山飞狐ED2K地址")
 
 还有还有，等我下完了，我会慢慢传到115网盘上，然后在这里更新地址的。**不管，有没有人来看。**
-
-<!--more-->
 
 * * *
 
