@@ -34,23 +34,23 @@
           <h3 class="masthead-title">
             <a href="/" title="Home">陈俊的网：浮生志</a>
             <small>On The Way to Philistinism...</small>
-            		  <span class="pull-right">
-                            <a id="twitter-ic" class="link" href="https://twitter.com/5CJ/" rel="me" title="Follow my Twitter!">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a id="google-ic" class="link" href="https://plus.google.com/+ChenJun/" rel="publisher" title="Plus me on Google+!">
-                                <i class="fa fa-google-plus-square"></i>
-                            </a>
-                            <a id="facebook-ic" class="link" href="https://www.facebook.com/ichenjun/" rel="me" title="Connect me on Facebook!">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a id="weibo-ic" class="link" href="http://weibo.com/Zhu8/" rel="me" title="关注我的新浪微博!">
-                                <i class="fa fa-weibo"></i>
-                            </a>
-							<a id="rss-ic" class="link" href="/feed.xml" title="Subscribe ChenJun.COM's Feed!">
-                                <i class="fa fa-rss"></i>
-                            </a>
-                        </span>
+            <span class="pull-right">
+    <a class="link" href="https://twitter.com/5CJ/" rel="me" title="Follow my Twitter!">
+        <i id="twitter-ic" class="fa fa-twitter"></i>
+    </a>
+    <a class="link" href="https://plus.google.com/+ChenJun/" rel="publisher" title="Plus me on Google+!">
+        <i id="google-ic" class="fa fa-google-plus-square"></i>
+    </a>
+    <a class="link" href="https://www.facebook.com/ichenjun/" rel="me" title="Connect me on Facebook!">
+        <i id="facebook-ic" class="fa fa-facebook-square"></i>
+    </a>
+    <a class="link" href="http://weibo.com/Zhu8/" rel="me" title="关注我的新浪微博!">
+        <i id="weibo-ic" class="fa fa-weibo"></i>
+    </a>
+    <a class="link" href="/feed.xml" title="Subscribe ChenJun.COM's Feed!">
+        <i id="rss-ic" class="fa fa-rss"></i>
+    </a>
+</span>
           </h3>
         </div>
       </div>
@@ -71,7 +71,7 @@
 
 <!--more-->
 
-<p><strong>第二步：</strong>解决www和non-www制定不同的问题。 由于Google只能绑定子域名（www亦是一种特殊格式的子域名），故我们要让根域名也指向到这里，~~如果你是Host domain在Godaddy，只要使用Forward就可以了。~~（<strong>经反复测试，此方法没有用，只有使用.htaccess解决，详见：<a href="%E6%B3%A8%E9%87%8A%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%8C%E5%A6%82EditPlus%E6%96%B0%E5%BB%BAUTF-8%E7%9A%84%E6%96%B0%E6%96%87%E4%BB%B6%EF%BC%8C%E5%86%85%E5%AE%B9%E4%B8%BA%EF%BC%9A">注释</a></strong>）如下：</p>
+<p><strong>第二步：</strong>解决www和non-www制定不同的问题。 由于Google只能绑定子域名（www亦是一种特殊格式的子域名），故我们要让根域名也指向到这里，~~如果你是Host domain在Godaddy，只要使用Forward就可以了。~~（<strong>经反复测试，此方法没有用，只有使用.htaccess解决，详见：[注释]<sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup></strong>）如下：</p>
 
 <p><img src="http://cloud.chenjun.com/static/images/godaddy-8.png" alt=""><br>
 <img src="http://cloud.chenjun.com/static/images/godaddy-9.png" alt=""> </p>
@@ -89,13 +89,27 @@
 <p>等待不过十几分钟，虽然Account Details里面的Status还是Pending Account Change，但是IP地址已经换了，Total DNS Control Panel里面的A Records已经变成了新的IP，等待……生效，一切OK！</p>
 
 <p><strong>P.S:</strong><em>Google Apps</em>等所有<strong><em>Google Custom Domain</em></strong>都适用此法。有问题，请留言！</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&gt; RewriteEngine  
-&gt; RewriteCond %{HTTP_HOST} ^zhu8.net  
-&gt; RewriteRule (.*) http://chenjun.com/$1 [R=301,L]  
 
-请自行更改域名为你的域名即可，将文件保存为**.htaccess**。使用**ASCII**格式上传到你的Godaddy免费空间根目录，文件属性**644**。
-</code></pre></div>
 <p>至此全部完成。请测试：<a href="http://zhu8.net/" title="Zhu8.Net">http://zhu8.net</a></p>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p>注释：使用编辑器，如EditPlus新建UTF-8的新文件，内容为：&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+
+<blockquote>
+<p>RewriteEngine<br>
+RewriteCond %{HTTP_HOST} ^zhu8.net<br>
+RewriteRule (.*) http://chenjun.com/$1 [R=301,L]  </p>
+</blockquote>
+
+<p>请自行更改域名为你的域名即可，将文件保存为<strong>.htaccess</strong>。使用<strong>ASCII</strong>格式上传到你的Godaddy免费空间根目录，文件属性<strong>644</strong>。</p>
+</li>
+
+</ol>
+</div>
 
 </div>
 	<div class="pfooter">
@@ -142,19 +156,16 @@
       
 	</div>
 <div class="share">
-   <p><!-- PO.ST BEGIN -->
-<div class="pw-widget pw-size-large">
-	<span style="font-size:32px;"><i class="fa fa-share-square-o"></i>&nbsp;</span>
-	<a class="pw-button-googleplus"></a>
-	<a class="pw-button-weibo"></a>
-	<a class="pw-button-delicious"></a>
-	<a class="pw-button-facebook"></a>
-	<a class="pw-button-twitter"></a>
-	<a class="pw-button-tumblr"></a>
-	<a class="pw-button-post"></a>
+   <p><!-- SHARE BEGIN -->
+<div class="share">
+    ［分享本文&nbsp;<i class="fa fa-paper-plane-o"></i>］：
+    <a href="javascript:void(0)" onclick="window.open('http://v.t.sina.com.cn/share/share.php?url='+encodeURI(document.location)+'&title='+encodeURI(document.title) , 'newwindow', 'height=330,width=550,top=' + (screen.height - 280) / 2 + ',left=' + (screen.width - 550) / 2 + ', toolbar=no, menubar=no, scrollbars=no,resizable=yes,location=no, status=no')"><i id="weibo-ic" class="fa fa-2x fa-weibo"></i></a>
+    <a href="javascript:void(0)" onclick="window.open('https://plus.google.com/share?url='+encodeURIComponent(document.location.href), 'newwindow', 'height=330,width=550,top=' + (screen.height - 280) / 2 + ',left=' + (screen.width - 550) / 2 + ', toolbar=no, menubar=no, scrollbars=no,resizable=yes,location=no, status=no');"><i id="google-ic" class="fa fa-2x fa-google-plus-square"></i></a>
+    <a href="javascript:void(0)" onclick="window.open('http://twitter.com/intent/tweet?source='+encodeURI(document.location)+'&text='+document.title , 'newwindow', 'height=330,width=550,top=' + (screen.height - 280) / 2 + ',left=' + (screen.width - 550) / 2 + ', toolbar=no, menubar=no, scrollbars=no,resizable=yes,location=no, status=no');"><i id="twitter-ic" class="fa fa-2x fa-twitter-square"></i></a>
+    <a href="javascript:void(0)" onclick="window.open('https://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&t='+encodeURIComponent(document.title), 'newwindow', 'height=330,width=550,top=' + (screen.height - 280) / 2 + ',left=' + (screen.width - 550) / 2 + ', toolbar=no, menubar=no, scrollbars=no,resizable=yes,location=no, status=no');"><i id="facebook-ic" class="fa fa-2x fa-facebook-square"></i></a>
+    <a href="javascript:void(0)" onclick="window.open('https://delicious.com/save?v=5&provider=ChenJun.COM&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious', 'height=330,width=550,top=' + (screen.height - 280) / 2 + ',left=' + (screen.width - 550) / 2 + ', toolbar=no, menubar=no, scrollbars=no,resizable=yes,location=no, status=no');"><i id="delicious-ic" class="fa fa-2x fa-delicious"></i></a>
 </div>
-<script src="http://i.po.st/static/v3/post-widget.js#publisherKey=p6pqlb53ca18934cteu2&retina=true" type="text/javascript"></script>
-<!-- PO.ST END --></p>
+<!-- SHARE END --></p>
 </div>
 <div id="page-navigation">
         <div class="left"> 
@@ -224,9 +235,9 @@
         <span class="sidebar-nav-item"><i class="fa fa-info-circle"></i>&nbsp; Ver. 2014.08.13</span>
     </nav>
     <div class="sidebar-misc">
-        <a href="http://www.apple.com/mac/"><img src="/images/mwmac_white.png" alt="Made on a Mac!" title="Made on a Mac!" /></a>
+        &copy; 2014.&nbsp; <a href="http://www.apple.com/mac/">Made on a&nbsp; <i class="fa fa-2x fa-apple"></i></a><br />
         <span class="copyright">
-            <small>&copy; 2014.<i class="fa fa-rocket"></i> Build with <a href="http://jekyllrb.com/">Jekyll</a> & <a href="https://bitbucket.org/">BitBucket</a></small>
+            <small><i class="fa fa-2x fa-rocket"></i>&nbsp; Build with <a href="http://jekyllrb.com/">Jekyll</a> & <a href="https://bitbucket.org/">BitBucket</a>.</small>
         </span>
         <a href="javascript:scroll(0,0)"><img src="/images/google-doraemon.png" width="70%" alt="I'M a Fan of Google & Doraemon!" title="I'M a Fan of Google & Doraemon!" /></a>
     </div>

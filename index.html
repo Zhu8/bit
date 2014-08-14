@@ -19,7 +19,7 @@ title: Home
 {% else %}
     {{ post.content | truncatehtml: 300 }}
 {% endif %}
-    <p> <a href="{{ post.url }}#more" class="more-link"><span class="readmore">阅读全文 &raquo;  &raquo;  &raquo; </span></a></p>
+    <p><a href="{{ post.url }}#more" class="button"><i class="fa fa-file-text-o"></i>&nbsp; 阅读全文<i class="fa fa-space-shuttle"></i></a></p>
   </div>
   {% endfor %}
 </div>

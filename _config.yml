@@ -8,7 +8,7 @@ markdown: redcarpet
 redcarpet:
   extensions:
     - with_toc_data
-    - html_toc
+    - footnotes
 lsi: false
 safe: false
 highlighter: pygments
