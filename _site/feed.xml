@@ -127,25 +127,6 @@
 			</item>
 		
 			<item>
-				<title>[流水]N97在太原火车站被狗日的维族佬偷了</title>
-				<description>
-					&lt;p&gt;很久没有写&lt;strong&gt;日志&lt;/strong&gt;了，因为一直没有啥动力，本来世界杯完了准备再写一篇&lt;a href=&quot;http://chenjun.com/blog/2006/06/worldcup-2006.html&quot; title=&quot;世界杯–难得疯狂&quot;&gt;&lt;strong&gt;世界杯感受&lt;/strong&gt;&lt;/a&gt;的，可是我可爱的&lt;strong&gt;&lt;a href=&quot;http://twitter.com/5CJ/status/17593626413&quot;&gt;斯内德&lt;/a&gt;（要翻土啬，你懂的。）&lt;/strong&gt;没有带领荷兰笑到最后，与数个被&lt;strong&gt;无比功利&lt;/strong&gt;的1个净胜球杀回家的球队一样，被西班牙1：0送回了阿姆斯特丹。 &lt;/p&gt;
-
-&lt;p&gt;今天&lt;a href=&quot;http://cloud.chenjun.com/static/images/o_N97.jpg&quot;&gt;&lt;img src=&quot;http://cloud.chenjun.com/static/images/s_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97-点击看大图&quot; class=&quot;alignright&quot;&gt;&lt;/a&gt;写的目的，是说下我在太原火车站，丢了我半年前引以为豪，机缘巧合用1900元人民币买回来的全新的&lt;strong&gt;Nokia N97&lt;/strong&gt;行货（当时N97的行货价是3900大洋），&lt;strong&gt;不是丢！是偷！2010年8月11日&lt;/strong&gt;，我第二次来太原出差，下午&lt;strong&gt;15：40&lt;/strong&gt;分左右，出了出站口，因为一只手拿着行李和笔记本包，另一只手打着伞，所以身上斜跨的小KAPPA包赤果果的暴露在了不法之徒的眼底。 &lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;5分钟后，我走到了过马路的人行横道，这里要说一下，那天下雨，本来太原火车站就全是人，门口的路永远的拥堵着（貌似中国的每个火车站都是这样）。等着过马路的档口，一个小伙子很小声的跟...&lt;/p&gt;
-					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html&quot;&gt;
-						Continue Reading
-					&lt;/a&gt;
-				</description>
-				<pubDate>Thu, 12 Aug 2010 16:53:24 +0800</pubDate>
-				<link>http://chenjun.com/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html</link>
-				<guid isPermaLink="true">http://chenjun.com/blog/2010/08/n97-stolen-by-a-uighur-fucker-at-taiyuan-railway-station.html</guid>
-			</item>
-		
-			<item>
 				<title>[流水]N97在太原火车站被维族佬偷了</title>
 				<description>
 					&lt;p&gt;很久没有写&lt;strong&gt;日志&lt;/strong&gt;了，因为一直没有啥动力，本来世界杯完了准备再写一篇&lt;a href=&quot;http://chenjun.com/blog/2006/06/worldcup-2006.html&quot; title=&quot;世界杯–难得疯狂&quot;&gt;&lt;strong&gt;世界杯感受&lt;/strong&gt;&lt;/a&gt;的，可是我可爱的&lt;strong&gt;&lt;a href=&quot;http://twitter.com/5CJ/status/17593626413&quot;&gt;斯内德&lt;/a&gt;（要翻土啬，你懂的。）&lt;/strong&gt;没有带领荷兰笑到最后，与数个被&lt;strong&gt;无比功利&lt;/strong&gt;的1个净胜球杀回家的球队一样，被西班牙1：0送回了阿姆斯特丹。 &lt;/p&gt;
@@ -405,6 +386,19 @@ define(&amp;amp;#8216;AUTOSAVE_INTERVAL&amp;amp;#8217;, 72000 );
 				<pubDate>Mon, 02 Mar 2009 07:32:20 +0800</pubDate>
 				<link>http://chenjun.com/blog/2009/03/waitting-for-edit.html</link>
 				<guid isPermaLink="true">http://chenjun.com/blog/2009/03/waitting-for-edit.html</guid>
+			</item>
+		
+			<item>
+				<title>技嘉主板安装IDE光驱和硬盘跳线问题(赠：Beyond-情人)</title>
+				<description>
+					&lt;p&gt;原来的板子坏了，新买了一块技嘉的板子（GA-M61PME-S2），因为我原来的硬盘和DVD-ROM都是IDE接...&lt;/p&gt;
+					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2009/02/ide-cdrom-on-gigabyte-error.html&quot;&gt;
+						Continue Reading
+					&lt;/a&gt;
+				</description>
+				<pubDate>Sat, 14 Feb 2009 01:31:38 +0800</pubDate>
+				<link>http://chenjun.com/blog/2009/02/ide-cdrom-on-gigabyte-error.html</link>
+				<guid isPermaLink="true">http://chenjun.com/blog/2009/02/ide-cdrom-on-gigabyte-error.html</guid>
 			</item>
 		
 	</channel>

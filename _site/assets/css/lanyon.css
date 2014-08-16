@@ -701,3 +701,12 @@ img.right { padding: 0 0 8px 8px }
 .link:hover,.link:focus {
   text-decoration: none!important;
 }
+#no-ie{z-index:9999;font-size:12px;font-family:"Microsoft Yahei",PMingLiu,Tahoma,Arial,Verdana,sans-serif;}
+#no-ie a{color:#A9CE7C;text-decoration:none;font-weight:normal;}
+#no-ie a:hover{text-decoration:underline;}
+#no-ie .no-ie-content{background:#f0f0f0;text-align:center}
+.noiecs{display:inline-block;background:url(./images/no-ie.png) no-repeat;vertical-align:middle}
+.sprite-NoIE{background-position:0 0;width:20px;height:20px;} 
+.sprite-Opera{background-position:0 -25px;width:20px;height:20px;} 
+.sprite-chrome{background-position:0 -50px;width:20px;height:20px;} 
+.sprite-firefox{background-position:0 -75px;width:20px;height:20px;}
