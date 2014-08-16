@@ -1,18 +1,7 @@
 <!DOCTYPE html>
-<<<<<<< .merge_file_a03920
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-=======
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <link href="http://gmpg.org/xfn/11" rel="profile">
-    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
->>>>>>> .merge_file_a02920
     <meta content="ʕ •ᴥ•ʔ陈俊［ChenJun(Zhu8)］的个人网站，江苏金坛人士，83年生人，电子产品、代码、海淘、智能设备、网页设计自虐狂，ಠ_ರೃ，王小波门下走狗。" name="description" />
     <meta content="Jekyll" name="generator" />
     <meta content="Chen Jun(Zhu8)" name="author" />
@@ -26,7 +15,6 @@
     <link href="https://plus.google.com/+ChenJun" rel="author" />
     <title>陈俊的网：浮生志 &middot; On The Way to Philistinism...</title>
     <!-- CSS -->
-<<<<<<< .merge_file_a03920
     <link rel="stylesheet" href="/assets/css/poole.css" />
     <link rel="stylesheet" href="/assets/css/syntax.css" />
     <link rel="stylesheet" href="/assets/css/lanyon.css" />
@@ -36,17 +24,6 @@
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png" />
     <link rel="shortcut icon" href="/assets/favicon.ico" />
-=======
-    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/poole.css" />
-    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/syntax.css" />
-    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/lanyon.css" />
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="/assets/css/font-awesome-ie7.min.css">
-    <![endif]-->
-    <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cloud.chenjun.com/assets/apple-touch-icon-precomposed.png" />
-    <link rel="shortcut icon" href="http://cloud.chenjun.com/assets/favicon.ico" />
->>>>>>> .merge_file_a02920
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml" />
 </head>
@@ -211,39 +188,6 @@ define(&amp;#8216;AUTOSAVE_INTERVAL&amp;#8217;, 72000 );
 
 
     <p><a href="/blog/2009/03/waitting-for-edit.html#more" class="button"><i class="fa fa-file-text-o"></i>&nbsp; 阅读全文<i class="fa fa-space-shuttle"></i></a></p>
-<<<<<<< .merge_file_a03920
-=======
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/blog/2009/02/ide-cdrom-on-gigabyte-error.html" rel="bookmark">
-        技嘉主板安装IDE光驱和硬盘跳线问题(赠：Beyond-情人)
-      </a>
-    </h1>
-
-    <span class="post-date">&nbsp; <i class="fa fa-calendar"></i>&nbsp; 2009年2月14日</span>
-
-  
-    <p>原来的板子坏了，新买了一块技嘉的板子（GA-M61PME-S2），因为我原来的硬盘和DVD-ROM都是IDE接口的，但是接上去之后系统要么启动很慢，要么在见到欢迎页面前就死掉。【启动&quot;Detecting IDE Drives...&quot;处非常慢，然后就是到&quot;Verifying DMI Pool Data...&quot;，一样巨慢，然后无法从硬盘启动……】而我原来的大板子悍马HA01-GT没有这个问题，只是被我刷BIOS刷爆了。不高兴去修了。反正技嘉那块板子才300多点，就买回来。前两天装系统，今天启动就老是不行。开始还怀疑是电源不够，我的是航嘉冷静王2.0钻石版300W的。后来检查跳线，因为我的跳线没有动过，Benq光驱还是在Slave上，而我的日立硬盘还是在Master上面；BIOS中的M/S设置也是对的。</p>
-
-<p>去网上查了一下，有位哥们跟我情况比较相似：</p>
-
-<blockquote>
-<p>急啊，高后帮下忙啊！！！！入手的技嘉GA-MA78GM-S2H 1.1版（BIOS版本是F5），用的是双IDE（光驱和硬盘），硬盘是希捷80G,光驱是原来dvd的，挂光驱硬盘开机检测查找IDE设备都要2分多钟，光驱是从盘,硬盘为主盘，用的一根IDE线，设置从CDROM第1启动盘，HDD第2可以安装好系统番茄花园SP3，装完重起电脑后进系统就找不到硬盘了，这个时候，不管我把光驱还是硬盘设为第一启动设备都是这样，是不是BIOS里有什么设置的问题？？？？？有什么办法不啊？配置：内存2G一根.，CPU4800+，电源全汉200W额定，硬盘80G IDE，光驱DVD IDE<br>
-这位兄弟的解答，也解决了我的问题：<strong>硬盘跳线设为 MASTER.光驱跳线设为slave或为无，<span class="Apple-style-span" style="color: rgb(255, 0, 0);">ide线长端（好像蓝色）接主板IDE口，另一端（好像黑色）接硬盘，中间接光驱，硬盘与光驱距离连接短，注意硬盘光驱安装位置</span>。我昨天用了2小时终于搞定。</strong></p>
-</blockquote>
-
-<p>延伸阅读：跳线</p>
-
-<blockquote>
-<p><span class="right"><img src="http://cloud.chenjun.com/static/images/jumper.jpg" alt="跳线（Jumper）" title="跳线（Jumper）"></span>跳线（英文Jumper）是控制线路板上电流流动的小开关。它的作用是调整设备上不同电信号的通断关系，并以此调节设备的工作状态，如确定主板电压、驱动器的主从关系等。跳线基本上由两个部分组成，一部分是固定在主板、硬盘等设备上的，由两根或两根以上金属跳针组成（如图1）；另一部分是跳线帽（如图2），这是一个可以活动的部件，外层是绝缘塑料，内层是导电材料，可以插在跳线针上面，将两根跳线针连接起来。<a href="http://www.cfanclub.net/article.php?itemid-3866-type-news.html"><strong><em>更多……</em></strong></a></p>
-</blockquote>
-
-
-
-    <p><a href="/blog/2009/02/ide-cdrom-on-gigabyte-error.html#more" class="button"><i class="fa fa-file-text-o"></i>&nbsp; 阅读全文<i class="fa fa-space-shuttle"></i></a></p>
->>>>>>> .merge_file_a02920
   </div>
   
 </div>
@@ -313,7 +257,6 @@ define(&amp;#8216;AUTOSAVE_INTERVAL&amp;#8217;, 72000 );
       (window.jQuery)||document.write('<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.1.min.js"><\/script>');//]]>
     </script>
     <script src="http://cloud.chenjun.com/assets/js/go-top.js" type="text/javascript"></script>
-<<<<<<< .merge_file_a03920
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -324,20 +267,5 @@ define(&amp;#8216;AUTOSAVE_INTERVAL&amp;#8217;, 72000 );
   ga('send', 'pageview');
 
 </script>
-=======
-    <div style="display:none;"><script src="http://s95.cnzz.com/stat.php?id=17872&web_id=17872" language="JavaScript"></script></div>
-<!-- Piwik --> 
-<script type="text/javascript">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://juicy-johana.gopagoda.com/" : "http://juicy-johana.gopagoda.com/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/javascript">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://juicy-johana.gopagoda.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Tracking Code -->
->>>>>>> .merge_file_a02920
   </body>
 </html>
