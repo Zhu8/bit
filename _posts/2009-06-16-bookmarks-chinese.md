@@ -12,16 +12,16 @@ tags:
   - 汉化
   - 程序
 ---
-<font style="font-size: 1.25em;"><b>描述：</b></font>
+###**描述：**
 
-***BookmarksChinese***是我在使用了一些如<a class="" title="AddThis" href="http://www.addthis.com/">addthis.com</a>的按钮之后，发现对中文支持很差，所以弄的一个中文化的书签插件如果你还需要其他的按钮，请自行参考开发即可。  
-作者信息：Zhu8 (<a class="" title="Zhu8''s Web" href="http://chenjun.com/">http://www.zhu8.net</a>)  
-插件地址：<a class="" title="Zhu8''s Web" href="http://chenjun.com/blog/2009/06/bookmarks-chinese.html">http://chenjun.com/blog/2009/06/bookmarks-chinese.html</a>  
+***BookmarksChinese***是我在使用了一些如[addthis.com](http://www.addthis.com/ "AddThis")的按钮之后，发现对中文支持很差，所以弄的一个中文化的书签插件如果你还需要其他的按钮，请自行参考开发即可。  
+作者信息：Zhu8 ([http://www.zhu8.net](http://chenjun.com/ "Zhu8"))  
+插件地址：[http://chenjun.com/blog/2009/06/bookmarks-chinese.html](http://chenjun.com/blog/2009/06/bookmarks-chinese.html "Zhu8")  
 插件版本：1.0 Final (2009.6.4)
 
 <!--more-->
 
-<font style="font-size: 1.25em;"><b>插件结构：</b></font>
+###**插件结构：**</font>
 
 > mt-static/  
 > 　　　　plugins/  
@@ -49,7 +49,7 @@ tags:
 > 　　　　　　　　　　　　　　function.mtfriendfeedurl.php  
 > 　　　　　　　　　　　　　　function.mttwitterurl.php
 
-<font style="font-size: 1.25em;"><b>模板标签：</b></font>
+###**模板标签：**</font>
 
 > <$MTAddToAnyURL$>  
 > <$MTDiggURL$>  
@@ -59,32 +59,51 @@ tags:
 > <$MTTechnoratiURL$>  
 > <$MTTwitterURL$>
 
-<font style="font-size: 1.25em;"><b>例子：</b></font>
+###**例子：**
 
-<img class="yui-img" style="float: left;" alt="Bookmarks Chinese Screenshot" title="Bookmarks Chinese Screenshot" src="{{ site.JB.STATIC_PATH }}/images/BookmarksChinese.png" />
+![Bookmarks Chinese Screenshot]({{ site.JB.STATIC_PATH }}/images/BookmarksChinese.png "Bookmarks Chinese Screenshot")
 
-<a class=&#8221;delicious&#8221; href=&#8221;<$MTDeliciousURL$>&#8221; title=&#8221;收藏到美味书签&#8221; target=&#8221;_blank&#8221;></a></p> 
+```html
+<a class="delicious" href="<$MTDeliciousURL$>" title="收藏到美味书签" target="_blank"></a>
+```
 
-<font style="font-size: 1.25em;"><b>如何使用：</b></font>
+###**如何使用：**
 
-1.  下载插件：【<a class="" title="Bookmarks Chinese 下载地址" href="http://chenjun.com/blog/upload/BookMarksChinese.zip"><b><span style="background-color: rgb(0, 0, 0); color: rgb(160, 255, 64);">这里下载</span></b></a>】
-2.  参照文件目录，上传插件。
-3.  修改**Index Templates**中的**Stylesheet（Style.css）**，在最后一行加上  
-    *@import url(<$mt:StaticWebPath$>plugins/BookmarksChinese/style.css);*
-4.  比如小站，我修改了Template Modules中的Entry Metadata，在其中找到：*  
-    *  
-    在后面加上引用代码，示例：  
-    ***<span class=&#8221;separator&#8221;>|</span> <a class=&#8221;delicious&#8221; href=&#8221;<$MTDeliciousURL$>&#8221; title=&#8221;收藏到Delicious&#8221; target=&#8221;_blank&#8221;></a>  
-    <a class=&#8221;twitter&#8221; href=&#8221;<$MTTwitterURL$>&#8221; title=&#8221;收藏到Twitter&#8221; target=&#8221;_blank&#8221;></a>  
-    <a class=&#8221;friendfeed&#8221; href=&#8221;<$MTFriendFeedURL$>&#8221; title=&#8221;收藏到FriendFeed&#8221; target=&#8221;_blank&#8221;></a>  
-    <a class=&#8221;google&#8221; href=&#8221;<$MTGoogleURL$>&#8221; title=&#8221;收藏到Google Bookmarks&#8221; target=&#8221;_blank&#8221;></a>  
-    <a class=&#8221;digg&#8221; href=&#8221;<$MTDiggURL$>&#8221; title=&#8221;Digg This!&#8221; target=&#8221;_blank&#8221;></a>  
-    <a class=&#8221;technorati&#8221; href=&#8221;<$MTTechnoratiURL$>&#8221; title=&#8221;收藏到Technorati&#8221; target=&#8221;_blank&#8221;></a>  
-    <a class=&#8221;addtoany&#8221; href=&#8221;<$MTAddToAnyURL$>&#8221; title=&#8221;更多&#8230;&#8221; target=&#8221;_blank&#8221;>More!</a>***  
+1.  下载插件：｛[**这里下载**](http://zhu8.googlecode.com/files/BookMarksChinese.zip "Bookmarks Chinese 下载地址")｝  
+2. 参照文件目录，上传插件。  
+3. 修改Index Templates中的Stylesheet（Style.css），在最后一行加上
+
+    ```css
+    @import url(<$mt:StaticWebPath$>plugins/BookmarksChinese/style.css);
+    ```
+
+4. 比如小站，我修改了Template Modules中的Entry Metadata，在其中找到：
+
+    ```html
+    <mt:ifpingsactive>
+    <span class="separator">|</span>
+    <a href="<$mt:entrypermalink$>#trackbacks"><$mt:entrytrackbackcount plural="# Trackbacks" singular="1 Trackback"$></a>
+    </mt:ifpingsactive>
+    ```
+
+    在后面加上引用代码，示例：
+
+    ```html
+    <span class="separator">|</span>
+    <a class="delicious" href="<$MTDeliciousURL$>" title="收藏到Delicious" target="_blank"></a>
+    <a class="twitter" href="<$MTTwitterURL$>" title="收藏到Twitter" target="_blank"></a>
+    <a class="friendfeed" href="<$MTFriendFeedURL$>" title="收藏到FriendFeed" target="_blank"></a>
+    <a class="google" href="<$MTGoogleURL$>" title="收藏到Google Bookmarks" target="_blank"></a>
+    <a class="digg" href="<$MTDiggURL$>" title="Digg This!" target="_blank"></a>
+    <a class="technorati" href="<$MTTechnoratiURL$>" title="收藏到Technorati" target="_blank"></a>
+    <a class="addtoany" href="<$MTAddToAnyURL$>" title="更多..." target="_blank">More!</a>
+    ```
+
     请注意，代码需在之前，以免破坏网页格式。
-5.  如果你需要加入其他的社会化网络按钮，请自己研究下源代码，参数很简单
 
-<font style="color: rgb(255, 0, 0); font-size: 1.25em;"><b>结束语：</b></font>
+5. 如果你需要加入其他的社会化网络按钮，请自己研究下源代码，参数很简单 :)
+
+###**结束语：**
 
 以上，是我在Movable Type的**最后一篇帖子**。经过和Wordpress的对比，MT在可定制性和易用性方面，在资源**特别是中文资源**方面，远远**落后**于WP，而且我从06年开始就使用WP，也有一定的感情，所以决定，今天：2009年6月16日，再次回到WordPress的怀抱，使用WordPress 2.8重新搭建站点。
 
@@ -92,4 +111,6 @@ tags:
 
 唉，废话少说，准备更新数据库，换WP。
 
-***Bye-Bye，活字印刷&#8230;&#8230;（抱歉，在十二小时之后，我又回来了&#8230;&#8230;）***
+***Bye-Bye，活字印刷......（抱歉，在十二小时之后，我又回来了......）***
+
+**-=The End=-** 

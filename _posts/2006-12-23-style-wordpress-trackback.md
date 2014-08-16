@@ -17,61 +17,55 @@ tags:
 
 首先是在你的Blog模版的评论页面（一般为**comments.php**）找到这句：
 
-    <?php foreach ($comments as $comment) : ?>
+```php
+<?php foreach ($comments as $comment) : ?>
+```
 
 在后面加上（**1**）：
 
-
-     <?php $istback = false; if($comment->comment_type == &#8221;trackback&#8221;) { $istback = true; } ?>
-
-     <?php $ispingb = false; if($comment->comment_type == &#8221;pingback&#8221;) { $ispingb = true; } ?>
-
+```php
+<?php $istback = false; if($comment->comment_type == 'trackback') { $istback = true; } ?>
+<?php $ispingb = false; if($comment->comment_type == 'pingback') { $ispingb = true; } ?>
+```
 
 随后再找到这句：
 
-	<?php comment_text() ?>
+```php
+<?php comment_text() ?>
+```
 
 在前后加上东西之后变成这个样子（**2**）：
 
-     <?php if($istback ) { echo ''
-    <div class="tbcomment">&#8221;;} ?>
-
-     <?php if($ispingb ) { echo ''
-    <div class="pbcomment">&#8221;;} ?>
-
-     <?php comment_text() ?>
-
-     <?php if($istback ) { echo ''</div>
-
-      &#8221;;} ?>
-     <?php if($ispingb ) { echo ''</div>
-
-      <p>
-        &#8221;;} ?>
-
+```php
+<?php if($istback ) { echo '<div class="tbcomment">';} ?>
+<?php if($ispingb ) { echo '<div class="pbcomment">';} ?>
+<?php comment_text() ?>
+<?php if($istback ) { echo '</div>';} ?>
+<?php if($ispingb ) { echo '</div>';} ?>
+```
 
 当然，为了不那么打击自己而全部照抄，我做了点小小的修改：将（**1**）更改为：
 
-     <?php $istb = false; if(get_comment_type() != "comment") { $istb = true; } ?>
+```php
+<?php $istb = false; if(get_comment_type() != "comment") { $istb = true; } ?>
+```
 
 这里就是图个简单，逆向思维，不是comment的当然就是Trackback和Pingback了。后面的（**2**）也就一起简单了。
 
-     <?php if($istb ) { echo ''
-    <div class="tbcomment">&#8221;;} ?>
-
-     <?php comment_text() ?>
-
-     <?php if($istb ) { echo ''</div>
-
-        <p>
-          &#8221;;} ?>
+```php
+<?php if($istb ) { echo '<div class="tbcomment">';} ?>
+<?php comment_text() ?>
+<?php if($istb ) { echo '</div>';} ?>
+```
 
 最后，在样式表中添加这个CSS样式，就大功告成了：
 
-    .tbcomment {
-     font:italic 1em/140% Georgia,sans-serif;
-     color:gray;
-     }
+```css
+.tbcomment {
+font:italic 1em/140% Georgia,sans-serif;
+color:gray;
+}
+```
 
 > 勉强以此安慰下自己，还能有一小小的创新，不过我并没有彻底的将Comment和Trackback区分开来，单独显示。因为我的TB不算多，所以没有再去弄个插件影响速度，如果你有需要，可以看看这些地方，希望能对你有所帮助：
 

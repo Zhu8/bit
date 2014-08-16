@@ -34,7 +34,7 @@
  * Update the foundational and global aspects of the page.
  */
 @import url(/assets/css/fonts.css);
-@import url(/assets/css/font-awesome.css);
+@import url(/assets/css/font-awesome.min.css);
 @import url(/assets/css/auticons/auticons.css);
 /* Prevent scroll on narrow devices */
 html,
@@ -616,6 +616,9 @@ img.right { padding: 0 0 8px 8px }
 .post p{
     text-indent:2em;
 }
+.post blockquote p{
+    text-indent:0em!important;
+}
 .pfooter h1 {
     font-weight: normal;
     display: inline;
@@ -648,6 +651,10 @@ img.right { padding: 0 0 8px 8px }
 #facebook-ic:hover,#facebook-ic:focus {
   color: #3B5998 !important;
 }
+#delicious-ic:hover,#delicious-ic:focus {
+  color: #3271CB !important;
+}
+
 .post-archive {
 	position: absolute;
 	left: 47%;
@@ -658,47 +665,39 @@ img.right { padding: 0 0 8px 8px }
   padding:1rem;
   float:right;
 }
-.more-link .button-blue {
-  display: inline-block;
-  padding: 8px 16px 6px;
-  padding: .5rem 1rem .4rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  border-radius: .33em;
-  border: 0;
-  cursor: pointer;
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 7.5px 15px;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 20px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+.sidebar-misc{
+  padding: 0.3rem 1.2rem;
 }
-
-.more-link:hover,.more-link:focus {
+.link:hover,.link:focus {
   text-decoration: none!important;
-}
-
-.more-link:active {
-  position: relative;
-  top: 1px;
-}
-
-.more-link {
-  background: #3498db;
-  color: #f6f6f6!important;
-  text-shadow: 0 1px 0 #3498db;
-  box-shadow: 0 .25em 0 0 #2077b2;
-}
-
-.more-link:visited {
-  color: #f6f6f6!important;
-}
-
-.more-link:hover,.more-link:active {
-  background: #2077b2;
-  color: #fff!important;
-  text-shadow: 0 1px 0 #16557e;
-  box-shadow: 0 .25em 0 0 #16557e;
-}
-
-.more-link:focus {
-  background: #2ecc71;
-  color: #fff!important;
-  text-shadow: 0 1px 0 #239a55;
-  box-shadow: 0 .25em 0 0 #239a55;
 }

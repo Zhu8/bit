@@ -7,8 +7,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 markdown: redcarpet
 redcarpet:
   extensions:
-    - with_toc_data
-    - html_toc
+    - footnotes
 lsi: false
 safe: false
 highlighter: rouge
@@ -26,10 +25,11 @@ JB :
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
+BASE_PATH: 
 url: http://chenjun.com
 title: 陈俊的网：浮生志
 tagline: On The Way to Philistinism...
-about: <a href="http://chenjun.com/"><strong>陈俊</strong></a>ChenJun(Zhu8)的个人网站，江苏人士，83年生人，电子产品自虐狂，<a href="http://chenjun.com/wang2/"><strong>王小波</strong></a>门下走狗。
+about: ʕ •ᴥ•ʔ陈俊［ChenJun(Zhu8)］的个人网站，江苏金坛人士，83年生人，电子产品、代码、海淘、智能设备、网页设计自虐狂，ಠ_ರೃ，王小波门下走狗。
 author:
   name: Chen Jun(Zhu8)
   email: zhu8.net@gmail.com
@@ -40,4 +40,4 @@ author:
   feedburner : Zhu8
   weibo : Zhu8
  # Custom vars
-version:          2014.08.02
+version:          2014.08.13

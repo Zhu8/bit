@@ -7,9 +7,6 @@ noToc: true
 categories:
   - 言吾 | Talk
 tags:
-  - Dream
-  - Nanjing
-  - Poem
   - 南京
   - 梦
   - 诗歌
