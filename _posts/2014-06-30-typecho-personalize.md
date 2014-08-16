@@ -20,9 +20,22 @@ tags:
 
 这里先放一个***列表***，详细的请进入**阅读全文**。
 
+<<<<<<< .merge_file_a04884
 <!--more-->
 
 ### 1、归档页面模板
+=======
+1.  [归档页面模板](#1)
+2.  [获取分类描述](#2)
+3.  [前后文章调用代码](#3)
+4.  [随机颜色标签云](#4)
+5.  [返回网页顶部](#5)
+6.  [段落首行缩进两字符](#6)
+
+<!--more-->
+
+### <a name="1"></a>1、归档页面模板
+>>>>>>> .merge_file_a06564
 
 （这里涉及到官方文档首段代码没有结尾，注意参考下面的第一段）
 
@@ -66,7 +79,11 @@ tags:
     <?php $this->need('footer.php'); ?>
 ```
 
+<<<<<<< .merge_file_a04884
 ### 2、获取分类描述
+=======
+### <a name="2"></a>2、获取分类描述
+>>>>>>> .merge_file_a06564
 
 `<?php echo $this->getDescription(); ?>`
 
@@ -78,11 +95,19 @@ tags:
 ->parse('<li><a href="{permalink}" title="{description}">{name}</a> ({count})</li>'); ?>
 ```
 
+<<<<<<< .merge_file_a04884
 ### 3、前后文章调用代码
+=======
+### <a name="3"></a>3、前后文章调用代码
+>>>>>>> .merge_file_a06564
 
 `<?php $this->thePrev(); ?> <?php $this->theNext(); ?>`
 
+<<<<<<< .merge_file_a04884
 ### 4、随机颜色标签云
+=======
+### <a name="4"></a>4、随机颜色标签云
+>>>>>>> .merge_file_a06564
 
 ```php
 <?php $this->widget('Widget_Metas_Tag_Cloud', 'ignoreZeroCount=1&limit=30')->to($tags); ?>
@@ -93,7 +118,11 @@ tags:
 </ul>
 ```
 
+<<<<<<< .merge_file_a04884
 ### 5、返回网页顶部
+=======
+### <a name="5"></a>5、返回网页顶部
+>>>>>>> .merge_file_a06564
 
 在footer.php页面增加如下代码（可直接下载我的第二段JS代码，将其中的图片地址改成你自己定义的）：
 
@@ -104,7 +133,11 @@ tags:
 <!-- End of Go-Top Code -->
 ```
 
+<<<<<<< .merge_file_a04884
 ### 6、段落首行缩进两字符
+=======
+### <a name="6"></a>6、段落首行缩进两字符
+>>>>>>> .merge_file_a06564
 
 编辑Style.css文件，增加如下代码：
 

@@ -36,7 +36,11 @@ tags:
       此水几时休？此恨何时已？  
       只愿君心似我心，定不负相思意。
 
+<<<<<<< .merge_file_a01324
 ..:: [KEANE][4] ::..**Can't Stop Now**
+=======
+..:: [KEANE][4] ::..**Can&#8217;t Stop Now**
+>>>>>>> .merge_file_a06628
 
 
  [1]: http://alumni.chinaren.com/class/class_index.jsp?classuuid=2917034545012212546 "永远的医法01"

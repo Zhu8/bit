@@ -1,7 +1,18 @@
 <!DOCTYPE html>
+<<<<<<< .merge_file_a06700
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
+=======
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+>>>>>>> .merge_file_a01324
     <meta content="  Typecho个性化常用代码  发布于：   			2014年6月30日 20时51分49秒      Chen Jun(Zhu8)  发觉自己真的老了，好多东西折腾不动了……一个网站模版和个性化，竟然每天就只能折腾一点点。遥想公瑾..." name="description" />
     <meta content="Jekyll" name="generator" />
     <meta content="Chen Jun(Zhu8)" name="author" />
@@ -15,6 +26,7 @@
     <link href="https://plus.google.com/+ChenJun" rel="author" />
     <title>Typecho个性化常用代码 &middot; 陈俊的网：浮生志</title>
     <!-- CSS -->
+<<<<<<< .merge_file_a06700
     <link rel="stylesheet" href="/assets/css/poole.css" />
     <link rel="stylesheet" href="/assets/css/syntax.css" />
     <link rel="stylesheet" href="/assets/css/lanyon.css" />
@@ -24,6 +36,17 @@
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png" />
     <link rel="shortcut icon" href="/assets/favicon.ico" />
+=======
+    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/poole.css" />
+    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/syntax.css" />
+    <link rel="stylesheet" href="http://cloud.chenjun.com/assets/css/lanyon.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cloud.chenjun.com/assets/apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" href="http://cloud.chenjun.com/assets/favicon.ico" />
+>>>>>>> .merge_file_a01324
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml" />
 </head>
@@ -74,57 +97,77 @@
 
 <p>这里先放一个<strong><em>列表</em></strong>，详细的请进入<strong>阅读全文</strong>。</p>
 
+<<<<<<< .merge_file_a06700
 <!--more-->
 
 <h3>1、归档页面模板</h3>
+=======
+<ol>
+<li> <a href="#1">归档页面模板</a></li>
+<li> <a href="#2">获取分类描述</a></li>
+<li> <a href="#3">前后文章调用代码</a></li>
+<li> <a href="#4">随机颜色标签云</a></li>
+<li> <a href="#5">返回网页顶部</a></li>
+<li> <a href="#6">段落首行缩进两字符</a></li>
+</ol>
+
+<!--more-->
+
+<h3 id="1、归档页面模板"><a name="1"></a>1、归档页面模板</h3>
+>>>>>>> .merge_file_a01324
 
 <p>（这里涉及到官方文档首段代码没有结尾，注意参考下面的第一段）</p>
 <div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
-<span class="sd">/**
- * 归档页面模板
- *
- * @package custom
- */</span><span class="p">;</span> <span class="cp">?&gt;</span>
+<span class="sd">/**</span>
+<span class="sd"> * 归档页面模板</span>
+<span class="sd"> *</span>
+<span class="sd"> * @package custom</span>
+<span class="sd"> */</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
 
-<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">'header.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">&#39;header.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
 
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-mb-12 col-8"</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"archive-title"</span><span class="nt">&gt;</span>日志归档<span class="nt">&lt;/h3&gt;</span>
-<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">'Widget_Contents_Post_Recent'</span><span class="p">,</span> <span class="s1">'pageSize=10000'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="nv">$archives</span><span class="p">);</span>   
+<span class="x">    &lt;div class=&quot;col-mb-12 col-8&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;</span>
+<span class="x">        &lt;h3 class=&quot;archive-title&quot;&gt;日志归档&lt;/h3&gt;</span>
+<span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">&#39;Widget_Contents_Post_Recent&#39;</span><span class="p">,</span> <span class="s1">&#39;pageSize=10000&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="nv">$archives</span><span class="p">);</span>   
     <span class="nv">$year</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$mon</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nv">$j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>   
-    <span class="nv">$output</span> <span class="o">=</span> <span class="s1">'&lt;div id="archives"&gt;'</span><span class="p">;</span>   
+    <span class="nv">$output</span> <span class="o">=</span> <span class="s1">&#39;&lt;div id=&quot;archives&quot;&gt;&#39;</span><span class="p">;</span>   
     <span class="k">while</span><span class="p">(</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">())</span><span class="o">:</span>   
-        <span class="nv">$year_tmp</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'Y'</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">);</span>   
-        <span class="nv">$mon_tmp</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">'m'</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">);</span>   
+        <span class="nv">$year_tmp</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">);</span>   
+        <span class="nv">$mon_tmp</span> <span class="o">=</span> <span class="nb">date</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">);</span>   
         <span class="nv">$y</span><span class="o">=</span><span class="nv">$year</span><span class="p">;</span> <span class="nv">$m</span><span class="o">=</span><span class="nv">$mon</span><span class="p">;</span>   
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$mon</span> <span class="o">!=</span> <span class="nv">$mon_tmp</span> <span class="o">&amp;&amp;</span> <span class="nv">$mon</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;/ul&gt;&lt;/li&gt;'</span><span class="p">;</span>   
-        <span class="k">if</span> <span class="p">(</span><span class="nv">$year</span> <span class="o">!=</span> <span class="nv">$year_tmp</span> <span class="o">&amp;&amp;</span> <span class="nv">$year</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;/ul&gt;'</span><span class="p">;</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$mon</span> <span class="o">!=</span> <span class="nv">$mon_tmp</span> <span class="o">&amp;&amp;</span> <span class="nv">$mon</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">&#39;&lt;/ul&gt;&lt;/li&gt;&#39;</span><span class="p">;</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$year</span> <span class="o">!=</span> <span class="nv">$year_tmp</span> <span class="o">&amp;&amp;</span> <span class="nv">$year</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">&#39;&lt;/ul&gt;&#39;</span><span class="p">;</span>   
         <span class="k">if</span> <span class="p">(</span><span class="nv">$year</span> <span class="o">!=</span> <span class="nv">$year_tmp</span><span class="p">)</span> <span class="p">{</span>   
             <span class="nv">$year</span> <span class="o">=</span> <span class="nv">$year_tmp</span><span class="p">;</span>   
-            <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;h3 class="al_year"&gt;'</span><span class="o">.</span> <span class="nv">$year</span> <span class="o">.</span><span class="s1">' 年&lt;/h3&gt;&lt;ul class="al_mon_list"&gt;'</span><span class="p">;</span> <span class="c1">//输出年份   
-</span>        <span class="p">}</span>   
+            <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">&#39;&lt;h3 class=&quot;al_year&quot;&gt;&#39;</span><span class="o">.</span> <span class="nv">$year</span> <span class="o">.</span><span class="s1">&#39; 年&lt;/h3&gt;&lt;ul class=&quot;al_mon_list&quot;&gt;&#39;</span><span class="p">;</span> <span class="c1">//输出年份   </span>
+        <span class="p">}</span>   
         <span class="k">if</span> <span class="p">(</span><span class="nv">$mon</span> <span class="o">!=</span> <span class="nv">$mon_tmp</span><span class="p">)</span> <span class="p">{</span>   
             <span class="nv">$mon</span> <span class="o">=</span> <span class="nv">$mon_tmp</span><span class="p">;</span>   
-            <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;li&gt;&lt;span class="al_mon"&gt;'</span><span class="o">.</span> <span class="nv">$mon</span> <span class="o">.</span><span class="s1">' 月&lt;/span&gt;&lt;ul class="al_post_list"&gt;'</span><span class="p">;</span> <span class="c1">//输出月份   
-</span>        <span class="p">}</span>   
-        <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;li&gt;'</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s1">'d日: '</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">)</span><span class="o">.</span><span class="s1">'&lt;a href="'</span><span class="o">.</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">permalink</span> <span class="o">.</span><span class="s1">'"&gt;'</span><span class="o">.</span> <span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">title</span> <span class="o">.</span><span class="s1">'&lt;/a&gt; &lt;em&gt;('</span><span class="o">.</span> <span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">commentsNum</span><span class="o">.</span><span class="s1">')&lt;/em&gt;&lt;/li&gt;'</span><span class="p">;</span> <span class="c1">//输出文章日期和标题   
-</span>    <span class="k">endwhile</span><span class="p">;</span>   
-    <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">'&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span><span class="p">;</span>   
+            <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">&#39;&lt;li&gt;&lt;span class=&quot;al_mon&quot;&gt;&#39;</span><span class="o">.</span> <span class="nv">$mon</span> <span class="o">.</span><span class="s1">&#39; 月&lt;/span&gt;&lt;ul class=&quot;al_post_list&quot;&gt;&#39;</span><span class="p">;</span> <span class="c1">//输出月份   </span>
+        <span class="p">}</span>   
+        <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">&#39;&lt;li&gt;&#39;</span><span class="o">.</span><span class="nb">date</span><span class="p">(</span><span class="s1">&#39;d日: &#39;</span><span class="p">,</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">created</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;&lt;a href=&quot;&#39;</span><span class="o">.</span><span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">permalink</span> <span class="o">.</span><span class="s1">&#39;&quot;&gt;&#39;</span><span class="o">.</span> <span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">title</span> <span class="o">.</span><span class="s1">&#39;&lt;/a&gt; &lt;em&gt;(&#39;</span><span class="o">.</span> <span class="nv">$archives</span><span class="o">-&gt;</span><span class="na">commentsNum</span><span class="o">.</span><span class="s1">&#39;)&lt;/em&gt;&lt;/li&gt;&#39;</span><span class="p">;</span> <span class="c1">//输出文章日期和标题   </span>
+    <span class="k">endwhile</span><span class="p">;</span>   
+    <span class="nv">$output</span> <span class="o">.=</span> <span class="s1">&#39;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&#39;</span><span class="p">;</span>   
     <span class="k">echo</span> <span class="nv">$output</span><span class="p">;</span>   
-<span class="cp">?&gt;</span> 
-    <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- end #main --&gt;</span>
+<span class="cp">?&gt;</span><span class="x"> </span>
+<span class="x">    &lt;/div&gt;&lt;!-- end #main --&gt;</span>
 
-    <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">'sidebar.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
-    <span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">'footer.php'</span><span class="p">);</span> <span class="cp">?&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">&#39;sidebar.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    </span><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">need</span><span class="p">(</span><span class="s1">&#39;footer.php&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
+<<<<<<< .merge_file_a06700
 <h3>2、获取分类描述</h3>
+=======
+<h3 id="2、获取分类描述"><a name="2"></a>2、获取分类描述</h3>
+>>>>>>> .merge_file_a01324
 
 <p><code>&lt;?php echo $this-&gt;getDescription(); ?&gt;</code></p>
 
 <p><em>案例演示：</em></p>
-<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">'Widget_Metas_Category_List'</span><span class="p">)</span>
-<span class="o">-&gt;</span><span class="na">parse</span><span class="p">(</span><span class="s1">'&lt;li&gt;&lt;a href="{permalink}" title="{description}"&gt;{name}&lt;/a&gt; ({count})&lt;/li&gt;'</span><span class="p">);</span> <span class="cp">?&gt;</span>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">&#39;Widget_Metas_Category_List&#39;</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="na">parse</span><span class="p">(</span><span class="s1">&#39;&lt;li&gt;&lt;a href=&quot;{permalink}&quot; title=&quot;{description}&quot;&gt;{name}&lt;/a&gt; ({count})&lt;/li&gt;&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
 </code></pre></div>
+<<<<<<< .merge_file_a06700
 <h3>3、前后文章调用代码</h3>
 
 <p><code>&lt;?php $this-&gt;thePrev(); ?&gt; &lt;?php $this-&gt;theNext(); ?&gt;</code></p>
@@ -138,18 +181,37 @@
 <span class="nt">&lt;/ul&gt;</span>
 </code></pre></div>
 <h3>5、返回网页顶部</h3>
+=======
+<h3 id="3、前后文章调用代码"><a name="3"></a>3、前后文章调用代码</h3>
+
+<p><code>&lt;?php $this-&gt;thePrev(); ?&gt; &lt;?php $this-&gt;theNext(); ?&gt;</code></p>
+
+<h3 id="4、随机颜色标签云"><a name="4"></a>4、随机颜色标签云</h3>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">widget</span><span class="p">(</span><span class="s1">&#39;Widget_Metas_Tag_Cloud&#39;</span><span class="p">,</span> <span class="s1">&#39;ignoreZeroCount=1&amp;limit=30&#39;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="nv">$tags</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;ul class=&quot;tags-list&quot;&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">while</span><span class="p">(</span><span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">())</span><span class="o">:</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">    &lt;li&gt;&lt;a style=&quot;color: rgb(</span><span class="cp">&lt;?php</span> <span class="k">echo</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x">, </span><span class="cp">&lt;?php</span> <span class="k">echo</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x">, </span><span class="cp">&lt;?php</span> <span class="k">echo</span><span class="p">(</span><span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">));</span> <span class="cp">?&gt;</span><span class="x">)&quot; href=&quot;</span><span class="cp">&lt;?php</span> <span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">permalink</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&quot; title=&#39;</span><span class="cp">&lt;?php</span> <span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&#39;&gt;</span><span class="cp">&lt;?php</span> <span class="nv">$tags</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">();</span> <span class="cp">?&gt;</span><span class="x">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="cp">&lt;?php</span> <span class="k">endwhile</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;/ul&gt;</span>
+</code></pre></div>
+<h3 id="5、返回网页顶部"><a name="5"></a>5、返回网页顶部</h3>
+>>>>>>> .merge_file_a01324
 
 <p>在footer.php页面增加如下代码（可直接下载我的第二段JS代码，将其中的图片地址改成你自己定义的）：</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Start of Go-Top Code --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://chenjun.com/usr/uploads/top.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://chenjun.com/usr/uploads/top.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="c">&lt;!-- End of Go-Top Code --&gt;</span>
 </code></pre></div>
+<<<<<<< .merge_file_a06700
 <h3>6、段落首行缩进两字符</h3>
+=======
+<h3 id="6、段落首行缩进两字符"><a name="6"></a>6、段落首行缩进两字符</h3>
+>>>>>>> .merge_file_a01324
 
 <p>编辑Style.css文件，增加如下代码：</p>
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.post-content</span> <span class="nt">p</span><span class="p">{</span> 
-<span class="nl">text-indent</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span> <span class="c">/*em是相对单位，2em即现在一个字大小的两倍*/</span> 
+<span class="k">text-indent</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span> <span class="c">/*em是相对单位，2em即现在一个字大小的两倍*/</span> 
 <span class="p">}</span> 
 </code></pre></div>
 <p>后续待补充，部分参考：<a href="http://docs.typecho.org">Typecho官方文档</a>以及<a href="http://typecho.me">Typecho.me</a>，一并致谢！</p>
@@ -308,6 +370,7 @@
       (window.jQuery)||document.write('<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.1.min.js"><\/script>');//]]>
     </script>
     <script src="http://cloud.chenjun.com/assets/js/go-top.js" type="text/javascript"></script>
+<<<<<<< .merge_file_a06700
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -318,5 +381,20 @@
   ga('send', 'pageview');
 
 </script>
+=======
+    <div style="display:none;"><script src="http://s95.cnzz.com/stat.php?id=17872&web_id=17872" language="JavaScript"></script></div>
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://juicy-johana.gopagoda.com/" : "http://juicy-johana.gopagoda.com/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://juicy-johana.gopagoda.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+>>>>>>> .merge_file_a01324
   </body>
 </html>
