@@ -16,9 +16,9 @@ excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 paginate:         5
 paginate_path: "/page/:num"
 JB :
-  ASSET_PATH : http://cloud.chenjun.com/assets
-  IMAGE_PATH : http://cloud.chenjun.com/images
-  STATIC_PATH : http://cloud.chenjun.com/static
+  ASSET_PATH : http://static.chenjun.com/assets
+  IMAGE_PATH : http://static.chenjun.com/images
+  STATIC_PATH : http://static.chenjun.com/static
 
 # auto: true # deprecated
 
@@ -29,7 +29,7 @@ BASE_PATH:
 url: http://chenjun.com
 title: 陈俊的网：浮生志
 tagline: On The Way to Philistinism...
-about: ʕ •ᴥ•ʔ陈俊［ChenJun(Zhu8)］的个人网站，江苏金坛人士，83年生人，电子产品、代码、海淘、智能设备、网页设计自虐狂，ಠ_ರೃ，王小波门下走狗。
+about: 陈俊［ChenJun(Zhu8)］的个人网站，江苏金坛人士，83年生人，电子产品、代码、海淘、智能设备、网页设计自虐狂，曼联死忠粉，王小波门下走狗。
 author:
   name: Chen Jun(Zhu8)
   email: zhu8.net@gmail.com
@@ -40,4 +40,4 @@ author:
   feedburner : Zhu8
   weibo : Zhu8
  # Custom vars
-version:          2014.08.13
+version:          2015.05.10
