@@ -16,9 +16,9 @@ excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 paginate:         5
 paginate_path: "/page/:num"
 JB :
-  ASSET_PATH : http://static.chenjun.com/assets
-  IMAGE_PATH : http://static.chenjun.com/images
-  STATIC_PATH : http://static.chenjun.com
+  ASSET_PATH : http://chenjun.com/assets
+  IMAGE_PATH : http://chenjun.com/images
+  STATIC_PATH : http://chenjun.com/static
 
 # auto: true # deprecated
 
