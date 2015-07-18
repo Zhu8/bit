@@ -75,7 +75,7 @@
 
 <p><strong>第一步：</strong>绑定域名，在Blogger里很好设置，这里就不赘述了。我使用<a href="http://chenjun.com/">http://chenjun.com/</a> 绑定了我的Blogger，故而在Godaddy里面如下设置：</p>
 
-<p><img src="http://static.chenjun.com/images/godaddy-11.png" alt=""> </p>
+<p><img src="http://chenjun.com/static/images/godaddy-11.png" alt=""> </p>
 
 <p>请列位看官自行看图说话，如何创造自己的ghs.xxx.com。实在看不懂请留言。ghs.google.com的IP有<a href="http://out.zhu8.net/ghs">这个地方</a>查很不错</p>
 
@@ -83,18 +83,18 @@
 
 <p><strong>第二步：</strong>解决www和non-www制定不同的问题。 由于Google只能绑定子域名（www亦是一种特殊格式的子域名），故我们要让根域名也指向到这里，~~如果你是Host domain在Godaddy，只要使用Forward就可以了。~~（<strong>经反复测试，此方法没有用，只有使用.htaccess解决，详见：[注释]</strong>）如下：</p>
 
-<p><img src="http://static.chenjun.com/images/godaddy-8.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-9.png" alt=""> </p>
+<p><img src="http://chenjun.com/static/images/godaddy-8.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-9.png" alt=""> </p>
 
 <p>这样本来就算完了，但是因为无孔不入的<strong>土啬</strong>又来了。封掉了不知道多少Godaddy的IP，所以如果你不幸如果，域名的IP被封了，那你就需要换IP了。Godaddy的域名自带有免费空间，我们可以通过切换域名空间的IP。网上有很多教程，但是目前来说Godaddy把它藏的深了一点，不再是Switch Operating System，换成了<strong>Upgrade/Downgrade Hosting Account</strong>。图解如下：</p>
 
-<p><img src="http://static.chenjun.com/images/godaddy-1.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-2.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-3.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-4.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-5.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-6.png" alt=""><br>
-<img src="http://static.chenjun.com/images/godaddy-7.png" alt=""> </p>
+<p><img src="http://chenjun.com/static/images/godaddy-1.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-2.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-3.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-4.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-5.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-6.png" alt=""><br>
+<img src="http://chenjun.com/static/images/godaddy-7.png" alt=""> </p>
 
 <p>等待不过十几分钟，虽然Account Details里面的Status还是Pending Account Change，但是IP地址已经换了，Total DNS Control Panel里面的A Records已经变成了新的IP，等待……生效，一切OK！</p>
 
@@ -274,7 +274,7 @@ RewriteRule (.*) http://chenjun.com/$1 [R=301,L]  </p>
       //<![CDATA[
       (window.jQuery)||document.write('<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.1.min.js"><\/script>');//]]>
     </script>
-    <script src="http://static.chenjun.com/assets/js/go-top.js" type="text/javascript"></script>
+    <script src="http://chenjun.com/assets/js/go-top.js" type="text/javascript"></script>
     <script>
 var _hmt = _hmt || [];
 (function() {

@@ -12,7 +12,7 @@
 					&lt;h2&gt;为何用BitBucket&amp;amp;FTPloy？&lt;/h2&gt;
 
 &lt;p&gt;网站使用&lt;a href=&quot;http://jekyllrb.com&quot; title=&quot;Jekyll &amp;amp;bull; Simple, blog-aware, static sites&quot;&gt;Jekyll&lt;/a&gt;建成之后，放置在&lt;a href=&quot;https://pages.github.com&quot; title=&quot;Github Pages&quot;&gt;Github Pages&lt;/a&gt;的源码属于公开的访问，处于一些个人安全考虑，最重要的是放置在自己的FTP空间会相对安全一些，所以，我采用了支持私有源码的&lt;a href=&quot;https://bitbucket.org/&quot; title=&quot;Bitbucket 由旧金山的Atlassian公司开发&quot;&gt;BitBucket&lt;/a&gt;作为Git仓库，并使用&lt;a href=&quot;https://ftploy.com&quot; title=&quot;FTP Deploy&quot;&gt;FTPloy&lt;/a&gt;作为Deploy方案，实现了自动发布到个人FTP的目的。
-&lt;img src=&quot;http://static.chenjun.com/images/FTPloy.png&quot; alt=&quot;FTPloy&quot; title=&quot;FTPloy&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;http://chenjun.com/static/images/FTPloy.png&quot; alt=&quot;FTPloy&quot; title=&quot;FTPloy&quot;&gt;&lt;/p&gt;
 
 &lt;h3&gt;注册并使用BitBucket&lt;/h3&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;&lt;strong&gt;Enjoy it!&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/vector_jerry_8ball_by_svezate-d6lzyyh.png&quot; alt=&quot;Jerry and the 8 Ball&quot; title=&quot;Jerry and the 8 Ball&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://chenjun.com/static/images/vector_jerry_8ball_by_svezate-d6lzyyh.png&quot; alt=&quot;Jerry and the 8 Ball&quot; title=&quot;Jerry and the 8 Ball&quot;&gt;&lt;/p&gt;
 
 &lt;h2&gt;为何用Github&amp;amp;Jekyll？&lt;/h2&gt;
 
@@ -135,7 +135,7 @@
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://static.chenjun.com/images/o_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://chenjun.com/static/images/o_N97.jpg&quot; alt=&quot;诺基亚 Nokia N97&quot; title=&quot;诺基亚 Nokia N97&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;5分钟后，我走到了过马路的人行横道，这里要说一下，那天下雨，本来太原火车站就全是人，门口的路永远的拥堵着（貌似中国的每个火车站都是这样）。等着过马路的档口，一个小伙子很小声的跟我说...&lt;/p&gt;
 					&lt;a title=&quot;Permalink&quot; class=&quot;permalink&quot; href=&quot;/blog/2010/08/n97-stolen-by-a-uighur-at-taiyuan-railway-station.html&quot;&gt;
@@ -208,7 +208,7 @@
 &lt;p&gt;也许是厌倦了不停的升级，虽然SixApart终于在两次跳票后发布了&lt;strong&gt;Movable Type 5&lt;/strong&gt;，Wordpress的更新速度更甚，反而是默默的Blogger，被关注的次数也越来越少，所以，我还是继续小众好了。害怕~~看不到~~这里的更新？&lt;strong&gt;Who Cares!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;center&quot;&gt;
-  &lt;img src=&quot;http://static.chenjun.com/images/nuhou.png&quot; alt=&quot;怒吼吧，中国！——李桦 1935年&quot; title=&quot;怒吼吧，中国！——李桦 1935年&quot;&gt;&lt;br&gt;
+  &lt;img src=&quot;http://chenjun.com/static/images/nuhou.png&quot; alt=&quot;怒吼吧，中国！——李桦 1935年&quot; title=&quot;怒吼吧，中国！——李桦 1935年&quot;&gt;&lt;br&gt;
 &lt;strong&gt;&lt;em&gt;版画：怒吼吧，中国！——李桦 1935&lt;/em&gt;&lt;/strong&gt;
 &lt;/span&gt;&lt;/p&gt;
 
@@ -296,7 +296,7 @@
 			<item>
 				<title>【Braid/时空幻境】图文介绍+视频攻略</title>
 				<description>
-					&lt;p&gt;&lt;span class=&quot;left&quot;&gt; &lt;img src=&quot;http://static.chenjun.com/images/killsign.png&quot; alt=&quot;&quot;&gt;&lt;/span&gt;当我看到&lt;a href=&quot;http://woooh.com/2009/05/braid.html&quot; title=&quot;Woooh:Braid&quot;&gt;Aether&lt;/a&gt;在FriendFeed上推荐了这个游戏的时候，回家我用最快的速度下载了下来。很小（100多Mb，仅相当于动辄N个G的一些“~~大作~~”的数十分之一），但是画面细腻有加，音乐有些像我们当年玩&lt;strong&gt;《英雄无敌3之死亡阴影》&lt;/strong&gt;时候的背景音乐，唯美动听。&lt;/p&gt;
+					&lt;p&gt;&lt;span class=&quot;left&quot;&gt; &lt;img src=&quot;http://chenjun.com/static/images/killsign.png&quot; alt=&quot;&quot;&gt;&lt;/span&gt;当我看到&lt;a href=&quot;http://woooh.com/2009/05/braid.html&quot; title=&quot;Woooh:Braid&quot;&gt;Aether&lt;/a&gt;在FriendFeed上推荐了这个游戏的时候，回家我用最快的速度下载了下来。很小（100多Mb，仅相当于动辄N个G的一些“~~大作~~”的数十分之一），但是画面细腻有加，音乐有些像我们当年玩&lt;strong&gt;《英雄无敌3之死亡阴影》&lt;/strong&gt;时候的背景音乐，唯美动听。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Updated on 2009/05/09 21：15&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
