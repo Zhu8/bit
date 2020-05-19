@@ -1,5 +1,5 @@
-RewriteEngine On
+#RewriteEngine On
 # Redirect Entire Site to New Domain
-RewriteCond %{HTTP_HOST} ^zhu8.net$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.zhu8.net$ [NC]
-RewriteRule ^(.*)$ http://chenjun.com/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} ^zhu8.net$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^www.zhu8.net$ [NC]
+#RewriteRule ^(.*)$ http://chenjun.com/$1 [R=301,L]
