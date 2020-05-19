@@ -16,9 +16,9 @@ excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 paginate:         5
 paginate_path: "/page/:num"
 JB :
-  ASSET_PATH : http://chenjun.com/assets
-  IMAGE_PATH : http://chenjun.com/images
-  STATIC_PATH : http://chenjun.com/static
+  ASSET_PATH : /assets
+  IMAGE_PATH : /images
+  STATIC_PATH : /static
 
 # auto: true # deprecated
 
@@ -26,7 +26,7 @@ JB :
 # so be sure to set them if your theme uses them.
 #
 BASE_PATH: 
-url: http://chenjun.com
+url: 
 title: 陈俊的网：浮生志
 tagline: On The Way to Philistinism...
 about: 陈俊［ChenJun(Zhu8)］的个人网站，江苏金坛人士，83年生人，电子产品、代码、海淘、智能设备、网页设计自虐狂，曼联死忠粉，王小波门下走狗。
